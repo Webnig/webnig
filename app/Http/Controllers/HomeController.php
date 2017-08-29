@@ -48,13 +48,14 @@ class HomeController extends Controller
 
         $matches = 'get matches';
 
-        return [
+        /*return [
                 'user' => 'a',//$user,
                 'notifications' => $notifications,
                 'interests' => $interests,
                 'transactions' => $transactions,
                 'matches' => $matches
-            ];
+            ];*/
+        return view('profile.profile');
     }
 
     public function viewDashboard()

@@ -1,0 +1,41 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html {}
+
+body {
+  font-family: $lr-common-font;
+  -webkit-font-smoothing: antialiased;
+  color: $lr-default-color;
+  font-size: 16px;
+}
+
+/* Headings */
+#{headings(1,6)} {
+  //font-family: $lr-common-font;
+  color: $lr-text-headline-color;
+}
+
+/* Text */
+strong {
+  color: $lr-text-bold-color;
+}
+
+/* Links */
+a {
+  color: $lr-link-color;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $lr-link-hover-color;
+  }
+}
+
+/* Images */
+img {
+  height: auto;
+  max-width: 100%;
+}

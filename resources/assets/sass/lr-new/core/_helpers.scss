@@ -1,0 +1,162 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Animations
+//
+// *************************************
+
+
+// ------- headings helper ----- //
+// -> generates h1 to h6
+//
+// $from - starting point
+// $to - end point
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+
+
+
+// Generate @font-face
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+          eot: "?",
+          svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+          otf: "opentype",
+          ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+// ----- screen ----- //
+// -> Generates a media query
+//
+// $size - the breakpoint keyword
+// $type - the type of query ('min-width', 'max-width')
+// $pixels -
+// @content - the generated content within the mixin
+// **************************
+// TODO
+//    declare unit for media query property, max-width property - https://github.com/engageinteractive/core/blob/master/src/scss/utility/_mixins.scss#L36
+// ***************************
+
+@mixin mq($size, $type: min, $property: width) {
+  @if map-has-key($breakpoints, $size) {
+    $size: map_get($breakpoints, $size);
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+  @if $type == max {
+    $size: $size - 1px;
+  }
+  @media screen and (#{$type}-#{$property}: $size) {
+    @content;
+  }
+}
+
+// ------- Lostrib element color mixin -------- //
+
+@mixin lr-color($el, $color) {
+  @if type_of($el) == el {
+    @if($el == 'text') {
+      color: $color;
+    }
+    @else if($el == 'btn') {
+      @extend %lr-btn;
+      background-color: $color;
+
+      @if $color == grey {
+        color: $lr-darkskyblue;
+      }
+      @else {
+        color: $white;
+      }
+    }
+  }
+  @else {
+    @warn "#{$el} is not an element for creation.";
+  }
+}
+
+@mixin lr-btn($color) {
+  @if type-of($color) == color {
+    @extend %lr-btn;
+    background-color: $color;
+
+    @if $color == grey {
+      color: $lr-darkskyblue;
+    }
+    @else {
+      color: $white;
+    }
+  }
+  @else {
+    @warn "#{$color} is not a color for `lr-btn`.";
+  }
+}
+
+// ------ generate-margin-classes ------- //
+// -> Generates utility margin/padding classes (m-l--5 - BEM style)
+@mixin generate-margin-classes(
+  $default-space-amounts-with-direction: (0 left l, 5 left l, 10 left l, 15 left l, 25 left l, 30 left l)
+) {
+  @each $space in $default-space-amounts-with-direction {
+    .m#{nth($space, 3)}--#{nth($space, 1)} {
+      margin-#{nth($space, 2)}: #{nth($space, 1)}px !important;
+    }
+  }
+}
+
+// ------ generate-padding-classes ------- //
+// -> Generates utility margin/padding classes (p-l--5 - BEM style)
+@mixin generate-padding-classes(
+  $default-space-amounts-with-direction: (0 left l, 5 left l, 10 left l, 15 left l, 25 left l, 30 left l)
+) {
+  @each $space in $default-space-amounts-with-direction {
+    .p#{nth($space, 3)}--#{nth($space, 1)} {
+      padding-#{nth($space, 2)}: #{nth($space, 1)}px !important;
+    }
+  }
+}

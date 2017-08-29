@@ -1,0 +1,11 @@
+.lr-container {
+  padding: 0 20px;
+  width: 90%;
+}
+
+.grid--flex {
+  display: flex;
+  @include mq('tiny', max) {
+    display: block;
+  } //may be unnecessary
+}

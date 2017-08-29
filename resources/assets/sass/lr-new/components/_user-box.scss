@@ -1,0 +1,22 @@
+.user-card {
+  text-align: center;
+  padding: 10px 5%;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 2px;
+  }
+
+  &__gender {
+    color: $lr-darkskyblue;
+    font-size: 20px;
+  }
+  &__thumb {
+    margin-top: -15px;
+    margin-bottom: 5px;
+  }
+}
