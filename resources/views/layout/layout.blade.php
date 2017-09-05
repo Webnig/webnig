@@ -17,7 +17,7 @@
 
     <link href="{{ asset('assets/css/bootstrap.min.css') }} " rel="stylesheet">
     <link href="{{ asset('assets/css/animate.css') }} " rel="stylesheet">
-    <link href="{{ asset('assets/css/lr-new/entry.css') }} " rel="stylesheet">
+    <link href="{{ asset('css/lr-new/entry.css') }} " rel="stylesheet">
     <link href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('assets/img/logo.jpg') }}" type="image/x-icon">
 

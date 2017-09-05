@@ -3,23 +3,35 @@
 @section('title', 'Profile | LostRib')
 
 @section('content')
+
+
     <section class="profile-area">
         <div class="container lr-container">
             <div class="row">
                 <div class="col-md-8 profile-area--info">
                     <div class="profile-section profile-section--summary">
-                        <h1 class="profile-section__title">Aisha Majekodunmi<span class="profile-section__location ml--10">Lekki, Lagos</span></h1>
+                        <h1 class="profile-section__title">{{ $details['user']->first_name }}
+                            , {{ $details['user']->last_name }}<span
+                                    class="profile-section__location ml--10">{{ $details['user']->city }}
+                                , {{ $details['user']->state }}</span></h1>
                         <div class="row profile-summary">
                             <div class="col-md-4 profile-summary--img">
                                 <div class="profile-summary__profile-pic">
-                                    <img src="{{asset('assets/build/img/profile_pic.jpg')}}" alt="" class="img-responsive">
+                                    <img src="{{ asset(' assets/img/profile_pic.jpg')}}" alt=""
+                                         class="img-responsive">
                                 </div>
                             </div>
                             <div class="col-md-8 profile-summary--details">
                                 <h3 class="profile-summary__gender">
-                                    Female, 26
-                                    <span class="profile-summary__height ml--10">176cm</span>
-                                    <span class="text-right profile-summary__status"><strong>What's on your mind?</strong></span>
+                                    @if($details['user']->gender == 'm')
+                                        Male,
+                                    @else
+                                        Female,
+                                    @endif
+                                        26
+                                    <span class="profile-summary__height ml--10">{{ $details['user']->height }}cm</span>
+                                    <span class="text-right profile-summary__status"><strong>What's on your
+                                            mind?</strong></span>
                                 </h3>
                                 <div class="profile-summary__info">
                                     <p>Ijebu, Ogun State</p>
@@ -51,7 +63,12 @@
                             <div class="personalinfo__icon"></div>
                             <div class="personalinfo__content">
                                 <p>
-                                    I am a down to earth person who rejoices in laughing and making people laugh. I believe in LIVE and Let LIVE philosphy. Acadamically I have done By mcom from reputed institute .I am currently working as Sr. Accounts officer in one of biggest French MNC and in the past I have worked with companies like Crew Bos an Riello Group i belong to well educated family and My family consists of my mother and my elder brother. Father expired in 2010 and was retired as More...
+                                    I am a down to earth person who rejoices in laughing and making people laugh. I
+                                    believe in LIVE and Let LIVE philosphy. Acadamically I have done By mcom from
+                                    reputed institute .I am currently working as Sr. Accounts officer in one of biggest
+                                    French MNC and in the past I have worked with companies like Crew Bos an Riello
+                                    Group i belong to well educated family and My family consists of my mother and my
+                                    elder brother. Father expired in 2010 and was retired as More...
                                 </p>
                             </div>
                         </div>
