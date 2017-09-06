@@ -1,0 +1,60 @@
+// Colors //
+
+// Pallete
+$lr-darkrose      : #b34376;
+//$lr-aquamarine  : #38c7da;
+$lr-darkskyblue   : #52c9d8;
+$lr-mediumpink    : #f26aa8;
+$lr-lightblue     : #e2f6f9;
+$lr-lightgrey     : #f5f5f5;
+$lr-brownishpink  : #d19595;
+$lr-seablue       : #358a96;
+$white            : #fff;
+
+// text & outline
+$lr-default-color: #848484;
+$lr-text-headline-color: #868686;
+$lr-text-bold-color: #848484;
+$lr-link-color: $lr-darkskyblue;
+$lr-link-hover-color: darken($lr-darkskyblue, 10%);
+$lr-nav-link-color: #989dac;
+
+//border
+$lr-border-color: darken($lr-nav-link-color, 10%);
+$lr-light-border-color: #ccd1d9;
+
+//buttons
+$btn-types: (
+        blue: $lr-darkskyblue,
+        pink: $lr-mediumpink,
+        grey: #e5e5e5
+) !default;
+
+$color-var : (
+        text: (
+                blue: $lr-darkskyblue,
+                pink: $lr-mediumpink,
+                grey: #e5e5e5
+        ),
+        btn: (
+                blue: $lr-darkskyblue,
+                pink: $lr-mediumpink,
+                grey: #e5e5e5
+        )
+) !default;
+
+$lr-active: #9a9a9a; //change this
+$lr-disabled: #bbbbbb;
+
+// Backgrounds & fills
+
+// font
+$lr-common-font: 'AvenirNext', sans-serif;
+
+// breakpoints
+$breakpoints: (
+  'tiny': 480px,
+  'small': 720px,
+  'medium': 960px,
+  'large': 1024px
+);

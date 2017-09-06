@@ -13,11 +13,12 @@
 
     {{--<title>Home | LostRib</title>--}}
     <title>@yield('page_title')</title>
+
+
     <link href="{{ asset('assets/css/bootstrap.min.css') }} " rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/animate.css') }} " rel="stylesheet">
+    <link href="{{ asset('css/lr-new/entry.css') }} " rel="stylesheet">
     <link href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('assets/img/logo.jpg') }}" type="image/x-icon">
 
     {{--  extra css files to be loaded for a specific page  --}}
@@ -26,81 +27,67 @@
 </head>
 
 <body>
+
 <!--Top navbar -->
-<section id="navbar">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+<section class="global-header">
+    <nav class="global-nav global-nav--primary">
+        <div class="navbar"> <!--bootstrap-->
+            <div class="container lr-container">
+                <div class="global-nav__left navbar-header">
+                    <a href="" class="global-nav__logo navbar-brand">
+                        <img class="img-responsive" src="{{asset('assets/img/mainlogo.png')}}">
+                    </a>
+                    <!--Mobile menu toggle-->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lr-main-menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="global-nav__right collapse navbar-collapse" id="lr-main-menu">
+                    <ul class="global-nav__menu nav navbar-nav navbar-right">
+                        <li class="global-nav__menu-item"><a href="">Matches</a></li>
+                        <li class="global-nav__menu-item"><a href="">Daily Matches</a></li>
+                        <li class="global-nav__menu-item"><a href="">Premium</a></li>
+                        <li class="global-nav__menu-item"><a href="">Upgrade</a></li>
+                        <li class="global-nav__menu-item"><a href="">Help</a></li>
+                        <li class="global-nav__menu-divider"></li>
+                        <li class="global-nav__menu-item global-nav__menu-item--blue"><a href="">My Account</a></li>
+                    </ul>
 
-                </button>
-                <a class="navbar-brand" href="#"><img width="122px" class="img-responsive"
-                                                      src="{{ asset('assets/img/mainlogo.png') }}"></a>
+                </div><!-- /.navbar-collapse -->
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class=""><a href="#">Matches</a></li>
-                    <li class=""><a href="#">Daily Matches</a></li>
-                    <li class=""><a href="#">Premium</a></li>
-                    <li class=""><a href="#">Upgrade</a></li>
-                    <li class=""><a href="#">Help</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div>
     </nav>
-    <!--Top navbar -->
-
-    <!-- second navbar -->
-    <nav class="secondNav">
-        <ul>
-            <li>
-            <span>
-                Over 1,200,203 genuine <img width="25.4" class="img-responsive img-circle" src="{{ asset('assets/img/nija.jpg') }}"> users since 2006</span>
-            </li>
-            <li class="new_user text-center">
-                <span class="new_user_name">
-                YESIMAMA<p style="font-size: 10px;">just joined</p>
-                </span>
-            </li>
-            <li class="new_user text-center">
-                <span class="new_user_name">
-                RECENT ACTIVITIES<p style="font-size: 10px;">In the last one hour</p>
-                </span>
-            </li>
-            <li>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-                         aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                        1392 Messages Sent
+    <nav class="global-nav global-nav--secondary">
+        <div class="container lr-container">
+            <ul class="global-nav-info grid--flex">
+                <li class="global-nav-info__item global-nav-info__item--usercount">
+                    <span>Over 1,200,203 genuine users since 2006</span>
+                </li>
+                <li class="global-nav-info__item global-nav-info__item--newuser text-center">
+                    <span class="new_user_name">
+                        YESIMAMA<p style="font-size: 10px;" class="mb--0">just joined</p>
+                    </span>
+                </li>
+                <li class="global-nav-info__item global-nav-info__item--recent">
+                    <div class="grid--flex">
+                        <span class="new_user_name">
+                            RECENT ACTIVITIES<p style="font-size: 10px;" class="mb--0">In the last one hour</p>
+                        </span>
+                        <div class="global-nav-progress global-nav-progress--green">
+                            <span class=""></span>
+                            1392 Messages Sent
+                        </div>
+                        <div class="global-nav-progress global-nav-progress--pink">1392 Profile Views</div>
+                        <div class="global-nav-progress global-nav-progress--gold">1392 Searches</div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-purple" role="progressbar" aria-valuenow="40"
-                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                        1392 Profile Views
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-lime" role="progressbar" aria-valuenow="40"
-                         aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                        1392 Searches
-                    </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <!-- second navbar -->
 </section>
 
 

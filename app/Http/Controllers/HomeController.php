@@ -33,11 +33,11 @@ class HomeController extends Controller
     public function viewProfile()
     {
         $user = Auth::user();
-        
+
         $notifications = $user->notifications();
 
         $interests = $user->load('interestShownIn')->load('interestShownFrom');
-        return $interests;
+        //return $interests;
         $interests = [
             'interest_from' => $user->interestShownFrom->where('status', '=', '0'),
             'interested_in' => $user->interestShownIn->where('status', '=', '0')
@@ -48,13 +48,17 @@ class HomeController extends Controller
 
         $matches = 'get matches';
 
-        return [
-                'user' => 'a',//$user,
+        $details =
+            [
+                'user' => $user,
                 'notifications' => $notifications,
                 'interests' => $interests,
                 'transactions' => $transactions,
                 'matches' => $matches
             ];
+
+
+        return view('profile.profile', compact('details'));
     }
 
     public function viewDashboard()

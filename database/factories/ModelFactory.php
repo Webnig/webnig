@@ -16,7 +16,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'first_name' => $faker->name,
+        'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
         'password' => bcrypt('secret'),
@@ -26,9 +26,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'gender' => $faker->randomElement(['m','f']),
         'original_image' => $faker->url,
         'blurred_image' => $faker->url,
-        'religion' => $faker->streetName,
+        'religion' => $faker->company,
         'state_of_origin' => $faker->city,
-        'genotype' => $faker->randomLetter,
+        'genotype' => $faker->randomElement(['AA', 'AS', 'SS']),
         'height' => $faker->randomNumber(3),
         'address' => $faker->streetAddress,
         'city' => $faker->city,
