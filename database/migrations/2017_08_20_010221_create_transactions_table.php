@@ -23,9 +23,9 @@ class CreateTransactionsTable extends Migration
             $table->string('auth_code');
             $table->timestamps();
         });
-	Schema::table('transactions', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-        });
+	/*Schema::table('transactions', function (Blueprint $table) {
+            //$table->foreign('user_id')->references('id')->on('users');
+        });*/
     }
 
     /**
