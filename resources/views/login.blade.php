@@ -22,12 +22,12 @@
             <div class="login-board">
                 <div class="login-socials">
                     <div class="social">
-                        <a href="#" class="social-btn large facebook">
-                            <i class="fa fa-facebook fa-2x  icon"></i> Login with Facebook</a>
-                        <a href="#" class="social-btn large twitter">
-                            <i class="fa fa-twitter fa-2x  icon"></i>Login with Twitter</a>
-                        <a href="#" class="social-btn large google">
-                            <i class="fa fa-google-plus fa-2x  icon"></i>Login with Google+</a>
+                        <a href="{{ route('facebook_login') }}" class="social-btn large facebook">
+                            <i class="fa fa-facebook fa-2x icon"></i> Login with Facebook</a>
+                        <a href="{{ route('twitter_login') }}" class="social-btn large twitter">
+                            <i class="fa fa-twitter fa-2x icon"></i>Login with Twitter</a>
+                        <a href="{{ route('google_plus_login') }}" class="social-btn large google">
+                            <i class="fa fa-google-plus fa-2x icon"></i>Login with Google+</a>
                     </div>
                 </div>
                 <div class="vertical-divider">
@@ -35,15 +35,23 @@
                 </div>
                 <div class="login-sign-in manual">
                     <p>Sign in manually</p>
-                    <form action="" name="login-form" class="login-form">
+                    <form action="{{ route('process_login') }}" name="login-form" method="POST" class="login-form">
+                        {{ csrf_field() }}
                         <div class="login-input">
-                            <label for="username" class="hidden">Username or email</label>
-                            <input type="text" name="username" placeholder="Username or email">
+                            <label for="username" class="hidden">Email</label>
+                            <input type="email" name="email" placeholder="Email" required="required">
                         </div>
                         <div class="login-input">
                             <label for="password" class="hidden">Password</label>
-                            <input type="password" name="password" placeholder="Password">
+                            <input type="password" name="password" placeholder="Password" required="required">
                         </div>
+
+                        <div class="alert alert-danger text-center">
+                            @foreach($errors->all() as $error)
+                                {{ $error }}
+                            @endforeach
+                        </div>
+
                         <div class="login-control">
                             <div class="remember-me">
                                 <input type="checkbox" id="checkbox" name="" class="hidden">
@@ -57,8 +65,8 @@
                         </div>
                     </form>
                     <div class="links">
-                        <a href="#" class="register">Register now</a>
-                        <a href="#">Forgot password?</a>
+                        <a href="{{ route('register') }}" class="register">Register now</a>
+                        <a href="{{ route('forgot_password') }}">Forgot password?</a>
                     </div>
                 </div>
             </div>

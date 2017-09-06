@@ -17,8 +17,17 @@ Route::get('/', 'Controller@index')->name('index_page');
 //login route to view login page
 Route::get('/login', 'Auth\LoginController@index')->name('login');
 
-//process login request
 Route::post('/login', 'Auth\LoginController@login')->name('process_login');
+
+Route::get('/login/channel/facebook', function(){ return ''; })->name('facebook_login');
+
+Route::get('/login/channel/twitter', function(){ return ''; })->name('twitter_login');
+
+Route::get('/login/channel/google', function(){ return ''; })->name('google_plus_login');
+
+Route::get('/password/forgot', function(){
+    return '';
+})->name('forgot_password');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
