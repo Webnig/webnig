@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Helper;
 use App\Interest;
 use App\User;
 use App\Notification;
@@ -40,6 +41,7 @@ class HomeController extends Controller
         //return $interests;
         $interests = [
             'interest_from' => $user->interestShownFrom->where('status', '=', '0'),
+
             'interested_in' => $user->interestShownIn->where('status', '=', '0')
         ];
 
@@ -64,6 +66,30 @@ class HomeController extends Controller
     public function viewDashboard()
     {
         $user = Auth::user();
-        return view('dashboard', compact('details'));
+
+        $user->gender = ($user->gender == 'm') ? 'Male' : 'Female';
+        $user->age = Helper::getUserAge($user->date_of_birth);
+
+
+
+        $monthAgo = date('Y-m-d H:i:s', strtotime('1 month ago'));
+        $notification = $user->notifications->where('created_at', '>=', $monthAgo);
+
+        $profile_views = $notification->where('type', '=', Notification::$PROFILE_VIEW)->count();
+        $admired = $user->outGoingNotifications->where('created_at', '>=', $monthAgo)
+            ->where('type', '=', Notification::$ADMIRE_MADE)->count();
+
+        $admiredBy = $notification->where('type', '=', Notification::$ADMIRE_FROM)->count();
+
+        $matches = $notification->where('type', '=', Notification::$NEW_MATCHES)->count();
+
+        var_dump($profile_views);
+        return view('dashboard', compact([
+            'profile_views',
+            'admired',
+            'admiredBy',
+            'matches',
+            'user',
+        ]));
     }
 }

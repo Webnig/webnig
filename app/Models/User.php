@@ -40,6 +40,10 @@ class User extends Authenticatable
         return $this->hasMany(Notification::class);
     }
 
+    public function outGoingNotifications(){
+        return $this->hasMany(Notification::class, 'source_id');
+    }
+
     public function transactions()
     {
         return $this->hasMany(Transaction::class);
