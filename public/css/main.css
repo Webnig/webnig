@@ -2729,7 +2729,7 @@ body {
     font-weight: 500; } }
 
 @media (min-width: 912px) {
-  .login-form input[type="text"],
+  .login-form input[type="email"],
   .login-form input[type="password"] {
     display: inline-block;
     width: 300px;

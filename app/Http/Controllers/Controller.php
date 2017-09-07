@@ -14,8 +14,6 @@ class Controller extends BaseController
 
     public function index()
     {
-        $details = User::all();
-        return $details;
-        #return view('welcome', []);
+        return view('homepage');
     }
 }

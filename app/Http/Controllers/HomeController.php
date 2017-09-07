@@ -67,9 +67,15 @@ class HomeController extends Controller
     {
         $user = Auth::user();
 
-        $user->gender = ($user->gender == 'm') ? 'Male' : 'Female';
+        $user->gender = Helper::getReadableGender($user->gender);
         $user->age = Helper::getUserAge($user->date_of_birth);
 
+
+        $randomUsers = User::query()->inRandomOrder()->take(3)->get()->each(function ($item, $key) {
+            $item->mat_id = Helper::hashMatIdString($item->mat_id);
+            $item->age = Helper::getUserAge($item->date_of_birth);
+            $item->gender = Helper::getReadableGender($item->gender);
+        });
 
 
         $monthAgo = date('Y-m-d H:i:s', strtotime('1 month ago'));
@@ -83,13 +89,13 @@ class HomeController extends Controller
 
         $matches = $notification->where('type', '=', Notification::$NEW_MATCHES)->count();
 
-        var_dump($profile_views);
         return view('dashboard', compact([
             'profile_views',
             'admired',
             'admiredBy',
             'matches',
             'user',
+            'randomUsers'
         ]));
     }
 }

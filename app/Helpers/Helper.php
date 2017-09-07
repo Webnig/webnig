@@ -18,4 +18,16 @@ class Helper
 
         return intval($timeStampDiff/(60 * 60 * 24 * 365));
     }
+
+    public static function hashMatIdString($matId)
+    {
+        $matId = strval($matId);
+
+        return substr_replace($matId, "###", -3);
+    }
+
+    public static function getReadableGender($genderLetter)
+    {
+       return ($genderLetter == 'm') ? 'Male' : 'Female';
+    }
 }

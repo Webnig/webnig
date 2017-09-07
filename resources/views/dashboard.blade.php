@@ -86,7 +86,7 @@
                             </div>
                             <div class="extra-details">
                                 <div class="mat-id">
-                                    <small>Mat ID: 133609####</small>
+                                    <small>Mat ID: {{ $user->mat_id }}</small>
                                 </div>
                                 <div class="info">
                                     <p>{{ $user->occupation }}</p>
@@ -318,46 +318,21 @@
                                 <h2>Trending Recommendations</h2>
                             </header>
                             <div class="collection">
-                                <div class="match large">
-                                    <div class="match__img">
-                                        <img src="{{ asset('images/bitmap@3x.jpg') }}"
-                                             class="img img-responsive img-circle">
+                                @foreach($randomUsers as $randomUser)
+                                    <div class="match large">
+                                        <div class="match__img">
+                                            <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                                 class="img img-responsive img-circle">
+                                        </div>
+                                        <div class="match__content">
+                                            <p>Mat ID: {{ $randomUser->mat_id }}</p>
+                                            <p>{{ $randomUser->gender. ', '. $randomUser->age }}</p>
+                                            <p>{{ $randomUser->religion .' | '. $randomUser->state }}</p>
+                                            <p>I am attracted to so many things …</p>
+                                        </div>
+                                        <button class="match__button">View Profile</button>
                                     </div>
-                                    <div class="match__content">
-                                        <p>Mat ID: 133609####</p>
-                                        <p>Male, 26</p>
-                                        <p>Muslim | Kano</p>
-                                        <p>I am attracted to so many things …</p>
-                                    </div>
-                                    <button class="match__button">View Profile</button>
-                                </div>
-                                <div class="match large">
-                                    <div class="match__img">
-                                        <img src="{{ asset('images/bitmap@3x.jpg') }}"
-                                             class="img img-responsive img-circle">
-                                    </div>
-                                    <div class="match__content">
-                                        <p>Mat ID: 133609####</p>
-                                        <p>Male, 26</p>
-                                        <p>Muslim | Kano</p>
-                                        <p>I am attracted to so many things …</p>
-                                    </div>
-                                    <button class="match__button">View Profile</button>
-                                </div>
-                                <div class="match large">
-                                    <div class="match__img">
-                                        <img src="{{ asset('images/bitmap@3x.jpg') }}"
-                                             class="img img-responsive img-circle">
-                                    </div>
-                                    <div class="match__content">
-                                        <p>Mat ID: 133609####</p>
-                                        <p>Male, 26</p>
-                                        <p>Muslim | Kano</p>
-                                        <p>I am attracted to so many things …</p>
-                                    </div>
-                                    <button class="match__button">View Profile</button>
-
-                                </div>
+                                @endforeach
                             </div>
                             <div class="trend__controls">
                                 <div class="slider">
