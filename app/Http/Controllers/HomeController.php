@@ -89,13 +89,13 @@ class HomeController extends Controller
 
         $matches = $notification->where('type', '=', Notification::$NEW_MATCHES)->count();
 
-        return view('dashboard', compact([
+        return view('dashboard', compact(
             'profile_views',
             'admired',
             'admiredBy',
             'matches',
             'user',
             'randomUsers'
-        ]));
+        ));
     }
 }

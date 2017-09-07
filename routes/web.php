@@ -39,9 +39,7 @@ Route::post('/register', 'Auth\RegisterController@register')->name('process_regi
 
 
 Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
+    
     Route::get('/dashboard', 'HomeController@viewDashboard')->name('view_dashboard');
 
     Route::get('/profile', 'HomeController@viewProfile')->name('view_profile');

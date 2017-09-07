@@ -107,3 +107,13 @@ if (false) {
 
 /***/ })
 /******/ ]);
+
+
+
+////DAN PLEASE CHECK HERE FOR ATTEMPT TO ADD OWL CAROUSEL SLIDER
+/*
+$(document).ready(function(){
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });
+});*/
