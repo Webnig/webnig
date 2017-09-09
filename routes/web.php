@@ -12,6 +12,10 @@
 */
 use Illuminate\Support\Facades\Route;
 
+Route::get('/test', function(){
+    return view('photo');
+});
+
 Route::get('/', 'Controller@index')->name('index_page');
 
 //login route to view login page

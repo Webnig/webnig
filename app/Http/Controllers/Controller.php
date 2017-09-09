@@ -14,6 +14,8 @@ class Controller extends BaseController
 
     public function index()
     {
+        var_dump(User::query());
+        exit;
         return view('homepage');
     }
 }

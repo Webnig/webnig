@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <title>NewsLetter</title>
 </head>
 <body class="newsletter">
   <header>
     <div class="brand-logo">
-      <img src="images/logo-3x.png" alt="">
+      <img src="{{ asset('images/logo-3x.png') }}" alt="">
     </div>
   </header>
   <main>
@@ -20,7 +20,7 @@
             <h2>Interest Accepted!</h2>
             <p>Dear Yesimama (B1967453),</p>
            <div>
-              <img src="images/newsletter.jpg" class="img img-circle" alt="">
+              <img src="{{ asset('images/newsletter.jpg') }}" class="img img-circle" alt="">
            </div>
             <h2>Ankit (G268375)</h2>
             <ul class="interest-profile">
@@ -40,7 +40,7 @@
             <ul class="latest-activities">
               <li class="activity">
                 <div class="activity__image">
-                  <img class="img img-responsive" src="images/bitmap.jpg">
+                  <img class="img img-responsive" src="{{ asset('images/bitmap.jpg') }}">
                 </div>
                 <div class="activity__content">
                   <p><a href="#">Dele Asiwaju</a>, (34yrs, 178cm) accepted to view your Profile</p>
@@ -53,7 +53,7 @@
               </li>
               <li class="activity">
                 <div class="activity__image">
-                  <img class="img img-responsive" src="images/bitmap.jpg">
+                  <img class="img img-responsive" src="{{ asset('images/bitmap.jpg') }}">
                 </div>
                 <div class="activity__content">
                   <p><a href="#">Dele Asiwaju</a>, (34yrs, 178cm) accepted to view your Profile </p>
@@ -66,7 +66,7 @@
               </li>
               <li class="activity">
                 <div class="activity__image">
-                  <img class="img img-responsive" src="images/bitmap.jpg">
+                  <img class="img img-responsive" src="{{ asset('images/bitmap.jpg') }}">
                 </div>
                 <div class="activity__content">
                   <p><a href="#">Dele Asiwaju</a>, (34yrs, 178cm) accepted to view your Profile </p>
@@ -92,8 +92,8 @@
   <footer class="newsletter-footer">
     <div class="container tc">
       <p>
-         You are a BharatMatrimony.com member. This e-mail comes to you in accordance with BharatMatrimony.com's Privacy Policy.
-        Click here to unsubscribe. BharatMatrimony.com is not responsible for content other than its own and makes no warranties
+         You are a lostrib.com member. This e-mail comes to you in accordance with lostrib.com's Privacy Policy.
+        Click here to unsubscribe. lostrib.com is not responsible for content other than its own and makes no warranties
         or guarantees about the products or services that are advertised.
       </p>
       <div class="address">
