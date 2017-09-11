@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Profile page</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+  .more {
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .profile-page,
+  .profile-page .similar,
+  .profile-page .similar h2 {
+    color: #848484;
+  }
+
+  .profile-page .input {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .profile-page h2 {
+    color: #202020;
+  }
+
+  .profile-page h4 {
+    margin-bottom: 1em;
+  }
+
+  .profile-page h3 {
+    color: #52c9d8;
+  }
+
+  .you,
+  .matched-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .matched-partner,
+  .personal-info {
+    border-top: 4px solid #ccd1d9;
+    padding: 2em 0;
+  }
+
+  .profile-border {
+    border-right: 1px solid #ccd1d9;
+  }
+
+  .spacing-h {
+    margin: 1.5em 0;
+  }
+
+  .interest-accepted button {
+    background: #f26aa8;
+  }
+
+  .personal-info {
+    border-top-width: 1px;
+  }
+
+  .you,
+  .upgrade-link {
+    color: #f26aa8;
+  }
+
+  .upgrade-link {
+    text-decoration: underline;
+  }
+
+  .profile-page .lead {
+    font-size: 16px;
+  }
+
+  .profile-page .lead-lg {
+    font-size: 24px;
+    color: #52c9d8;
+  }
+
+  .profile-page .lead-lg small {
+    color: #f26aa8;
+  }
+
+  .hero-txt {
+    font-size: 2em;
+  }
+
+  .hero-txt small {
+    font-size: 0.6em;
+    color: #52c9d8;
+  }
+
+  p small {
+    font-size: 0.7em;
+  }
+
+  </style>
+</head>
+
+<body class="profile-page">
+  <header role="banner">
+    <nav role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 navbar">
+            <div class="col-md-2">
+              <div class="brand">
+                <a href="#">
+                <img src="images/logo-3x.png" alt="">
+              </a>
+              </div>
+            </div>
+            <div class="col-md-10">
+              <div class="nav">
+                <ul class="navbar">
+                  <li><a href="#" class="nav-link">Matches</a></li>
+                  <li><a href="#" class="nav-link">Daily Matches</a></li>
+                  <li><a href="#" class="nav-link">Premium</a></li>
+                  <li><a href="#" class="nav-link">Upgrading</a></li>
+                  <li><a href="#" class="nav-link">Help to the top</a></li>
+                  <li><a href="#" class="nav-link">
+                      <i class="fa fa-search"></i>
+                  </a></li>
+                  <li> <a href="" class="nav-link account">My Account</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mini-activities">
+      <div class="container">
+        <div class="row vertical-center horizontal-center">
+          <div class="col-md-4 text-center">
+            <span>Over 1,200,203 genuine <img src="images/flag.png" class="img img-responsive img-circle" alt=""> users since 2006</span>
+          </div>
+          <div class="col-md-1 br text-center">
+            <span>YESIMAMA</span>
+            <small>just joined</small>
+          </div>
+          <div class="col-md-7">
+            <div class="row vertical-center text-center">
+              <div class="col-md-3">
+                <span>RECENT ACTIVITIES</span>
+                <small>In the last one hour</small>
+              </div>
+              <div class="col-md-3">
+                <span class="l">1392 Messages Sent <span class="gr"></span></span>
+              </div>
+              <div class="col-md-3">
+                <span class="l">1392 Messages Sent <span class="pl"></span></span>
+              </div>
+              <div class="col-md-3">
+                <span class="l">1392 Messages Sent <span class="dl"></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 profile-border">
+          <div class="row main-spacer-lg spacing-h">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <small>Mat ID: 133609####</small>
+                </div>
+                <div class="col-md-12">
+                  <p class="hero-txt">
+                    Aisha Majekodunmi
+                    <small>Lekki, Lagos</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-5">
+                  <img src="images/bmm.png" class="img img-responsive" alt="">
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="col-md-8">
+                          <p class="lead lead-lg">
+                            Female, 26 <small class="height">175cm</small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="lead">Ijebu, Ogun State</p>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="lead">Muslim</p>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="lead">
+                        University of Lagos
+                      </p>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="lead">
+                          Front Desk Officer
+                      </p>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="lead">N45,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12"></div>
+          </div>
+          <div class="row personal-info">
+            <article>
+              <div class="col-md-12">
+                <header class="spacing-h">
+                  <h2>Personal Information</h2>
+                </header>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>The Need to Know</h3>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <img src="" alt="">
+                      </div>
+                      <div class="col-md-10">
+                        <p>I am a down to earth person who rejoices in laughing and making people laugh. I believe in LIVE and Let LIVE philosphy. Acadamically I have done By mcom from reputed institute .I am currently working as Sr. Accounts officer in one of biggest French MNC and in the past I have worked with companies like Crew Bos an Riello Group i belong to well educated family and My family consists of my mother and my elder brother. Father expired in 2010 and was retired as <a href="#" class="more">More...</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row main-spacer-lg">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col">
+                        <h4>Professional Information</h4>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Education</p>
+                          </div>
+                          <div class="col">
+                            <p>MCom</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>College / Institution</p>
+                          </div>
+                          <div class="col">
+                            <p>Distancwe</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Employed in </p>
+                          </div>
+                          <div class="col">
+                            <p>Private Sector</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Occupation</p>
+                          </div>
+                          <div class="col">
+                            <p>Officer</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Occupation in Detail</p>
+                          </div>
+                          <div class="col">
+                            <p>Working as an senior account officer</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Annual Income </p>
+                          </div>
+                          <div class="col">
+                            <p> Rs. 5.00 lakhs</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- professional info -->
+                <div class="row main-spacer-lg">
+                  <!-- <div class="col-md-1"></div> -->
+                  <div class="col-md-2"></div>
+                  <div class="col text-center">
+                    <p class="lead">Upgrade your membership to unlock contact details</p>
+                    <a href="#" class="upgrade-link">Upgrade your account now</a>
+                  </div>
+                </div>
+                <div class="row main-spacer-lg">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col">
+                        <h4>Religious Information</h4>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <p>Religion</p>
+                          </div>
+                          <div class="col">
+                            <p>Jain - Digambar</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <p>Caste / Sub</p>
+                          </div>
+                          <div class="col">
+                            <p>Caste (Caste No Bar) / Not Specified</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <p>Gothram</p>
+                          </div>
+                          <div class="col">
+                            <p>Not Specified | Request</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <p>Zodiac</p>
+                          </div>
+                          <div class="col">
+                            <p>Scorpio</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <p>Star / Raasi</p>
+                          </div>
+                          <div class="col">
+                            <p> Anuradha / Vrishchik (Scorpio)</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <p>Dosh </p>
+                          </div>
+                          <div class="col">
+                            <p> No</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- religious info -->
+              </div>
+            </article>
+          </div>
+          <!-- end of personal info -->
+          <div class="row matched-partner">
+            <div class="col-md-12">
+              <h2>His Partner Preferences</h2>
+            </div>
+            <div class="col-md-12 main-spacer">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <img src="images/you.png" class="img img-responsive" alt="">
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <p class="you">You</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col text-center">
+                  <p class="lead">Your profile matches with</p>
+                  <p></p>
+                  <p class="lead">of Bode Peter's preferences!</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <img src="images/bode.png" class="img img-responsive" alt="">
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <p class="matched-name">Bode Peter</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 spacing-h">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Religion</p>
+                    </div>
+                    <div class="col">
+                      <p>Jain - Digambar</p>
+                    </div>
+                    <div class="col-md-3 input">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Caste / Sub</p>
+                    </div>
+                    <div class="col">
+                      <p>Caste (Caste No Bar) / Not Specified</p>
+                    </div>
+                    <div class="col-md-3 input">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Gothram</p>
+                    </div>
+                    <div class="col">
+                      <p>Not Specified | Request</p>
+                    </div>
+                    <div class="col-md-3 input">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Zodiac</p>
+                    </div>
+                    <div class="col">
+                      <p>Scorpio</p>
+                    </div>
+                    <div class="col-md-3 input">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Star / Raasi</p>
+                    </div>
+                    <div class="col">
+                      <p> Anuradha / Vrishchik (Scorpio)</p>
+                    </div>
+                    <div class="col-md-3 input">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Dosh </p>
+                    </div>
+                    <div class="col">
+                      <p> No</p>
+                    </div>
+                    <div class="col-md-3 input">
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+            </div>
+          </div>
+          <!-- end of partner preferences -->
+        </div>
+        <div class="col-md-5 similar">
+          <div class="row">
+            <div class="col-md-12">
+              <header class="text-center main-spacer-lg">
+                <h2>View Similar Profiles</h2>
+                <p>We found <a href="">12</a> you might be interested in</p>
+              </header>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="item">
+                    <div class="row vertical-center">
+                      <div class="col-md-7">
+                        <img src="images/bitmap@2x.jpg" class="img img-responsive img-circle">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="text-center content">
+                          <p>Mat ID: 133609####</p>
+                          <p>Male, 26</p>
+                          <p>Muslim | Kano</p>
+                          <p>I am attracted to so many things …</p>
+                        </div>
+                        <button class="match__button">View Profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="item">
+                    <div class="row vertical-center">
+                      <div class="col-md-7">
+                        <img src="images/bitmap@2x.jpg" class="img img-responsive img-circle">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="text-center content">
+                          <p>Mat ID: 133609####</p>
+                          <p>Male, 26</p>
+                          <p>Muslim | Kano</p>
+                          <p>I am attracted to so many things …</p>
+                        </div>
+                        <button class="match__button">View Profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="item">
+                    <div class="row vertical-center">
+                      <div class="col-md-7">
+                        <img src="images/bitmap@2x.jpg" class="img img-responsive img-circle">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="text-center content">
+                          <p>Mat ID: 133609####</p>
+                          <p>Male, 26</p>
+                          <p>Muslim | Kano</p>
+                          <p>I am attracted to so many things …</p>
+                        </div>
+                        <button class="match__button">View Profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="item">
+                    <div class="row vertical-center">
+                      <div class="col-md-7">
+                        <img src="images/bitmap@2x.jpg" class="img img-responsive img-circle">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="text-center content">
+                          <p>Mat ID: 133609####</p>
+                          <p>Male, 26</p>
+                          <p>Muslim | Kano</p>
+                          <p>I am attracted to so many things …</p>
+                        </div>
+                        <button class="match__button">View Profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row main-spacer-lg interest-accepted">
+            <div class="col text-center">
+              <h2>Interest Accepted</h2>
+            </div>
+            <div class="col-md-12 horizontal-center">
+              <div class="item">
+                <div class="row vertical-center">
+                  <div class="col-md-7">
+                    <img src="images/bitmap@2x.jpg" class="img img-responsive img-circle">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="text-center content">
+                      <p>Mat ID: 133609####</p>
+                      <p>Male, 26</p>
+                      <p>Muslim | Kano</p>
+                      <p>I am attracted to so many things …</p>
+                    </div>
+                    <button class="match__button">View Profile</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row horizontal-center">
+                <div class="col-md-8">
+                  <div class="spacing-h">
+                    <img src="images/ads.jpg" class="img img-responsive" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 horizontal-center">
+              <div class="item">
+                <div class="row vertical-center">
+                  <div class="col-md-7">
+                    <img src="images/bitmap@2x.jpg" class="img img-responsive img-circle">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="text-center content">
+                      <p>Mat ID: 133609####</p>
+                      <p>Male, 26</p>
+                      <p>Muslim | Kano</p>
+                      <p>I am attracted to so many things …</p>
+                    </div>
+                    <button class="match__button">View Profile</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

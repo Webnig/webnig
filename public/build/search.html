@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/site.css"> -->
+  <title>Search</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</head>
+
+<body class="searches-page">
+  <header role="banner">
+    <nav role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 navbar">
+            <div class="col-md-2">
+              <div class="brand">
+                <a href="#">
+                <img src="images/logo-3x.png" alt="">
+              </a>
+              </div>
+            </div>
+            <div class="col-md-10">
+              <div class="nav">
+                <ul class="navbar">
+                  <li><a href="#" class="nav-link">Matches</a></li>
+                  <li><a href="#" class="nav-link">Daily Matches</a></li>
+                  <li><a href="#" class="nav-link">Premium</a></li>
+                  <li><a href="#" class="nav-link">Upgrading</a></li>
+                  <li><a href="#" class="nav-link">Help to the top</a></li>
+                  <li><a href="#" class="nav-link"><i class="fa fa-search "></i></a
+                  <li> <a href="" class="nav-link account">My Account</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mini-activities">
+      <div class="container">
+        <div class="row vertical-center horizontal-center">
+          <div class="col-md-4 text-center">
+            <span>Over 1,200,203 genuine <img src="images/flag.png" class="img img-responsive img-circle" alt=""> users since 2006</span>
+          </div>
+          <div class="col-md-1 br text-center">
+            <span>YESIMAMA</span>
+            <small>just joined</small>
+          </div>
+          <div class="col-md-7">
+            <div class="row vertical-center text-center">
+              <div class="col-md-3">
+                <span>RECENT ACTIVITIES</span>
+                <small>In the last one hour</small>
+              </div>
+              <div class="col-md-3">
+                <span class="l">1392 Messages Sent <span class="gr"></span></span>
+              </div>
+              <div class="col-md-3">
+                <span class="l">1392 Messages Sent <span class="pl"></span></span>
+              </div>
+              <div class="col-md-3">
+                <span class="l">1392 Messages Sent <span class="dl"></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <section class="searches">
+            <ul class="nav nav-tabs tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="regular-search-tab" data-toggle="tab" href="#regular-search" role="tab" aria-controls="regular-search" arial-expanded="true">Regular Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " id="advance-search-tab" data-toggle="tab" href="#advance-search" aria-controls="advance-search-tab" role="tab">Advanced Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " data-toggle="tab" href="#keyword-search" role="tab" aria-controls="true">
+      Keyword Search </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade active show  regular-search" id="regular-search" role="tabpanel" aria-labelledby="regular-search-tab">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form action="">
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Age</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <div class="form-inline inline">
+                                <select name="" id="" class="form-control">
+                                  <option value="">18</option>
+                                </select>
+                                <span>to</span>
+                                <select name="" id="" class="form-control">
+                                  <option value="">49</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Height</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-10">
+                              <div class="form-inline inline">
+                                <select name="" id="" class="form-control">
+                                  <option value="">5ft 7inch - 170cm</option>
+                                </select>
+                                <span>to</span>
+                                <select name="" id="" class="form-control">
+                                  <option value="">5ft 7inch - 170cm</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Marital status</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Any
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Never Married
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Widowed
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Awaiting Divorce
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Religion</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                  <option value="">Freethinker</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Mother Language</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                  <option value="">Yoruba</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>State of Origin</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                  <option value="">Edo</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Education</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                  <option value="">B.sc.</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Show</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1"> With Photo
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2"> with Horoscope
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3"> Premium Members
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3"> Online
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row vertical-center">
+                        <div class="col-md-3">
+                          <p>Don't Show</p>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Ignored
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Contacted
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Viewed
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Shortlisted
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                      <div class="save-search">
+                  <h5>Save Search</h5>
+                  <div class=" bbb">
+                    <label class="form-check-label">
+                      Save Search as
+                      <input class="form-check-input form-control" type="text" id="inlineCheckbox3" value="">
+                    </label>
+                    <div>OR</div>
+                    <label class="form-check-label">
+                      Overwrite existing
+                      <select name="" id="" class="form-control">
+                        <option value="select from previous">
+                          select from previous
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="submit">
+                  <input type="submit" form="regular-search" class="button">
+                </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of regular search -->
+              <div class="tab-pane fade keyword-search" id="keyword-search" role="tabpanel" aria-labelledby="keyword-search-tab">
+                <p>
+                  Find profiles based on keywords. If you're looking for very specific results, try Keyword option in <a href="">Advanced Search.</a>
+                </p>
+                <div class="keyword-search__input">
+                  <form action="">
+                    <input type="text" placeholder="Enter MatID">
+                    <button class="button" type="submit">Search</button>
+                    <label for="">
+                      <input type="checkbox"> Show Profiles with Photos
+                    </label>
+                  </form>
+                </div>
+                <div class="example">
+                  <p>
+                    Example 1: hindu, agarwal, f, 25 - 30 Yrs, delhi
+                  </p>
+                  <p>
+                    Example 2: iyer, female, 25 Yrs, good looking
+                  </p>
+                </div>
+                <p style="border-top: 1px solid #ccd1d9; padding-top: 2em">Note: Please note that due to privacy reasons name search facility is not available in keyword search.</p>
+              </div>
+              <!-- end of keyword search tab -->
+              <div class="tab-pane fade advance-search" id="advance-search" role="tabpanel" aria-labelledby="advance-search-tab">
+                <div id="accordion" role="tablist">
+                  <div class="card">
+                    <div class="card-header as-header" role="tab" id="headingOne">
+                      <h5 class="mb-0">
+                        Education / Occupation / Annual Income Details
+                        <a data-toggle="collapse" href="#education" aria-expanded="false" aria-controls="collapseOne">
+                          <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </h5>
+                    </div>
+                    <div id="education" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header as-header" role="tab" id="headingOne">
+                      <h5 class="mb-0">
+                         Location Details
+                        <a data-toggle="collapse" href="#location" aria-expanded="false" aria-controls="collapseOne">
+                             <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </h5>
+                    </div>
+                    <div id="location" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header as-header" role="tab" id="headingOne">
+                      <h5 class="mb-0">
+                        Habits &amp; Hobbies
+                        <a data-toggle="collapse" href="#hobbie" aria-expanded="false" aria-controls="collapseOne">
+                              <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </h5>
+                    </div>
+                    <div id="hobbie" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header as-header" role="tab" id="headingOne">
+                      <h5 class="mb-0">
+                         Background, Personality &amp; Interests
+                        <a data-toggle="collapse" href="#background" aria-expanded="false" aria-controls="background">
+                             <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </h5>
+                    </div>
+                    <div id="background" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        <div class="background-checkbox">
+                          <div class="form-inline custom-form-inline">
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Affluents
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Cheerful
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Spiritually inclined
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Warm &amp; Friendly
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="background-checkbox">
+                          <div class="form-inline custom-form-inline">
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Cares for pets
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Enjoys music
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Enjoys food
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Likes reading
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of accordion -->
+                  <div class="aaa">
+                    <h4>Search using Keywords</h4>
+                    <p>Enter keywords within quotes and for more than one keyword use a comma separator between words. Example: "Good looking", "Well settled", etc. </p>
+                    <p>Keywords are searched against the profile description of a member.</p>
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1" class="sr-only">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="form-inline custom-form-inline">
+                    <p class="label">Show</p>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1"> With Photo
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2"> with Horoscope
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3"> Premium Members
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3"> Online
+                      </label>
+                    </div>
+                  </div>
+                  <!-- end of show profile -->
+                  <div class="form-inline custom-form-inline">
+                    <p class="label">Don't Show</p>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Ignored
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Contacted
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Viewed
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Shortlisted
+                      </label>
+                    </div>
+                  </div>
+                  <!-- end of don't show profile -->
+                </div>
+                <div class="save-search">
+                  <h5>Save Search</h5>
+                  <div class=" bbb">
+                    <label class="form-check-label">
+                      Save Search as
+                      <input class="form-check-input form-control" type="text" id="inlineCheckbox3" value="">
+                    </label>
+                    <div>OR</div>
+                    <label class="form-check-label">
+                      Overwrite existing
+                      <select name="" id="" class="form-control">
+                        <option value="select from previous">
+                          select from previous
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="submit">
+                  <input type="submit" form="regular-search" class="button">
+                </div>
+                <!-- end of advance search tab -->
+              </div>
+              <!-- end of advanced search tab -->
+          </section>
+          </div>
+          <div class="col-md-4">
+            <section class="search-by-id">
+              <header>
+                <h2>Search by ID</h2>
+              </header>
+              <form action="">
+                <div class="input">
+                  <label for="search-by-id" class="hidden">Enter MatID</label>
+                  <input type="search" id="search-by-id" placeholder="Enter MatID">
+                </div>
+                <button type="submit" class="button ">Search</button>
+              </form>
+              <div class="ads">
+                <img src="images/ads.jpg" class="img img-responsive" alt="">
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+  </main>
+  <!-- <script src="jquery-3.2.1.js"></script> -->
+  <!-- <script src="bootstrap.min.js"></script> -->
+  <script>
+  $(function() {
+    $('.nav-link a', '.tabs').click(function() {
+      $('.nav-link a', '.tabs').each(function(i, el) {
+        const $el = $(el);
+
+        console.log($el)
+
+        if ($el.hasClass('active')) $el.toggleClass('active')
+      })
+    });
+
+    $('h5 a', '.as-header').click(function() {
+      $('i', $(this)).toggleClass('fa-cherov-up fa-chevron-down')
+    });
+
+  })
+
+  </script>
+</body>
+
+</html>
