@@ -1,0 +1,75 @@
+.searches {
+    margin-top: 4em;
+    padding: 2em 0;
+}
+
+.searches-page .tabs li {
+    flex-basis: auto;
+    padding-bottom: 0;
+}
+
+.searches-page .tab-content {
+    margin-top: 2em;
+}
+
+.searches-page .card {
+    border-left: none;
+    border-right: none;
+}
+
+.as-header {
+    padding: 2em 0;
+    /* border-bottom: none; */
+    background: #fff;
+}
+
+.aaa {
+    margin-top: 2em;
+}
+
+.aaa input {
+    width: 80%;
+    color: #848484;
+}
+
+.custom-form-inline {
+    display: flex;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.custom-form-inline .label {
+    margin: 0;
+    flex-basis: 20%;
+}
+
+.custom-form-inline label {
+    /* width: 150px; */
+}
+
+
+.background-checkbox {
+    display: flex;
+    font-size: 1.1em;
+}
+
+.form-inline label {
+    justify-content: flex-start;
+}
+
+.background-checkbox label{
+    width: 159px;
+}
+
+.background-checkbox .custom-form-inline {
+    margin: 1em 0;
+}
+
+.save-search label {
+    display: block;
+    text-align: center;
+}
+
+.bbb {
+    display: flex;
+}

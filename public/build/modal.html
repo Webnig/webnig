@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Modal</title>
+</head>
+<body>
+  <button id="btn1">show Modal</button>
+  <div class="modal overlay">
+      <div class="modal-box">
+        <div class="modal-content">
+          <div class="modal-header">
+            <small>Mat ID: 133609####</small>
+            <p class="name">Aisha Majekodunmi <small>Lekki, Lagos</small></p>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body__image">
+              <img src="images/bmm.png" class="img img-responsive" alt="">
+            </div>
+            <div class="modal-body__detail">
+              <p>Female, 26 <small>176cm</small></p>
+              <p>Ijebu, Ogun State</p>
+              <p>Muslim</p>
+              <p>University of Lagos, Lagos</p>
+              <p>Front Desk Officer</p>
+              <p>N45,000</p>
+            </div>
+          </div>
+          <div class="modal-footer tc">
+            <p>You have accepted her interest</p>
+            <p>Call +23480123#### right away</p>
+            <a href="#">Upgrade</a>
+          </div>
+        </div>
+        <button id="btn" class="close">X</button>
+      </div>
+  </div>
+    <script>
+      var modal$ = document.querySelector('.modal');
+
+      function togglModal() {
+        modal$.classList.toggle('show');
+      }
+
+      document.querySelector('#btn1')
+          .addEventListener('click', togglModal, false);
+
+      document.querySelector('#btn')
+        .addEventListener('click', togglModal, false);
+    </script>
+</body>
+</html>
