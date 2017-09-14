@@ -17,7 +17,7 @@ class CreateSavedUserSearches extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('user_id')->unsigned()->nullable();
-            $table->json('search_parameters');
+            // $table->json('search_parameters');
         });
 	Schema::table('saved_user_searches', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');

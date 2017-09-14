@@ -19,7 +19,8 @@ class InterestsController extends Controller
         return $interest;
     }
     
-    public function saveInterest(){
+    public function saveInterest()
+    {
         $interest = new Interest();
         $interest->addInterest(request()->target_id);
     }
