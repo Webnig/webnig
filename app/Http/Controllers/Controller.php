@@ -14,8 +14,8 @@ class Controller extends BaseController
 
     public function index()
     {
-        // var_dump(User::query());
+        $users = User::where('id', '<=', '4')->get();
         // exit;
-        return view('homepage');
+        return view('homepage', compact('users'));
     }
 }

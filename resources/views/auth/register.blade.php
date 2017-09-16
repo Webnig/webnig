@@ -1,6 +1,32 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title')
+Register
+@endsection
+
+@section('body')
+
+<div class="container top_margin">
+	<div class="panel">
+		<div class="panel-body">
+			<form action="{{ route('process_registration') }}">
+				{{ csrf_field() }}
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" name="name" placeholder="Name" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" name="email" placeholder="E-mail Address" class="form-control">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+@endsection
+
+{{-- @section('body')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -74,3 +100,4 @@
     </div>
 </div>
 @endsection
+ --}}

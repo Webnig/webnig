@@ -7,13 +7,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="alternative icon" type="icon" href="{{ asset('images/logo.png') }}">
-
     {{--<title>Home | LostRib</title>--}}
     <title>@yield('title')</title>
+    {{-- Stylesheets --}}
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
+    {{-- favicon --}}
+    <link rel="alternative icon" type="icon" href="{{ asset('images/logo.png') }}">
 </head>
 
 <body>
@@ -59,20 +62,3 @@
         </div>
     </div>
 </header>
-
-@yield('content')
-
-<footer role="complementary" class="login-page__footer">
-    <div class="footer-logo">
-        <img src="{{ asset('images/logo-2x.png') }}" alt="">
-    </div>
-    <div class="copyright">
-        <p>&copy; Copyright 2017. All Rights Reserved.</p>
-    </div>
-</footer>
-<script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bundle.js') }}"></script>
-</body>
-
-</html>
