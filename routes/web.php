@@ -41,6 +41,8 @@ Route::get('/register', 'Auth\RegisterController@index')->name('register');
 //process register request;
 Route::post('/register', 'Auth\RegisterController@register')->name('process_registration');
 
+// frequently asked questions
+Route::get('faqs', 'Controller@faqs');
 
 Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
     
