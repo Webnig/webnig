@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\HTTP\Request;
 use Illuminate\Support\Facades\Session;
+use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
@@ -45,6 +47,37 @@ class LoginController extends Controller
     }
 
 
+    public function redirectToProvider($provider)
+    {
+        $authUser = User::where('provider_id', $user->id)->first();
+        if ( $authUser ) {
+            return $authUser;
+        }
+        return User::create([
+            'name' => $user->name,
+            'email' => $user->email,
+            'provider' => $provider,
+            'provider_id' => $user->id
+        ]);
+        return Socialite::driver($provider)->redirect();
+    }
+
+    public function handleProviderCallback($provider)
+    {
+        $authUser = Socialite::driver($provider)->user();
+
+        $exists = User::query()->where('provider_id', '=', $authUser->id);
+        if($exists){
+            Auth::login($authUser, true);
+        }else{
+            $user = new User();
+            $user->provider_id = $authUser->id;
+        }
+        $authUser = $this->findOrCreateUser($user, $provider);
+
+        return redirect($this->redirectTo);
+    }
+
     public function login(Request $request)
     {
         if ( Auth::check() ) {
@@ -60,7 +93,7 @@ class LoginController extends Controller
             }
         }
 
-        return back()->withErrors(['login_failed' => 'incorrect email and password combination']);
+        return back()->withErrors([ 'login_failed' => 'incorrect email and password combination' ]);
     }
 
 

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'provider', 'provider_id'
     ];
 
     /**
@@ -27,8 +27,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function interestShownIn(){
-       return $this->hasMany(Interest::class, 'source_id');
+    public static function findOrCreateUser($user, $provider)
+    {
+        
+    }
+
+    public function interestShownIn()
+    {
+        return $this->hasMany(Interest::class, 'source_id');
     }
 
     public function interestShownFrom()
@@ -36,11 +42,13 @@ class User extends Authenticatable
         return $this->hasMany(Interest::class, 'target_id');
     }
 
-    public function notifications(){
+    public function notifications()
+    {
         return $this->hasMany(Notification::class);
     }
 
-    public function outGoingNotifications(){
+    public function outGoingNotifications()
+    {
         return $this->hasMany(Notification::class, 'source_id');
     }
 

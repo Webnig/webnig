@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,11 +24,9 @@ Route::get('/login', 'Auth\LoginController@index')->name('login');
 
 Route::post('/login', 'Auth\LoginController@login')->name('process_login');
 
-Route::get('/login/channel/facebook', function(){ return ''; })->name('facebook_login');
+Route::get('/auth/{provider}', 'Auth\LoginController@redirectToProvider')->name('social_login');
 
-Route::get('/login/channel/twitter', function(){ return ''; })->name('twitter_login');
-
-Route::get('/login/channel/google', function(){ return ''; })->name('google_plus_login');
+Route::get('/auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/password/forgot', function(){
     return '';

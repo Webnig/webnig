@@ -89,7 +89,7 @@
                             </div>
 
                         </form>
-                        <p>Want an invite? Click <a href="">here</a> to get started</p>
+                        <p>Want an invite? Click <a href="{{ route('login') }}">here</a> to get started</p>
                     </div>
                 </div>
             </div>

@@ -20,20 +20,22 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('first_name');
             $table->string('last_name');
-            $table->dateTime('date_of_birth');
-            $table->string('occupation');
-            $table->enum('gender', ['m', 'f']);
-            $table->string('original_image');
-            $table->string('blurred_image');
+            $table->dateTime('date_of_birth')->nullable();
+            $table->string('occupation')->nullable();
+            $table->enum('gender', ['m', 'f'])->nullable();
+            $table->string('original_image')->nullable();
+            $table->string('blurred_image')->nullable();
+            $table->string('provider')->nullable();
+            $table->string('provider_id')->nullable();
 
-            $table->string('religion');
-            $table->string('state_of_origin');
-            $table->string('genotype');
-            $table->integer('height');
-            $table->longText('address');
-            $table->string('city');
-            $table->string('state');
-            $table->string('phone_number');
+            $table->string('religion')->nullable();
+            $table->string('state_of_origin')->nullable();
+            $table->string('genotype')->nullable();
+            $table->integer('height')->nullable();
+            $table->longText('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('phone_number')->nullable();
 
 
 
