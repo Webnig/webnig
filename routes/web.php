@@ -44,6 +44,9 @@ Route::post('/register', 'Auth\RegisterController@register')->name('process_regi
 // frequently asked questions
 Route::get('faqs', 'Controller@faqs');
 
+// Payment
+Route::get('payment', 'Controller@payment');
+
 Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
     
     Route::get('/dashboard', 'HomeController@viewDashboard')->name('view_dashboard');

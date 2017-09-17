@@ -22,3 +22,110 @@ hr.small {
 .fine {
 	font-family: AvenirNext, 'Caviar Dreams';
 }
+
+.bolder {
+	font-weight: bolder;
+	padding-bottom: 20px;
+}
+
+a.no_decor {
+	text-decoration: none;
+}
+
+a.no_decor:hover {
+	text-decoration: none;
+}
+
+.fa {
+	margin-right: 10px;
+}
+
+.panel_cyan {
+	background: #52c8d7;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.panel_gray {
+	background: #e0e8e9;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.cyan_rule {
+	width: 100%;
+	background: #52c8d7;
+	height: 1.7px;
+	border-radius: 0.5px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.gray_rule {
+	width: 100%;
+	background: #e0e8e9;
+	height: 1.7px;
+	border-radius: 0.5px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.white {
+	color: #fff;
+	font-family: 'Caviar Dreams', 'Arial Black';
+	letter-spacing: 0.1em;
+	font-weight: bolder;
+	font-size: 20px;
+	margin-left: -30px;
+}
+
+.black {
+	color: #000;
+	font-family: 'Caviar Dreams', 'Arial Black';
+	letter-spacing: 0.1em;
+	font-weight: bolder;
+	font-size: 20px;
+	margin-left: -30px;
+}
+
+.price {
+	height: 33px;
+	font-family: AvenirNext, 'Caviar Dreams';
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 0.2em;
+}
+
+.price_cyan {
+	color: #52c8d7;
+	letter-spacing: 0.2em;
+	text-align: center;
+	font-size: 24px;
+	font-family: AvenirNext, 'Caviar Dreams';
+	height: 33px;
+}
+
+.month_gray {
+	color: #757c7d;
+	font-family: AvenirNext, 'Caviar Dreams';
+	font-weight: bolder;
+}
+
+.month_gray_faded {
+	color: #b5f1f9;
+	font-family: AvenirNext, 'Caviar Dreams';
+	font-weight: bolder;
+}
+
+.bigbutton {
+	width: 99%;
+	padding: 10px;
+	border-radius: 20px;
+	background: green;
+	color: #fff;
+	font-weight: bolder;
+	margin-top: 15px;
+	border: 2px inset #fff;
+	font-family: AvenirNext, Arial, 'Caviar Dreams';
+}
