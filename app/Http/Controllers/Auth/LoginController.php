@@ -46,10 +46,9 @@ class LoginController extends Controller
         return view('login');
     }
 
-
     public function redirectToProvider($provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        /*$authUser = User::where('provider_id', $user->id)->first();
         if ( $authUser ) {
             return $authUser;
         }
@@ -58,7 +57,7 @@ class LoginController extends Controller
             'email' => $user->email,
             'provider' => $provider,
             'provider_id' => $user->id
-        ]);
+        ]);*/
         return Socialite::driver($provider)->redirect();
     }
 
@@ -66,12 +65,16 @@ class LoginController extends Controller
     {
         $authUser = Socialite::driver($provider)->user();
 
+        var_dump($authUser); exit;
         $exists = User::query()->where('provider_id', '=', $authUser->id);
         if($exists){
             Auth::login($authUser, true);
         }else{
             $user = new User();
             $user->provider_id = $authUser->id;
+            $user->provider = $provider;
+            $user->original_image = $authUser->imageUrl; //please do something about this
+            $user->email = $authUser->email;
         }
         $authUser = $this->findOrCreateUser($user, $provider);
 
