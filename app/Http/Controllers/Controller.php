@@ -23,4 +23,9 @@ class Controller extends BaseController
     {
     	return view('faqs');
     }
+
+    public function payment()
+    {
+    	return view('payment');
+    }
 }
