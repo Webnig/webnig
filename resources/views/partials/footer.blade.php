@@ -1,3 +1,9 @@
+<br>
+<br>
+<br>
+<br>
+<hr>
+
 <footer role="complementary" class="login-page__footer">
     <div class="footer-logo">
         <img src="{{ asset('images/logo-2x.png') }}" alt="">

@@ -18,4 +18,9 @@ class Controller extends BaseController
         // exit;
         return view('homepage', compact('users'));
     }
+
+    public function faqs()
+    {
+    	return view('faqs');
+    }
 }
