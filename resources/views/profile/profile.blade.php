@@ -1,8 +1,10 @@
-@extends('layout.layout')
+@extends('layouts.app')
 
-@section('title', 'Profile | LostRib')
+@section('title')
+Profile | LostRib
+@endsection
 
-@section('content')
+@section('body')
 
 
     <section class="profile-area">

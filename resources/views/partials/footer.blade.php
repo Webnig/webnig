@@ -1,7 +1,6 @@
 <br>
 <br>
 <br>
-<br>
 <hr>
 
 <footer role="complementary" class="login-page__footer">
@@ -15,6 +14,7 @@
 <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 </body>
 
 </html>
