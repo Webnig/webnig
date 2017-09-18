@@ -239,6 +239,11 @@
 				</p>
 			</div>
 		</div>
+
+		<hr>
+
+		<h3 class="text-center">Addon Packages</h3>
+		<p class="text-center">A little extra to make your profile stand out</p>
 	</div>
 </div>
 

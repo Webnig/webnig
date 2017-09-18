@@ -1,6 +1,8 @@
-@extends('layout.layout')
+@extends('layouts.app')
 
-@section('title', 'DashBoard | LostRib')
+@section('title')
+Dashboard | LostRib
+@endsection
 
 @section('extra_page_css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/dashboard.css') }}">
