@@ -1,3 +1,19 @@
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 .login_background {
 	background-image: url('../images/login-bg.jpg');
 	background-size: cover;
@@ -30,10 +46,24 @@
 	margin-right: 15px;
 }
 
+.darkrose {
+    background: #b34376;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
+}
 
+.fullwidth {
+    width: 100%;
+    padding-top: 20px;
+    /*font-family: AvenirNext-Regular, 'Caviar Dreams';*/
+}
 
 .top_margin {
-	margin-top: 50px;
+	margin-top: 35px;
 }
 
 #mediumButton {
@@ -54,7 +84,7 @@ hr.small {
 }
 
 .fine {
-	font-family: AvenirNext, 'Caviar Dreams';
+	font-family: AvenirNext-Regular, 'Caviar Dreams';
 }
 
 .bolder {
@@ -62,12 +92,14 @@ hr.small {
 	padding-bottom: 20px;
 }
 
-a.no_decor {
+.no_decor {
 	text-decoration: none;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
 }
 
-a.no_decor:hover {
+.no_decor:hover {
 	text-decoration: none;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
 }
 
 .fa {
@@ -95,6 +127,12 @@ a.no_decor:hover {
 	margin-bottom: 30px;
 }
 
+.cyan_link {
+    color: #02b2c9;
+    font-weight: bold;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
+}
+
 .gray_rule {
 	width: 100%;
 	background: #e0e8e9;
@@ -102,6 +140,18 @@ a.no_decor:hover {
 	border-radius: 0.5px;
 	margin-top: 10px;
 	margin-bottom: 30px;
+}
+
+.gray_link {
+    color: #848484;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
+}
+
+.paragraph {
+    font-size: 12pt;
+    margin-bottom: 10px;
+    /*padding-bottom: 10px;*/
+    padding-top: 10px;
 }
 
 .white {
@@ -124,7 +174,7 @@ a.no_decor:hover {
 
 .price {
 	height: 33px;
-	font-family: AvenirNext, 'Caviar Dreams';
+	font-family: AvenirNext-Regular, 'Caviar Dreams';
 	font-size: 24px;
 	text-align: center;
 	color: #fff;
@@ -136,19 +186,19 @@ a.no_decor:hover {
 	letter-spacing: 0.2em;
 	text-align: center;
 	font-size: 24px;
-	font-family: AvenirNext, 'Caviar Dreams';
+	font-family: AvenirNext-Regular, 'Caviar Dreams';
 	height: 33px;
 }
 
 .month_gray {
 	color: #757c7d;
-	font-family: AvenirNext, 'Caviar Dreams';
+	font-family: AvenirNext-Regular, 'Caviar Dreams';
 	font-weight: bolder;
 }
 
 .month_gray_faded {
 	color: #b5f1f9;
-	font-family: AvenirNext, 'Caviar Dreams';
+	font-family: AvenirNext-Regular, 'Caviar Dreams';
 	font-weight: bolder;
 }
 
@@ -160,7 +210,7 @@ a.no_decor:hover {
 	font-weight: bolder;
 	margin-top: 15px;
 	border: 2px inset #fff;
-	font-family: AvenirNext, Arial, 'Caviar Dreams';
+	font-family: AvenirNext-Regular, 'Caviar Dreams';
 }
 
 .button_large {
@@ -168,12 +218,21 @@ a.no_decor:hover {
 	padding: 10px;
 	border-radius: 8px;
 	margin-top: 15px;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
 }
 
 .long_button {
 	width: 100%;
 	padding: 10px;
 	border-radius: 8px;
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
+}
+
+.medium_button {
+    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    width: 100%;
+    border-radius: 20px;
+    /*padding: 8px;*/
 }
 
 .links {
