@@ -63,7 +63,6 @@ class LoginController extends Controller
 
     public function handleProviderCallback($provider)
     {
-        (request()->has('error_code')) ? redirect(route('login')) :
         $authUser = Socialite::driver($provider)->user();
 
         $user = User::where('provider_id', $authUser->id);

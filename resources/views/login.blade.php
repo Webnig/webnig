@@ -71,20 +71,25 @@
 								{{-- Socials --}}
 								<div class="col-md-5 col-sm-5 col-lg-5 col-xs-12" style="margin-top: 20px;">
 									<a href="#" class="btn btn-primary button_large">
-										<i class="icon fa fa-facebook fa-fw"></i> Login with Facebook
+										<i class="icon fa fa-facebook fa-2x fa-fw"></i> Login with Facebook
 									</a>
 									<br>
 									<a href="#" class="btn btn-info button_large">
-										<i class="icon fa fa-twitter fa-fw"></i> Login with Twitter
+										<i class="icon fa fa-twitter fa-2x fa-fw"></i> Login with Twitter
 									</a>
 									<br>
 									<a href="#" class="btn btn-danger button_large">
-										<i class="icon fa fa-google-plus fa-fw"></i> Login with Google+
+										<i class="icon fa fa-google-plus fa-2x fa-fw"></i> Login with Google+
 									</a>
 								</div>
 								{{-- Vertical Divider --}}
-								<div class="col-md-1 col-sm-1 col-lg-1">
+								<div class="col-md-1 col-sm-1 col-lg-1 hidden-xs vertical-divider">
 									{{--  --}}
+								</div>
+
+								<div class="col-md-12 col-sm-12 col-lg-12 hidden-sm hidden-md hidden-lg horizontal-divider">
+									{{--  --}}
+
 								</div>
 								{{-- Manual Login --}}
 								<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
@@ -105,7 +110,7 @@
 												<div class="form-group">
 													<div class="checkbox">
 														<label for="remember-me">
-															<input type="checkbox" value=""> Remember me
+															<input class="checkbox-inline checkbox" type="checkbox" value=""> Remember me
 														</label>
 													</div>
 												</div>
