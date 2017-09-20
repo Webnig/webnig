@@ -54,17 +54,17 @@
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row top_margin">
                                 <div class="col-md-4 col-sm-4 col-lg-4">
-                                    <a href="#" class="gray_link no_decor">Regular Search</a>
+                                    <a href="{{ route('user.regular_search') }}" class="gray_link no_decor">Regular Search</a>
                                     <br>
                                     <div class="gray_rule"></div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
-                                    <a href="#" class="gray_link no_decor">Advanced Search</a>
+                                    <a href="{{ route('user.advance_search') }}" class="gray_link no_decor">Advanced Search</a>
                                     <br>
                                     <div class="gray_rule"></div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
-                                    <a href="#" class="cyan_link no_decor">Keyword Search</a>
+                                    <font class="cyan_link no_decor">Keyword Search</font>
                                     <br>
                                     <div class="cyan_rule"></div>
                                 </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="container">
                         <p class="paragraph">
-                            Find profiles based on keywords. If you're looking for very specific results, try Keyword option in <a href="#" class="cyan_link"><u>Advanced Search</u></a>.
+                            Find profiles based on keywords. If you're looking for very specific results, try Keyword option in <a href="{{ route('user.advance_search') }}" class="cyan_link"><u>Advanced Search</u></a>.
                         </p>
                     </div>
                     <div class="container-fluid fullwidth">

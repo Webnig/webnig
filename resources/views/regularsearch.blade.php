@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Advanced Search</title>
+    <title>Regular Search</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="LostRib">
@@ -54,14 +54,14 @@
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row top_margin">
                                 <div class="col-md-4 col-sm-4 col-lg-4">
-                                    <a href="{{ route('user.regular_search') }}" class="gray_link no_decor">Regular Search</a>
-                                    <br>
-                                    <div class="gray_rule"></div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-lg-4">
-                                    <font class="cyan_link">Advanced Search</font>
+                                    <font class="cyan_link">Regular Search</font>
                                     <br>
                                     <div class="cyan_rule"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <a href="{{ route('user.advance_search') }}" class="gray_link no_decor">Advanced Search</a>
+                                    <br>
+                                    <div class="gray_rule"></div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
                                     <a href="{{ route('user.keyword_search') }}" class="gray_link no_decor">Keyword Search</a>
@@ -143,80 +143,19 @@
                                     </select>
                                 </div>
                             </div>
-                            <ul class="list-group">
-                                <li class="list-group-item cyan_text lists">
-                                    Education / Occupation / Annual Income Details <span class="pull-right"><i class="fa fa-chevron-circle-up"></i></span>
-                                </li>
-                                <li class="list-group-item cyan_text lists">
-                                    Location Details <span class="pull-right"><i class="fa fa-chevron-circle-up"></i></span>
-                                </li>
-                                <li class="list-group-item cyan_text lists">
-                                    Habits &amp; Hobbies <span class="pull-right"><i class="fa fa-chevron-circle-up"></i></span>
-                                </li>
-                                <li class="list-group-item cyan_text lists">
-                                    Background, Personality &amp; Interests <span class="pull-right"><i class="fa fa-chevron-circle-down"></i></span>
-                                    <br><br>
-                                    <div class="row gray_text">
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Affluent
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Cheerful
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Spiritually inclined
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Warm &amp; Friendly
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row gray_text">
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Cares for pets
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Enjoys music
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Enjoys food
-                                            </label>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value=""> Likes reading
-                                            </label>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="form-group" style="padding-left: 20px">
-                                <h2 class="cyan_text">Search using Keywords</h2>
-                                <p class="gray_text">
-                                    Enter keywords within quotes and for more than one keyword use a comma separator between words. <br>
-                                    Example: "Good looking", "Well settled", etc. <br>
-                                    Keywords are searched against the profile description of a member.
-                                </p>
-                                <div class="row">
-                                    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-                                        <input type="text" placeholder="Keywords" class="form-control" style="width: 60%">
-                                    </div>
+                            <div class="form-group">
+                                <label for="status" class="col-md-2 col-sm-2">Mother Language</label>
+                                <div class="col-md-10 col-sm-10">
+                                    <select name="religion" class="form-control inline_input" style="width: 170px;">
+                                        <option value="">Yoruba</option>
+                                        <option value="">Igbo</option>
+                                        <option value="">Hausa</option>
+                                        <option value="">Tapa</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-3 col-sm-3 gray_text" style="padding-top: 5px">Show Profile</label>
+                                <label for="status" class="col-md-3 col-sm-3 gray_text" style="padding-top: 5px">Show Profile</label>
                                 <div class="col-md-9 col-sm-9 gray_text">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3">

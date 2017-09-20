@@ -46,7 +46,8 @@ Route::get('faqs', 'Controller@faqs');
 // keyword search
 // do remember to remove these search routes if necessary @PENS
 Route::get('/search', 'Controller@keywordSearch')->name('user.keyword_search');
-Route::get('search/advance', 'Controller@advanceSearch')->name('user.advance_search');
+Route::get('/search/advance', 'Controller@advanceSearch')->name('user.advance_search');
+Route::get('/search/regular', 'Controller@regularSearch')->name('user.regular_search');
 
 // Payment
 Route::get('payment', 'Controller@payment');
