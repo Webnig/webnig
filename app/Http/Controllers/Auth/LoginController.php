@@ -67,7 +67,7 @@ class LoginController extends Controller
 
         $user = User::where('provider_id', $authUser->id);
 
-        if (empty($user)) {
+        if ( empty($user) ) {
             $user = new User();
             if ( $provider == 'google' ) {
                 $user->first_name = $authUser->user[ 'name' ][ 'givenName' ];
@@ -91,6 +91,8 @@ class LoginController extends Controller
         }
 
         Auth::login($user, true);
+
+        //check if user has completed their profile
 
         return redirect($this->redirectTo);
     }

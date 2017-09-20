@@ -70,29 +70,31 @@
 							<div class="row">
 								{{-- Socials --}}
 								<div class="col-md-5 col-sm-5 col-lg-5 col-xs-12" style="margin-top: 20px;">
-									<a href="#" class="btn btn-primary button_large">
+									<a href="{{ route('social_login', ['provider' => 'facebook']) }}" class="btn btn-primary button_large">
 										<i class="icon fa fa-facebook fa-2x fa-fw"></i> Login with Facebook
 									</a>
 									<br>
-									<a href="#" class="btn btn-info button_large">
+									<a href="{{ route('social_login', ['provider' => 'twitter']) }}" class="btn btn-info button_large">
 										<i class="icon fa fa-twitter fa-2x fa-fw"></i> Login with Twitter
 									</a>
 									<br>
-									<a href="#" class="btn btn-danger button_large">
+									<a href="{{ route('social_login', ['provider' => 'google']) }}" class="btn btn-danger button_large">
 										<i class="icon fa fa-google-plus fa-2x fa-fw"></i> Login with Google+
 									</a>
 								</div>
 								{{-- Vertical Divider --}}
-								<div class="col-md-1 col-sm-1 col-lg-1 hidden-xs vertical-divider">
-									{{--  --}}
+
+								<div class="col-sm-1 hidden-xs vertical-divider">
+									<span class="vertical-divider-text">OR</span>
 								</div>
 
-								<div class="col-md-12 col-sm-12 col-lg-12 hidden-sm hidden-md hidden-lg horizontal-divider">
-									{{--  --}}
-
+								{{-- Horizonatal divider --}}
+								<div class="hidden-sm hidden-md hidden-lg horizontal-divider">
+									<span class="horizontal-divider-text">OR</span>
 								</div>
+
 								{{-- Manual Login --}}
-								<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+								<div class="col-md-5 col-sm-5 col-lg-6 col-xs-12">
 									<p class="text-center">Sign in Manually</p>
 									{{-- @include('partials.errors') --}}
 									<form action="{{ route('process_login') }}" method="post">
@@ -125,8 +127,8 @@
 										</div>
 									</form>
 									<div class="links">
-										<a href="{{ route('register') }}" class="register">Register now</a> |
-				                        <a href="{{ route('forgot_password') }}">Forgot password?</a>
+										<a href="{{ route('register') }}" class="register">Register now </a> |
+				                        <a href="{{ route('forgot_password') }}" class="">Forgot password?</a>
 									</div>
 								</div>
 							</div>
