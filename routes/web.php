@@ -14,7 +14,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/test', function(){
-    return view('keywordsearch');
+    return view('advancedsearch');
 });
 
 Route::get('/', 'Controller@index')->name('index_page');
