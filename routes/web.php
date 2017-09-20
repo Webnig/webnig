@@ -45,8 +45,9 @@ Route::post('/register', 'Auth\RegisterController@register')->name('process_regi
 Route::get('faqs', 'Controller@faqs');
 
 // keyword search
-// do remember to remove this @PENS
+// do remember to remove these search routes if necessary @PENS
 Route::get('/search', 'Controller@keywordSearch')->name('user.keyword_search');
+Route::get('search/advance', 'Controller@advanceSearch')->name('user.advance_search');
 
 // Payment
 Route::get('payment', 'Controller@payment');
@@ -66,7 +67,7 @@ Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
 //search routes
     // Route::get('/search', 'SearchController@index');
 
-    Route::get('search/advance', 'SearchController@advanceIndex');
+    // Route::get('search/advance', 'SearchController@advanceIndex');
 
     Route::post('/search', 'SearchController@processSearch');
 
