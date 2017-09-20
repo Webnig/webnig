@@ -34,6 +34,11 @@ class Controller extends BaseController
         return view('advancedsearch');
     }
 
+    public function regularSearch()
+    {
+        return view('regularsearch');
+    }
+
     public function payment()
     {
     	return view('payment');
