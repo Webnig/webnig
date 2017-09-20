@@ -13,17 +13,27 @@ class SearchController extends Controller
      */
     public function index()
     {
-        return view('search.index');
+        return view('keywordsearch');
     }
 
-    public function advanceIndex()
+    public function advance()
     {
-        return view('search.advance.index');
+        return view('advancedsearch');
+    }
+    
+    public function regular()
+    {
+        return view('regularsearch');
     }
 
-    public function processSearch(Request $r)
+    public function processKeywordSearch(Request $r)
     {
+        $searchResult = [ ];
+        return view('search.results');
+    }
 
+    public function processRegularSearch(Request $r)
+    {
         $searchResult = [ ];
         return view('search.results');
     }

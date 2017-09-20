@@ -79,7 +79,10 @@
                     <div class="container-fluid fullwidth">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-                                <form action="#" method="post" class="form-horizontal">
+                                <form action="{{ route('process_search') }}" method="post" class="form-horizontal">
+
+                                    {{ csrf_field() }}
+
                                     <div class="form-group">
                                         <label for="matID" class="col-md-7 col-sm-7">
                                             <input type="search" name="matID" placeholder="Enter MatID" class="form-control" width="60px">
@@ -121,6 +124,7 @@
                 <div class="col-md-3 col-sm-3">
                     <h2 class="fine">Search by ID</h2>
                     <form action="#" method="post">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="MatID" class="sr-only">MatID</label>
                             <input type="search" name="matID" placeholder="MatID" class="form-control">

@@ -234,4 +234,7 @@ return [
 
     ],
 
+    'min_age' => 18,
+    'max_age' => 59
+
 ];
