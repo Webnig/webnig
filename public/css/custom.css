@@ -1,3 +1,12 @@
+@font-face {
+    font-family: AvenirNext;
+    src: url(../assets/fonts/AvenirNext/AvenirNextLTPro-Regular.woff);
+}
+
+body {
+    font-family: AvenirNext;
+}
+
 a:active {
     text-decoration: none;
 }
@@ -69,7 +78,16 @@ a:link {
     padding-left: 30px;
     padding-right: 30px;
     color: #fff;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
+}
+
+.cyan {
+    background: #02b0c7;
+    height: 7px;
+}
+
+.form-horizontal label {
+    padding-top: 6px;
 }
 
 .fullwidth {
@@ -100,7 +118,7 @@ hr.small {
 }
 
 .fine {
-	font-family: AvenirNext-Regular, 'Caviar Dreams';
+	font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .bolder {
@@ -110,12 +128,12 @@ hr.small {
 
 .no_decor {
 	text-decoration: none;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .no_decor:hover {
 	text-decoration: none;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .fa {
@@ -151,18 +169,18 @@ hr.small {
 .cyan_link {
     color: #02b2c9;
     font-weight: bold;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .cyan_text {
     color: #02b2c9;
     /*font-weight: bold;*/
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .gray_text {
     color: #848484;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .gray_rule {
@@ -176,7 +194,7 @@ hr.small {
 
 .gray_link {
     color: #848484;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .paragraph {
@@ -206,7 +224,7 @@ hr.small {
 
 .price {
 	height: 33px;
-	font-family: AvenirNext-Regular, 'Caviar Dreams';
+	font-family: AvenirNext, 'Caviar Dreams';
 	font-size: 24px;
 	text-align: center;
 	color: #fff;
@@ -218,19 +236,19 @@ hr.small {
 	letter-spacing: 0.2em;
 	text-align: center;
 	font-size: 24px;
-	font-family: AvenirNext-Regular, 'Caviar Dreams';
+	font-family: AvenirNext, 'Caviar Dreams';
 	height: 33px;
 }
 
 .month_gray {
 	color: #757c7d;
-	font-family: AvenirNext-Regular, 'Caviar Dreams';
+	font-family: AvenirNext, 'Caviar Dreams';
 	font-weight: bolder;
 }
 
 .month_gray_faded {
 	color: #b5f1f9;
-	font-family: AvenirNext-Regular, 'Caviar Dreams';
+	font-family: AvenirNext, 'Caviar Dreams';
 	font-weight: bolder;
 }
 
@@ -242,7 +260,7 @@ hr.small {
 	font-weight: bolder;
 	margin-top: 15px;
 	border: 2px inset #fff;
-	font-family: AvenirNext-Regular, 'Caviar Dreams';
+	font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .button_large {
@@ -250,20 +268,22 @@ hr.small {
 	padding: 10px;
 	border-radius: 8px;
 	margin-top: 15px;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .long_button {
 	width: 100%;
 	padding: 10px;
 	border-radius: 8px;
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
 }
 
 .medium_button {
-    font-family: AvenirNext-Regular, 'Caviar Dreams';
+    font-family: AvenirNext, 'Caviar Dreams';
     width: 100%;
     border-radius: 20px;
+    padding-top: 8px;
+    padding-bottom: 10px;
     /*padding: 8px;*/
 }
 

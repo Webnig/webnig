@@ -58,6 +58,9 @@ Route::post('/search/regular', 'SearchController@processRegularSearch')->name('p
 Route::post('/search/advance', 'SearchController@processAdvanceSearch')->name('process_advanced_search');
 
 
+// Routes for Basic Info
+Route::get('/basicinfo', 'Controller@basicInfo')->name('user.basic_info');
+
 // Payment
 Route::get('payment', 'Controller@payment');
 

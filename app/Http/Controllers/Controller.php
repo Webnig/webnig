@@ -43,4 +43,91 @@ class Controller extends BaseController
     {
     	return view('payment');
     }
+
+    public function basicInfo()
+    {
+        $genotypes = [
+            'AA', 'AS', 'SS', 'SC'
+        ];
+
+        $months = [
+            1 => 'January',
+            2 => 'February',
+            3 => 'March',
+            4 => 'April',
+            5 => 'May',
+            6 => 'June',
+            7 => 'July',
+            8 => 'August',
+            9 => 'September',
+            10 => 'October',
+            11 => 'November',
+            12 => 'December'
+        ];
+
+        $religions = [
+            'Christian', 'Muslim', 'Atheist', 'Agnostic', 
+            'Traditional Worshipper', 'Christian + Traditional',
+            'Muslim + Traditional', 'Non Religious but Spiritual',
+            'Other'
+        ];
+
+        $countries = [
+            'United States of America',
+            'United Kingdom', 'Kenya', 'Ghana',
+            'China', 'India', 'Singapore'
+        ];
+
+        $nigerianStates = [
+            'Abia', 'Adamawa', 'Akwa-Ibom', 'Anambra', 'Bauchi',
+            'Benue', 'Borno', 'Cross Rivers', 'Kwara', 'Lagos',
+        ];
+
+        $spokenLanguages = [
+            'English', 'Yoruba', 'Igbo', 'Hausa', 'Mandarin', 'French'
+        ];
+
+        $familyStatus = [
+            'Lower middle class', 'Middle class', 'Upper middle class',
+            'Rich', 'Affluent'
+        ];
+
+        $fatherStatus = [
+            'Employed', 'Not Employed', 'Retired', 'Businessman',
+            'Passed away'
+        ];
+
+        $motherStatus = [
+            'Employed', 'Not Employed', 'Retired', 'Businesswoman',
+            'Passed away'
+        ];
+
+        $residentStatus = [
+            'Permanent Resident', 'Work Permit', 'Student Visa', 'Temporary Visa'
+        ];
+
+        $employers = [
+            'Government', 'Private Business', 'Defence', 'Self Employed', 'Not working'
+        ];
+
+        $descriptionTags = [
+            'Understanding', 'Cheerful', 'Respectable', 'Calm', 'Ambitious',
+            'Easy-going', 'Down-to-earth', 'Loving', 'Homely', 'Broad-minded',
+            'Modern', 'Positive-attitude', 'Helpful', 'Energetic', 'Conscientious'
+        ];
+
+        $hobbies = [
+            'Cooking', 'Nature', 'Photography', 'Dancing', 'Painting',
+            'Pets', 'Playing Musical Instruments', 'Puzzles',
+            'Gardening/Landscaping', 'Art/Handicraft', 'Listening to music',
+            'Movies', 'Internet Surfing', 'Traveling'
+        ];
+
+        return view('basicinfo.index', compact(
+            'genotypes', 'months', 'religions', 'countries',
+            'nigerianStates', 'spokenLanguages', 'familyStatus',
+            'fatherStatus', 'motherStatus', 'residentStatus',
+            'employers', 'descriptionTags', 'hobbies'
+        ));
+    }
 }
