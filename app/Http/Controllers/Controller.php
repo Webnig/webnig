@@ -106,10 +106,28 @@ class Controller extends BaseController
             'Permanent Resident', 'Work Permit', 'Student Visa', 'Temporary Visa'
         ];
 
+        $employers = [
+            'Government', 'Private Business', 'Defence', 'Self Employed', 'Not working'
+        ];
+
+        $descriptionTags = [
+            'Understanding', 'Cheerful', 'Respectable', 'Calm', 'Ambitious',
+            'Easy-going', 'Down-to-earth', 'Loving', 'Homely', 'Broad-minded',
+            'Modern', 'Positive-attitude', 'Helpful', 'Energetic', 'Conscientious'
+        ];
+
+        $hobbies = [
+            'Cooking', 'Nature', 'Photography', 'Dancing', 'Painting',
+            'Pets', 'Playing Musical Instruments', 'Puzzles',
+            'Gardening/Landscaping', 'Art/Handicraft', 'Listening to music',
+            'Movies', 'Internet Surfing', 'Traveling'
+        ];
+
         return view('basicinfo.index', compact(
             'genotypes', 'months', 'religions', 'countries',
             'nigerianStates', 'spokenLanguages', 'familyStatus',
-            'fatherStatus', 'motherStatus', 'residentStatus'
+            'fatherStatus', 'motherStatus', 'residentStatus',
+            'employers', 'descriptionTags', 'hobbies'
         ));
     }
 }

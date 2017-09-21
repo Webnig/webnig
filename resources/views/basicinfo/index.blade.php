@@ -515,6 +515,7 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                                     <h4 class="gray_text">Work Location</h4>
+                                    <br>
                                     <div class="form-group">
                                         <div class="row container-fluid">
                                             <div class="col-md-4 col-sm-4">
@@ -587,6 +588,107 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <h4 class="gray_text">Education in Detail</h4>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="" class="col-md-3 col-sm-3">Course Studied</label>
+                                        <div class="col-md-9 col-sm-9">
+                                            <input type="text" name="course_studied" id="course_studied" placeholder="Course Studied" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <label for="">Employed in</label>
+                                                <br>
+                                                <select name="employer" id="employer" class="form-control">
+                                                    <option value="">Choose...</option>
+                                                    @foreach($employers as $employer)
+                                                        <option value="{{ $employer }}">{{ $employer }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <label for="">Occupation</label>
+                                                <br>
+                                                <select name="occupation" id="occupation" class="form-control">
+                                                    <option value="">Choose...</option>
+                                                    <option value="Banker">Banker</option>
+                                                    <option value="Therapist">Therapist</option>
+                                                    <option value="Medical Doctor">Medical Doctor</option>
+                                                    <option value="Software Developer">Software Developer</option>
+                                                    <!-- fill this loop with occupations supplied by Yeside -->
+                                                    {{-- @foreach($employers as $employer)
+                                                        <option value="{{ $employer }}">{{ $employer }}</option>
+                                                    @endforeach --}}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4 class="gray_text">Income</h4>
+                                    <br>
+                                    <div class="form-group container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <label for="">Currency</label>
+                                                <br>
+                                                <select name="currency" id="currency" class="form-control">
+                                                    <option value="">Choose...</option>
+                                                    <option value="NGN">NGN</option>
+                                                    <option value="YEN">YEN</option>
+                                                    <option value="USD">USD</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <label for="">Income</label>
+                                                <br>
+                                                <input type="number" placeholder="Income" name="income" id="income" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group container-fluid">
+                                        {{-- this label should be based on what was selected earlier
+                                        whether self or daughter or son :) --}}
+                                        <label for="">About Me/Daughter/Son</label>
+                                        <br>
+                                        <textarea name="about" id="about" rows="6" placeholder="About" maxlength="200" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group container-fluid">
+                                        <label for="">People describe me as</label>
+                                        <br>
+                                        <div class="row">
+                                            @foreach($descriptionTags as $tag)
+                                                <div class="col-md-4 col-sm-4">
+                                                    <label for="" class="checkbox-inline">
+                                                        <input type="checkbox" name="citizenship"> {{ $tag }}
+                                                    </label>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="form-group container-fluid">
+                                        <label for="">Hobbies and Interests</label>
+                                        <br>
+                                        <div class="row">
+                                            @foreach($hobbies as $hobby)
+                                                <div class="col-md-4 col-sm-4">
+                                                    <label for="" class="checkbox-inline">
+                                                        <input type="checkbox" name="citizenship"> {{ $hobby }}
+                                                    </label>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                    <button class="btn btn-info medium_button" type="submit">
+                                        Proceed
+                                    </button>
                                 </div>
                             </div>
                         </form>
