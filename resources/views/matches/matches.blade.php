@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layouts.app')
 
 @section('title', 'Matches | LostRib')
 
@@ -161,6 +161,7 @@
                             <label><input type="checkbox">Send Interest to all</label>
                         </div>
                     </div>
+
                     <div class="col-md-offset-9">
                         <ul class="pagination pagination-lg">
                             <li><a href="#">First</a></li>

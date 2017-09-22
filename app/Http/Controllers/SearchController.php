@@ -26,6 +26,24 @@ class SearchController extends Controller
         return view('regularsearch');
     }
 
+    public function searchByMatID()
+    {
+        $this->validate(request(), [
+           'matID' => 'required|numeric'
+        ], [
+            'matID.required' => 'Please provide the MAT ID of the user',
+            'matID.numeric' => 'The MatID must be a numeric value'
+        ]);
+
+        $mat_id = request('matID');
+        
+        $users = User::where('mat_id', 'like', '%'.$mat_id.'%')->get();
+        
+        echo '<pre>';
+        var_dump($users);
+        echo '</pre>';
+    }
+
     public function processKeywordSearch(Request $r)
     {
         $searchResult = [ ];

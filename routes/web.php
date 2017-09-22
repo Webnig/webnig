@@ -14,8 +14,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/test', function () {
-    return view('regularsearch');
+    return view('matches.matches');
 });
+
+Route::get('/mail', 'MailController@sendRegistrationSuccess');
 
 Route::get('/', 'Controller@index')->name('index_page');
 
@@ -43,6 +45,7 @@ Route::post('/register', 'Auth\RegisterController@register')->name('process_regi
 // frequently asked questions
 Route::get('faqs', 'Controller@faqs');
 
+
 // keyword search
 // do remember to remove these search routes if necessary @PENS
 Route::get('/search', 'SearchController@index')->name('user.keyword_search');
@@ -56,6 +59,8 @@ Route::post('/search', 'SearchController@processKeywordSearch')->name('process_s
 Route::post('/search/regular', 'SearchController@processRegularSearch')->name('process_regular_search');
 
 Route::post('/search/advance', 'SearchController@processAdvanceSearch')->name('process_advanced_search');
+
+Route::post('/search/byMatID', 'SearchController@searchByMatID')->name('process_search_by_mat_id');
 
 
 // Routes for Basic Info

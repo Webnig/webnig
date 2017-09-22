@@ -18,7 +18,7 @@
         <div class="newsletter-board">
             <div class="interest">
                 <h2>Interest Accepted!</h2>
-                <p>Dear Yesimama (B1967453),</p>
+                <p>Dear {{ $usr }}</p>
                 <div>
                     <img src="{{ asset('images/newsletter.jpg') }}" class="img img-circle" alt="">
                 </div>
