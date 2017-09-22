@@ -130,4 +130,46 @@ class Controller extends BaseController
             'employers', 'descriptionTags', 'hobbies'
         ));
     }
+
+    public function basicInfo2()
+    {
+        $eatingHabit = [
+            'Normal', 'Traditional', 'Vegetarian', 'Keto diet',
+            'Sugarless diet'
+        ];
+
+        $drinkingHabit = [
+            'No', 'Drinks Socially', 'Love Alcohol'
+        ];
+
+        $smokingHabit = [
+            'No', 'Occasionally', 'Yes', 'I smoke only cigarettes',
+            'I smoke Indian hemp'
+        ];
+
+        $looks = ['Sexy', 'Nerdy'];
+        $heights = ['Short', 'Petite', 'Tall', 'Very Tall'];
+        $bodyStructures = [
+            'Slim', 'Athletic', 'Skinny', 'Overweight', 'BBW',
+            'SSBBW', 'Curvy', 'Plump', 'Muscular'
+        ];
+        $makeups = ['No makeup', 'Minimal makeup', 'Lots of makeup'];
+        $beard = ['Full beard', 'Clean Shaven', 'Average beard'];
+        $belly = ['Pot belly', 'Six pack', 'Flat belly', 'Not too flat'];
+        $feet = ['Big', 'Average', 'Small'];
+        $boobs = ['Very Big', 'Big', 'Average', 'Small'];
+        $butt = ['Very Big', 'Big', 'Average Small'];
+        $complexions = ['Dark Chocolate', 'Fair', 'Very Fair'];
+        $fingers = ['Long', 'Short'];
+        $nosetype = ['Pointed', 'Wide', 'Semi wide', 'Semi pointed'];
+        $legs = ['Long', 'Short', 'Straight', 'K Leg', 'Bow Leg'];
+        $shoulder = ['Wide', 'Average', 'Small'];
+
+        return view('basicinfo.page2', compact(
+            'eatingHabit', 'drinkingHabit', 'smokingHabit',
+            'looks', 'heights', 'bodyStructures', 'makeups',
+            'beard', 'belly', 'feet', 'boobs', 'butt', 'complexions',
+            'fingers', 'nosetype', 'legs', 'shoulder'
+        ));
+    }
 }

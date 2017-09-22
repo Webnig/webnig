@@ -51,7 +51,8 @@ Route::get('/search/advance', 'Controller@advanceSearch')->name('user.advance_se
 Route::get('/search/regular', 'Controller@regularSearch')->name('user.regular_search');
 
 // Routes for Basic Info
-Route::get('/basicinfo', 'Controller@basicInfo')->name('user.basic_info');
+Route::get('/basicinfo', 'Controller@basicInfo');
+Route::get('/basicinfo/2', 'Controller@basicInfo2');
 
 // Payment
 Route::get('payment', 'Controller@payment');

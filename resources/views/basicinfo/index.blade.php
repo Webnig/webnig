@@ -193,7 +193,7 @@
                                                 <label for="religion">Religion</label>
                                                 <br>
                                                 <select name="religion" id="religion" class="form-control">
-                                                    <option value="">Choose Religion</option>
+                                                    <option value="">Please select</option>
                                                     @foreach($religions as $religion)
                                                         <option value="{{ $religion }}">{{ $religion }}</option>
                                                     @endforeach
@@ -686,9 +686,14 @@
                             <hr>
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                    <button class="btn btn-info medium_button" type="submit">
+                                    {{-- remember to change the anchor tag to button, 
+                                    this is just for test purpose --}}
+                                    {{-- <button class="btn btn-info medium_button" type="submit">
                                         Proceed
-                                    </button>
+                                    </button> --}}
+                                    <a class="btn btn-info medium_button" href="/basicinfo/2">
+                                        Proceed
+                                    </a>
                                 </div>
                             </div>
                         </form>
