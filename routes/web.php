@@ -50,6 +50,9 @@ Route::get('/search', 'Controller@keywordSearch')->name('user.keyword_search');
 Route::get('/search/advance', 'Controller@advanceSearch')->name('user.advance_search');
 Route::get('/search/regular', 'Controller@regularSearch')->name('user.regular_search');
 
+// matches
+Route::get('/matches', 'Controller@matches')->name('display_matches');
+
 // Routes for Basic Info
 Route::get('/basicinfo', 'Controller@basicInfo');
 Route::get('/basicinfo/2', 'Controller@basicInfo2');
@@ -67,7 +70,8 @@ Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
 //Route::get('/profile/edit', '');
 //Route::resource('photos', 'PhotosController');
 
-    Route::get('/matches', 'MatchesController@index')->name('viewMatches');
+// TODO::uncomment this route
+    // Route::get('/matches', 'MatchesController@index')->name('viewMatches');
 
 //search routes
     // Route::get('/search', 'SearchController@index');
