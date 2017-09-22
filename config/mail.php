@@ -44,6 +44,7 @@ return [
 
     'port' => env('MAIL_PORT', 587),
 
+    
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
@@ -56,8 +57,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'admin@lostrib.com'),
+        'name' => env('MAIL_FROM_NAME', 'LostRib'),
     ],
 
     /*
@@ -119,5 +120,6 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+
 
 ];

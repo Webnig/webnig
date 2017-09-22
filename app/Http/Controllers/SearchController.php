@@ -13,17 +13,45 @@ class SearchController extends Controller
      */
     public function index()
     {
-        return view('search.index');
+        return view('keywordsearch');
     }
 
-    public function advanceIndex()
+    public function advance()
     {
-        return view('search.advance.index');
+        return view('advancedsearch');
+    }
+    
+    public function regular()
+    {
+        return view('regularsearch');
     }
 
-    public function processSearch(Request $r)
+    public function searchByMatID()
     {
+        $this->validate(request(), [
+           'matID' => 'required|numeric'
+        ], [
+            'matID.required' => 'Please provide the MAT ID of the user',
+            'matID.numeric' => 'The MatID must be a numeric value'
+        ]);
 
+        $mat_id = request('matID');
+        
+        $users = User::where('mat_id', 'like', '%'.$mat_id.'%')->get();
+        
+        echo '<pre>';
+        var_dump($users);
+        echo '</pre>';
+    }
+
+    public function processKeywordSearch(Request $r)
+    {
+        $searchResult = [ ];
+        return view('search.results');
+    }
+
+    public function processRegularSearch(Request $r)
+    {
         $searchResult = [ ];
         return view('search.results');
     }

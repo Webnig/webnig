@@ -76,6 +76,7 @@
                                 </div>
                                 <div class="status">
                                     <form action="" name="status-form">
+                                        {{ csrf_field() }}
                                         <label for="status" class="hidden">What is on your mind</label>
                                         <input type="text" id="status" placeholder="What is on your mind?">
                                     </form>
@@ -398,7 +399,9 @@
                     </div>
                     <div class="search">
                         <h2>Search</h2>
+
                         <form action="">
+                            {{ csrf_field() }}
                             <div class="input">
                                 <label for="">i am</label>
                                 <select>

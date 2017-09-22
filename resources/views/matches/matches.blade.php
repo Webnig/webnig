@@ -1,36 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<meta name="author" content="LostRib" />
-<meta name="keywords" content=""/>
-<meta http-equiv="robots" content="no index, no follow" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}"/>
-{{-- <script type="text/javascript" src="{{ asset('js/script.js') }}"></script> --}}
-<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
-<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
-<link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+@extends('layouts.app')
 
-<link rel="alternative icon" type="icon" href="{{  asset('images/logo.png') }}">
-{{-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> --}}
-<title>LostRib | Matches</title>
-</head>
-<body>
-    <nav class="navbar navbar-default login_nav">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <img src="{{ asset('images/logo-3x.png') }}" alt="LostRib Logo" width="150px">
-          </a>
+@section('title', 'Matches | LostRib')
+
+@section('extra_page_css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/matches.css') }}">
+@endsection
+
+@section('content')
+    <div class="container container-full">
+        <div class="row">
+            <div class="landing">
+                <div class="col-md-2">
+                    <h1 class="matches-text">Matches</h1>
+                </div>
+                <div class="col-md-offset-8">
+                    <div class="row">
+                        <div class="col-md-4 sort_profile">
+                            <span>Sort profiles By:</span>
+                        </div>
+                        <div class="col-md-">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                    Relevance
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Matches</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         {{-- <div class="collapse navbar-collapse pull-right" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -67,8 +68,132 @@
                             <option value="Female">Female</option>
                             <option value="Male">Male</option>
                     </select>
+                <div class="row top-buffer">
+                    <img src="{{ asset('assets/img/add.png') }}" width="150px" height="150px">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="checkbox">
+                            <label><input type="checkbox">Send Interest to all</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-9">
+                        <ul class="pagination pagination-lg">
+                            <li><a href="#">First</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">Last</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="profile-card">
+                            <div class="row row-small-margin">
+                                <img src="{{ asset('assets/img/img2.png') }}" class="profile-image img-circle center-block"
+                                     alt="Cinque Terre" width="75" height="75">
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center matid">Mat-ID-133609</p>
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center sage">Male, 26</p>
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center specs">181cm | Muslim | Kano</p>
+                            </div>
+                            <div class="row">
+                                <p class="text-center pspecs">Teacher | University of Lagos</p>
+                            </div>
+                            <div class="row">`
+                                <p class="text-center attr">I am attracted to so many things.</p>
+                            </div>
+                            <div class="row btn center-block">
+                                <button type="button" class="btn btn-info send">Send Interest</button>
+                            </div>
+                        </div>
 
 
+                        <div class="row center-block">
+                            <a href="" class="col-md-5 sendmail">Send Mail</a>
+                            <p class="col-md-2">|</p>
+                            <a href="" class="col-md-5 sendmail">Shortlist</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="profile-card">
+                            <div class="row row-small-margin">
+                                <img src="{{ asset('assets/img/img2.png') }}" class="profile-image img-circle center-block"
+                                     alt="Cinque Terre" width="75" height="75">
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center matid">Mat-ID-133609</p>
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center sage">Male, 26</p>
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center specs">181cm | Muslim | Kano</p>
+                            </div>
+                            <div class="row">
+                                <p class="text-center pspecs">Teacher | University of Lagos</p>
+                            </div>
+                            <div class="row">`
+                                <p class="text-center attr">I am attracted to so many things.</p>
+                            </div>
+                            <div class="row btn center-block">
+                                <button type="button" class="btn btn-info send">Send Interest</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row center-block">
+                            <a href="" class="col-md-5 sendmail">Send Mail</a>
+                            <p class="col-md-2">|</p>
+                            <a href="" class="col-md-5 sendmail">Shortlist</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="profile-card">
+                            <div class="row row-small-margin">
+                                <img src="{{ asset('assets/img/img2.png') }}" class="profile-image img-circle center-block"
+                                     alt="Cinque Terre" width="75" height="75">
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center matid">Mat-ID-133609</p>
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center sage">Male, 26</p>
+                            </div>
+                            <div class="row row-small-margin">
+                                <p class="text-center specs">181cm | Muslim | Kano</p>
+                            </div>
+                            <div class="row">
+                                <p class="text-center pspecs">Teacher | University of Lagos</p>
+                            </div>
+                            <div class="row">`
+                                <p class="text-center attr">I am attracted to so many things.</p>
+                            </div>
+                            <div class="row btn center-block">
+                                <button type="button" class="btn btn-info send">Send Interest</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row center-block">
+                            <a href="" class="col-md-5 sendmail">Send Mail</a>
+                            <p class="col-md-2">|</p>
+                            <a href="" class="col-md-5 sendmail">Shortlist</a>
+                        </div>
+                    </div>
+
+                </div>
                 </form><br>
                 <center style="font-size:12px;color:#848484">wishing to meet a</center>
                 <br>
@@ -141,7 +266,6 @@
                             <option value="">39</option>
                             <option value="">40</option>
                     </select>
-
                 </form>
             </div></div>
                 <br><br>

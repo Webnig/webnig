@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         // Create three App\User instances...
-        $users = factory(App\User::class, 10)->create();
+        $users = factory(App\User::class, 20)->create();
     }
 
 }
