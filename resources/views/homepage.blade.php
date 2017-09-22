@@ -18,9 +18,10 @@
             <div class="col-md-1"></div>
             @foreach ($users as $user)
                 <div class="col-md-2 col-xs-12 col-sm-6">
-                    <div class="jumbotron match">
+                    <div class="match ">
                         <div class="match__img">
-                            <img src="{{ asset('images/bitmap@3x.jpg') }}" alt="" class="img-responsive img-circle">
+                            <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                 class="img img-responsive img-circle">
                         </div>
                         <div class="match__content">
                             <p id="matID">Mat ID: {{ $user->mat_id }}</p>
@@ -151,9 +152,10 @@
                 </div>
                 <div class="meet-up__matches">
                     <div class="collection">
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -163,9 +165,10 @@
                             </div>
                             <button class="match__button">View Profile</button>
                         </div>
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -175,9 +178,10 @@
                             </div>
                             <button class="match__button">View Profile</button>
                         </div>
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -187,9 +191,10 @@
                             </div>
                             <button class="match__button">View Profile</button>
                         </div>
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -263,7 +268,7 @@
                     <p>Because this is what it's all about. Read what our clients have to say about us and their
                         experiences.</p>
                     <div class="ls-comment">
-                        <img src="images/gift.png" class="img img-circle" alt="">
+                        <img src="{{ asset('images/gift.png') }}" class="img img-circle" alt="">
                         <blockquote>
                             <p>
                                 "My matchmaker has set up outstanding dates. The locations have been interesting and the

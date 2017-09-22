@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\HTTP\Request;
 use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
+use Mockery\CountValidator\Exception;
 
 class LoginController extends Controller
 {
@@ -63,43 +64,47 @@ class LoginController extends Controller
 
     public function handleProviderCallback($provider)
     {
-        $authUser = Socialite::driver($provider)->user();
+        try {
+            $authUser = Socialite::driver($provider)->user();
 
-        $user = User::where('provider_id', $authUser->id);
+            $user = User::where('provider_id', $authUser->id)->first();
 
-        if ( empty($user) ) {
-            $user = new User();
-            if ( $provider == 'google' ) {
-                $user->first_name = $authUser->user[ 'name' ][ 'givenName' ];
-                $user->last_name = $authUser->user[ 'name' ][ 'familyName' ];
-            } elseif ( $provider == 'facebook' ) {
-                $names = explode(" ", $authUser->user[ 'name' ]);
-                $user->first_name = $names[ 0 ];
-                $user->last_name = $names[ 1 ];
+            if (empty($user)){
+                $user = new User();
+                if ($provider == 'google'){
+                    $user->first_name = $authUser->user['name']['givenName'];
+                    $user->last_name = $authUser->user['name']['familyName'];
+                } elseif ($provider == 'facebook') {
+                    $names = explode(" ", $authUser->user['name']);
+                    $user->first_name = $names[0];
+                    $user->last_name = $names[1];
 
-                $user->gender = ($authUser->user[ 'gender' ] == 'female') ? 'f' : 'm';
+                    $user->gender = ($authUser->user['gender'] == 'female') ? 'f' : 'm';
+                }
+
+                $user->provider_id = $authUser->id;
+                $user->provider = $provider;
+                $user->mat_id = substr(strval($authUser->id), 0, 6);
+                $user->original_image = $authUser->avatar_original; //please do something about this: download and save
+                $user->email = ($authUser->email == null) ? 'not available': $authUser->email ;
+
+                $user->save();
+
             }
 
-            $user->provider_id = $authUser->id;
-            $user->provider = $provider;
-            $user->mat_id = substr(strval($authUser->id), 0, 6);
-            $user->original_image = $authUser->avatar_original; //please do something about this: download and save
-            $user->email = $authUser->email;
-
-            $user->save();
+            Auth::login($user, true);
+        } catch (Exception $exc) {
 
         }
 
-        Auth::login($user, true);
-
-        //check if user has completed their profile
+       
 
         return redirect($this->redirectTo);
     }
 
     public function login(Request $request)
     {
-        if ( Auth::check() ) {
+        if (Auth::check()){
             return redirect($this->redirectTo);
         } else {
             $this->validate($request, [
@@ -109,7 +114,7 @@ class LoginController extends Controller
 
             $remember = ($request->has('remember')) ? true : false;
 
-            if ( Auth::attempt([ 'email' => $request->email, 'password' => $request->password ], $remember) ) {
+            if (Auth::attempt([ 'email' => $request->email, 'password' => $request->password ], $remember)){
                 return redirect($this->redirectTo);
             }
         }
@@ -121,6 +126,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
+
         return redirect(route('login'));
     }
 }
