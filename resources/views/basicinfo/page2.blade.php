@@ -29,15 +29,15 @@
         <div class="collapse navbar-collapse pull-right" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <i class="icon fa fa-search fa-2x text-info"></i>
+                    <h3 class="cyan_text">My Account</h3>
                 </li>
-                <li>
+                <!-- <li>
                     <i class="icon fa fa-bell fa-2x text-info"></i>
                 </li>
                 <li>
                     <i class="icon fa fa-user fa-2x text-info"></i>
-                </li>
-              </ul>
+                </li> -->
+            </ul>
           </div>
       </div>
     </nav>
@@ -59,7 +59,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($eatingHabit as $habit)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="eatingHabit" value="{{ $habit }}"> {{ $habit }}
                                                         </label>
@@ -74,7 +74,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($drinkingHabit as $habit)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="drinkingHabit" value="{{ $habit }}"> {{ $habit }}
                                                         </label>
@@ -89,7 +89,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($smokingHabit as $habit)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="smokingHabit" value="{{ $habit }}"> {{ $habit }}
                                                         </label>
@@ -110,7 +110,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($looks as $look)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="look" value="{{ $look }}"> {{ $look }}
                                                         </label>
@@ -125,7 +125,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($heights as $height)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="height" value="{{ $height }}"> {{ $height }}
                                                         </label>
@@ -139,7 +139,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($bodyStructures as $structure)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="bodyStructure" value="{{ $structure }}"> {{ $structure }}
                                                         </label>
@@ -153,7 +153,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($makeups as $makeup)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="makeup" value="{{ $makeup }}"> {{ $makeup }}
                                                         </label>
@@ -167,7 +167,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($beard as $beard)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="beard" value="{{ $beard }}"> {{ $beard }}
                                                         </label>
@@ -182,7 +182,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($belly as $belly)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="belly" value="{{ $belly }}"> {{ $belly }}
                                                         </label>
@@ -197,7 +197,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($feet as $feet)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="feet" value="{{ $feet }}"> {{ $feet }}
                                                         </label>
@@ -212,7 +212,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($boobs as $boobs)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="boobs" value="{{ $boobs }}"> {{ $boobs }}
                                                         </label>
@@ -227,7 +227,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($butt as $butt)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="butt" value="{{ $butt }}"> {{ $butt }}
                                                         </label>
@@ -242,7 +242,7 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($complexions as $complexion)
-                                                    <div class="col-md-4 col-sm-4">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
                                                         <label for="" class="radio-inline">
                                                             <input type="radio" name="complexion" value="{{ $complexion }}"> {{ $complexion }}
                                                         </label>
@@ -498,27 +498,86 @@
                                     <hr>
                                     <div class="form-group container-fluid">
                                         <label for="">
-                                            To what extent have you felt the emotions below in the last 30 days? <span class="gray_text">(Choose at least four)</span>
+                                            To what extent have you felt the emotions below in the last 30 days?
                                         </label>
                                         <br>
-                                        Happy
+                                        <span class="text-warning">1</span> is lowest while <span class="text-success">7</span> is highest
+                                        <div class="row">
+                                            @foreach($emotions as $emotion)
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                    <label for="">{{ $emotion }}</label>
+                                                    <br>
+                                                    <select name="{{ $emotion }}" id="{{ $emotion }}" class="form-control">
+                                                        <option value="">Select One</option>
+                                                        @for($a=1;$a<=7;$a++)
+                                                            <option value="{{ $a }}">{{ $a }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group container-fluid">
+                                        <label for="">
+                                            What interests do you have? <span class="gray_text">(At least five)</span>
+                                        </label>
                                         <br>
-                                        @foreach($emotions as $emotion)
-                                            <div class="col-md-4 col-sm-4 col-xs-hidden">
-                                                <label for="" class="checkbox-inline">
-                                                    <input type="checkbox" name="emotions" value="{{ $emotion }}"> {{ $emotion }}
-                                                </label>
-                                            </div>
-                                        @endforeach
+                                        <div class="row">
+                                            @foreach($interests as $interest)
+                                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                                    <label for="" class="checkbox-inline">
+                                                        <input type="checkbox" name="interest" value="{{ $interest }}"> {{ $interest }}
+                                                    </label>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group container-fluid">
+                                        <label for="">
+                                            What Movie Platforms do you enjoy?
+                                        </label>
+                                        <br>
+                                        <div class="row">
+                                            @foreach($moviePlatforms as $moviePlatform)
+                                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                                    <label for="" class="checkbox-inline">
+                                                        <input type="checkbox" name="moviePlatform" value="{{ $moviePlatform }}"> {{ $moviePlatform }}
+                                                    </label>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group container-fluid">
+                                        <label for="">
+                                            Which of these characteristics do you have? <span class="gray_text">(Choose at least five)</span>
+                                        </label>
+                                        <br>
+                                        <div class="row">
+                                            @foreach($characteristics as $characteristic)
+                                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                                    <label for="" class="checkbox-inline">
+                                                        <input type="checkbox" name="characteristic" value="{{ $characteristic }}"> {{ $characteristic }}
+                                                    </label>
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                    <button class="btn btn-info medium_button" type="submit">
+                                    {{-- remember to change the anchor tag to button, 
+                                    this is just for test purpose --}}
+                                    {{-- <button class="btn btn-info medium_button" type="submit">
                                         Proceed
-                                    </button>
+                                    </button> --}}
+                                    <a class="btn btn-info medium_button" href="/basicinfo/3">
+                                        Proceed
+                                    </a>
                                 </div>
                             </div>
                         </form>

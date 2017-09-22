@@ -268,6 +268,35 @@ class Controller extends BaseController
             'I am rich and generous'
         ];
 
+        $emotions = [
+            'Happy', 'Sad', 'Worried', 'Confident', 'Hopeful', 'Anxious about the future',
+            'Furious', 'Calm', 'Fortunate', 'Out of control', 'Fulfilled', 'Depressed',
+            'Energetic', 'Tired', 'Successful', 'Unable to cope', 'Content', 'Misunderstood',
+            'Secure', 'Paranoid'
+        ];
+
+        $interests = [
+            'Music', 'Fine Food and Dining', 'Arts and Crafts',
+            'Theatre/Dance/Opera', 'Nature/Gardening', 'Socialising/Clubbing',
+            'Philanthropy', 'Movies/Cinema', 'International Travle/Road Trip',
+            'Photography', 'Swimming', 'Literature/Reading', 'Health and Fitness/Gym',
+            'Playing Team Sports'
+        ];
+
+        $moviePlatforms = [
+            'Foreign movies/Netflix', 'Local movies/African Magic', 'Telemundo',
+            'Zee world', 'I don\'t mind what I watch'
+        ];
+
+        $characteristics = [
+            'Makes a lot of time for their closest friends', 'Likes being the center of attention',
+            'Often make others laugh', 'Bring romance to my relationships', 'Adept at resolving conflicts',
+            'Always on the go', 'Constantly extending their circle of friends', 'Able to accommodate the wishes of others',
+            'Trying to understand others', 'Always try to fix any issues, which arise between my partner and me',
+            'Try to avoid disagreements', 'Try to forget an issue once it is resolved',
+            'A people pleaser'
+        ];
+
         return view('basicinfo.page2', compact(
             'eatingHabit', 'drinkingHabit', 'smokingHabit',
             'looks', 'heights', 'bodyStructures', 'makeups',
@@ -275,7 +304,8 @@ class Controller extends BaseController
             'fingers', 'nosetype', 'legs', 'shoulder', 'fashionStyles',
             'wifeLooks', 'husbandLooks', 'musicGenres', 'sports',
             'travelHabits', 'descriptions', 'moreDescriptions', 'qualities',
-            'peopleDescriptions', 'imperfections', 'lifeViews'
+            'peopleDescriptions', 'imperfections', 'lifeViews', 'emotions',
+            'interests', 'moviePlatforms', 'characteristics'
         ));
     }
 
