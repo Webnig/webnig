@@ -63,8 +63,12 @@ Route::post('/search/advance', 'SearchController@processAdvanceSearch')->name('p
 Route::post('/search/byMatID', 'SearchController@searchByMatID')->name('process_search_by_mat_id');
 
 
+// matches
+Route::get('/matches', 'Controller@matches')->name('display_matches');
+
 // Routes for Basic Info
-Route::get('/basicinfo', 'Controller@basicInfo')->name('user.basic_info');
+Route::get('/basicinfo', 'Controller@basicInfo');
+Route::get('/basicinfo/2', 'Controller@basicInfo2');
 
 // Payment
 Route::get('payment', 'Controller@payment');
@@ -79,7 +83,8 @@ Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
 //Route::get('/profile/edit', '');
 //Route::resource('photos', 'PhotosController');
 
-    Route::get('/matches', 'MatchesController@index')->name('viewMatches');
+// TODO::uncomment this route
+    // Route::get('/matches', 'MatchesController@index')->name('viewMatches');
 
 
 //interests routes
