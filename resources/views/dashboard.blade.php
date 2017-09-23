@@ -70,20 +70,16 @@
                                     <img src="{{ asset('images/profile-pic-3x.png') }}" class="img img-circle" height="200px" width="200px" alt="Profile Picture" title="Your Profile Picture" />
                                 </div>          
                             </div>
-
                             <div class="col-xs-hidden col-sm-hidden col-md-5 col-lg-5 col-xl-5">
                                 <div class="dash-head-child-1">
-                                    <h3> {{ $user->city.', '. $user->state }} </h3>
-                                    <span class="name">{{ $user->first_name.' '. $user->last_name }}</span>
-                                    <div><span class="gender">{{ $user->gender }}, {{ $user->age }}</span>
-                                    <span class="height">{{ $user->height }}cm</span></div>
+                                    <h3>Lekki, Lagos</h3>
+                                    <span class="name">Aisha Majekodunmi</span>
+                                    <div><span class="gender">Female, 26</span><span class="height">176cm</span></div>
                                     <span><hr style="color:#d8d8d8"></span>
-                                    <form action="" name="status-form">
-                                      {{ csrf_field() }}
-                                      <span class="mind">What's on your mind</span><br><br>
-                                      <span class="mind-child">I am attracted to so many things</span>
-                                    </form>
-                                </div>     
+                                    <span class="mind">What's on your mind</span><br><br>
+                                    <span class="mind-child">I am attracted to so many things</span>
+                                </div>              
+                            </div>
                             <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
                                     <div class="dash-head-child-2">
                                         <p class="pull-right" style="color:#868686;font-size:10px;font-weight:bolder;margin-right:-90px">Mat ID: 13609####</p><br>
@@ -225,7 +221,6 @@
                             <center><a href="" style="color:#848c8d;font-size:22px ;font-weight: bolder">View All</a></center><br><br>
                         </div>
                     </div>
-                      <!-- check to see if there are any errors here --!>
                     <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
                         <h3 style="color:#848484;font-weight:lighter;text-align: center">New Matches</h3>
                         <center><p style="font-size:13px;color:#848484">We found <a href="" style="color:#f26aa8">12</a> new matches you might be interested in</p></center><br>
@@ -290,7 +285,8 @@
                                         </div>  
                                     </div>
                                 </div>
-
+                            </div>
+                        </div>
                     </div>
                     <hr>
                 </div>
