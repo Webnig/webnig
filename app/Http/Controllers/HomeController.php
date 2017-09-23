@@ -81,9 +81,9 @@ class HomeController extends Controller
         $monthAgo = date('Y-m-d H:i:s', strtotime('1 month ago'));
         $notification = $user->notifications->where('created_at', '>=', $monthAgo);
 
-        $profile_views = $notification->where('type', '=', Notification::$PROFILE_VIEW)->count();
+        $profile_views = $notification->where('type', Notification::$PROFILE_VIEW)->count();
         $admired = $user->outGoingNotifications->where('created_at', '>=', $monthAgo)
-            ->where('type', '=', Notification::$ADMIRE_MADE)->count();
+            ->where('type', Notification::$ADMIRE_MADE)->count();
 
         $admiredBy = $notification->where('type', '=', Notification::$ADMIRE_FROM)->count();
 

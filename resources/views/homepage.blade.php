@@ -1,38 +1,40 @@
 @extends('layouts.app')
 
 @section('title')
-Homepage
+    Homepage
 @endsection
 
 @section('body')
-	<div class="container top_margin">
-		<div class="row">
-			<div class="col-md-3 col-xs-12 col-sm-6">
-				<div class="include_me">
-					<div class="add-image">
-						<img src="{{ asset('images/add-me-3x.png') }}" alt="Add me here" class="img img responsive" height="350px">
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>
-			@foreach ($users as $user)
-				<div class="col-md-2 col-xs-12 col-sm-6">
-					<div class="jumbotron match">
-						<div class="match__img">
-							<img src="{{ asset('images/bitmap@3x.jpg') }}" alt="" class="img-responsive img-circle">
-						</div>
-						<div class="match__content">
-							<p id="matID">Mat ID: {{ $user->mat_id }}</p>
-							<p id="gender">Male, 26</p>
-							<p id="religion">{{ str_limit($user->religion, 10, '...') }} | {{ $user->state }}</p>
-							<p id="attraction">{{ str_limit($user->positive_traits, $limit = 30, $end = '...') }}</p>
-						</div>
-						<button class="match__button">View Profile</button>
-					</div>
-				</div>
-			@endforeach
-		</div> {{-- /.row --}}
-	</div> {{-- /.container-fluid .top_margin --}}
+    <div class="container top_margin">
+        <div class="row">
+            <div class="col-md-3 col-xs-12 col-sm-6">
+                <div class="include_me">
+                    <div class="add-image">
+                        <img src="{{ asset('images/add-me-3x.png') }}" alt="Add me here" class="img img responsive"
+                             height="350px">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            @foreach ($users as $user)
+                <div class="col-md-2 col-xs-12 col-sm-6">
+                    <div class="match ">
+                        <div class="match__img">
+                            <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                 class="img img-responsive img-circle">
+                        </div>
+                        <div class="match__content">
+                            <p id="matID">Mat ID: {{ $user->mat_id }}</p>
+                            <p id="gender">Male, 26</p>
+                            <p id="religion">{{ str_limit($user->religion, 10, '...') }} | {{ $user->state }}</p>
+                            <p id="attraction">{{ str_limit($user->positive_traits, $limit = 30, $end = '...') }}</p>
+                        </div>
+                        <button class="match__button">View Profile</button>
+                    </div>
+                </div>
+            @endforeach
+        </div> {{-- /.row --}}
+    </div> {{-- /.container-fluid .top_margin --}}
     <main class="homepage">
         <section class="add-me">
             <div class="container">
@@ -112,6 +114,7 @@ Homepage
                     <div class="finder-content">
                         <h1>Your soulmate is only a click away</h1>
                         <form action="">
+                            {{ csrf_field() }}
                             <label for="search" class="hidden">
                                 Search by location or matrimony ID
                             </label>
@@ -121,7 +124,7 @@ Homepage
                             </div>
 
                         </form>
-                        <p>Want an invite? Click <a href="">here</a> to get started</p>
+                        <p>Want an invite? Click <a href="{{ route('login') }}">here</a> to get started</p>
                     </div>
                 </div>
             </div>
@@ -149,9 +152,10 @@ Homepage
                 </div>
                 <div class="meet-up__matches">
                     <div class="collection">
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -161,9 +165,10 @@ Homepage
                             </div>
                             <button class="match__button">View Profile</button>
                         </div>
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -173,9 +178,10 @@ Homepage
                             </div>
                             <button class="match__button">View Profile</button>
                         </div>
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -185,9 +191,10 @@ Homepage
                             </div>
                             <button class="match__button">View Profile</button>
                         </div>
-                        <div class="match">
+                        <div class="match ">
                             <div class="match__img">
-                                <img src="images/bitmap@3x.jpg" class="img img-responsive img-circle">
+                                <img src="{{ asset('images/bitmap@3x.jpg') }}"
+                                     class="img img-responsive img-circle">
                             </div>
                             <div class="match__content">
                                 <p>Mat ID: 133609####</p>
@@ -261,7 +268,7 @@ Homepage
                     <p>Because this is what it's all about. Read what our clients have to say about us and their
                         experiences.</p>
                     <div class="ls-comment">
-                        <img src="images/gift.png" class="img img-circle" alt="">
+                        <img src="{{ asset('images/gift.png') }}" class="img img-circle" alt="">
                         <blockquote>
                             <p>
                                 "My matchmaker has set up outstanding dates. The locations have been interesting and the
