@@ -13,11 +13,16 @@
 */
 use Illuminate\Support\Facades\Route;
 
+
+/*
+ * TODO ::::: THIS FILE NEEDS CLEANING
+ *
+ * */
 Route::get('/test', function () {
     return view('matches.matches');
 });
 
-Route::get('/mail', 'MailController@sendRegistrationSuccess');
+Route::get('/mail/registration_success', 'MailController@sendRegistrationSuccess');
 
 Route::get('/', 'Controller@index')->name('index_page');
 
@@ -68,6 +73,7 @@ Route::get('/matches', 'Controller@matches')->name('display_matches');
 
 // Routes for Basic Info
 Route::get('/basicinfo', 'Controller@basicInfo');
+
 Route::get('/basicinfo/2', 'Controller@basicInfo2');
 
 // Payment
