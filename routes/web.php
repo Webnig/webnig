@@ -59,22 +59,23 @@ Route::get('/search/advance', 'SearchController@advance')->name('user.advance_se
 
 Route::get('/search/regular', 'SearchController@regular')->name('user.regular_search');
 
-Route::post('/search', 'SearchController@processKeywordSearch')->name('process_search');
+Route::get('/search/results', 'SearchController@processKeywordSearch')->name('process_search');
 
-Route::post('/search/regular', 'SearchController@processRegularSearch')->name('process_regular_search');
+Route::get('/search/regular/results', 'SearchController@processRegularSearch')->name('process_regular_search');
 
-Route::post('/search/advance', 'SearchController@processAdvanceSearch')->name('process_advanced_search');
+Route::get('/search/advance/results', 'SearchController@processAdvanceSearch')->name('process_advanced_search');
 
-Route::post('/search/byMatID', 'SearchController@searchByMatID')->name('process_search_by_mat_id');
+Route::get('/search/byMatID/results', 'SearchController@searchByMatID')->name('process_search_by_mat_id');
 
 
 // matches
 Route::get('/matches', 'Controller@matches')->name('display_matches');
 
 // Routes for Basic Info
-Route::get('/basicinfo', 'Controller@basicInfo');
+Route::get('/basicinfo', 'Controller@basicInfo')->name('edit_profile_1');
 
-Route::get('/basicinfo/2', 'Controller@basicInfo2');
+Route::get('/basicinfo/2', 'Controller@basicInfo2')->name('edit_profile_2');
+
 Route::get('/basicinfo/3', 'Controller@basicInfo3');
 
 Route::get('/dashboard', function() {
@@ -82,7 +83,7 @@ Route::get('/dashboard', function() {
 });
 
 // Payment
-Route::get('payment', 'Controller@payment');
+Route::get('/upgrade', 'Controller@payment')->name('upgrade');
 
 Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
 
@@ -91,6 +92,8 @@ Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
 
 
     Route::get('/profile', 'HomeController@viewProfile')->name('view_profile');
+    
+    Route::get('/user/{user}/profile', 'HomeController@viewProfile')->name('view_user_profile');
 
 //TODO::resolve the conflicts between these two routes {{--}}
 //Route::get('/profile/edit', '');
@@ -105,7 +108,6 @@ Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
     Route::get('/interests', 'InterestsController@index');
 
     Route::get('/interests/{interest}', 'InterestsController@view');
-
 });
 
 
