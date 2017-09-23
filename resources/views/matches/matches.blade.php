@@ -12,7 +12,7 @@
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
-<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ asset('js/jquery.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
 <link rel="alternative icon" type="icon" href="{{  asset('images/logo.png') }}">

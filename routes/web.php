@@ -56,13 +56,18 @@ Route::get('/matches', 'Controller@matches')->name('display_matches');
 // Routes for Basic Info
 Route::get('/basicinfo', 'Controller@basicInfo');
 Route::get('/basicinfo/2', 'Controller@basicInfo2');
+Route::get('/basicinfo/3', 'Controller@basicInfo3');
+
+Route::get('/dashboard', function() {
+    return view('dashboard');
+});
 
 // Payment
 Route::get('payment', 'Controller@payment');
 
 Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
-    
-    Route::get('/dashboard', 'HomeController@viewDashboard')->name('view_dashboard');
+    // remote this @PENS
+    // Route::get('/dashboard', 'HomeController@viewDashboard')->name('view_dashboard');
 
     Route::get('/profile', 'HomeController@viewProfile')->name('view_profile');
 

@@ -309,6 +309,11 @@ class Controller extends BaseController
         ));
     }
 
+    public function basicInfo3()
+    {
+        return view('basicinfo.page3');
+    }
+
     public function matches()
     {
         return view('matches.matches');
