@@ -311,7 +311,98 @@ class Controller extends BaseController
 
     public function basicInfo3()
     {
-        return view('basicinfo.page3');
+        $curtsies = [
+            'Yes, for only the husband', 'Yes, for only the in-laws',
+            'Yes, for both husband and in-laws', 'No, I don\'t believe in this'
+        ];
+
+        $haveMaleChild = [
+            'Yes, it is compulsory', 'No, it is not compulsory'
+        ];
+
+        $familyidol = [
+            'Yes, we do', 'No, we don\'t'
+        ];
+
+        $spouse = [
+            'I will listen to them and break up with my intended',
+            'I will not listen to them',
+            'I will listen depending on their reason'
+        ];
+
+        $partnersFamily = [
+            'Yes, it is okay with me', 'No, it is not okay with me'
+        ];
+
+        $spouseGreetParents = [
+            'Modern' => 'Shake hands when they greet my parents',
+            'Hybrid' => 'Curtsy, nod when they greet my parents',
+            'Traditional' => 'Kneel/Prostrate when they greet my parents',
+            'Liberal' => 'Wave when they greet my parents'
+        ];
+
+        $spouseSiblings = [
+            'Yes, if they are older than her', 'Yes, irrespective of their age',
+            'No, if they are younger than her'
+        ];
+
+        $extendedFamilyExpenses = [
+            'Yes, as long as it is mutual',
+            'No, we keep extended family expenses apart'
+        ];
+
+        $religiousProphecies = ['Yes, I will', 'No, I will not'];
+        $domesticJobs = [
+            'Yes, it is her job to do house chores',
+            'No, both of us work on house chores',
+            'We will get a househelp/cleaner/cook'
+        ];
+
+        $clothesWasher = [
+            'My partner will wash everything with his/her hands',
+            'We\'ll get a washing machine', 'Our house help/drycleaner will wash it',
+            'I don\'t care as long as it is clean'
+        ];
+
+        $enjoyCooking = ['Yes', 'No'];
+        $enjoyHousekeeping = ['Yes', 'No'];
+        $tidyness = ['Very tidy', 'Tidy', 'Not tidy'];
+        $unsatisfiedFeeling = [
+            'I will become very upset and plan my revenge',
+            'I accept it in good stride and move on',
+            'I will nag till they get it done',
+            'Nothing, there will be other days'
+        ];
+        $hasCar = ['Yes', 'No'];
+        $partnerHasCar = ['Yes', 'No'];
+        $liveInFamilyHouse = [
+            'Yes, I live in the family house',
+            'No, I have my own place', 'I live with my friends'
+        ];
+
+        $mostAppealing = [
+            'Settling down with a family someday',
+            'A life of singledom', 'Living spontaneously and in the moment'
+        ];
+
+        $whoCallsMore = [
+            'The Groom to be', 'The Bride to be', 'Both of them'
+        ];
+
+        $getBackTogetherActivity = [
+            'We take a break for some time to think things through',
+            'We have a heart to heart discussion',
+            'We make love to reconnect our emotions'
+        ];
+
+        return view('basicinfo.page3', compact(
+            'curtsies', 'haveMaleChild', 'familyidol', 'spouse',
+            'partnersFamily', 'spouseGreetParents', 'spouseSiblings',
+            'extendedFamilyExpenses', 'religiousProphecies', 'domesticJobs',
+            'clothesWasher', 'enjoyCooking', 'enjoyHousekeeping', 'tidyness',
+            'unsatisfiedFeeling', 'hasCar',  'partnerHasCar', 'liveInFamilyHouse',
+            'mostAppealing', 'whoCallsMore', 'getBackTogetherActivity'
+        ));
     }
 
     public function matches()

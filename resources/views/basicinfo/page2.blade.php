@@ -55,12 +55,12 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Eating Habit</label>
+                                        <label class="col-md-3 col-sm-3">Eating Habit</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($eatingHabit as $habit)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="eatingHabit" value="{{ $habit }}"> {{ $habit }}
                                                         </label>
                                                     </div>
@@ -70,12 +70,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Drinking Alcohol Habit</label>
+                                        <label class="col-md-3 col-sm-3">Drinking Alcohol Habit</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($drinkingHabit as $habit)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="drinkingHabit" value="{{ $habit }}"> {{ $habit }}
                                                         </label>
                                                     </div>
@@ -85,12 +85,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Smoking Habit</label>
+                                        <label class="col-md-3 col-sm-3">Smoking Habit</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($smokingHabit as $habit)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="smokingHabit" value="{{ $habit }}"> {{ $habit }}
                                                         </label>
                                                     </div>
@@ -106,12 +106,12 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Look</label>
+                                        <label class="col-md-3 col-sm-3">Look</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($looks as $look)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="look" value="{{ $look }}"> {{ $look }}
                                                         </label>
                                                     </div>
@@ -121,12 +121,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Height</label>
+                                        <label class="col-md-3 col-sm-3">Height</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($heights as $height)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="height" value="{{ $height }}"> {{ $height }}
                                                         </label>
                                                     </div>
@@ -135,12 +135,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Body Structure</label>
+                                        <label class="col-md-3 col-sm-3">Body Structure</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($bodyStructures as $structure)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="bodyStructure" value="{{ $structure }}"> {{ $structure }}
                                                         </label>
                                                     </div>
@@ -149,12 +149,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Makeup style</label>
+                                        <label class="col-md-3 col-sm-3">Makeup style</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($makeups as $makeup)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="makeup" value="{{ $makeup }}"> {{ $makeup }}
                                                         </label>
                                                     </div>
@@ -163,12 +163,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Beard</label>
+                                        <label class="col-md-3 col-sm-3">Beard</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($beard as $beard)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="beard" value="{{ $beard }}"> {{ $beard }}
                                                         </label>
                                                     </div>
@@ -178,12 +178,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Belly</label>
+                                        <label class="col-md-3 col-sm-3">Belly</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($belly as $belly)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="belly" value="{{ $belly }}"> {{ $belly }}
                                                         </label>
                                                     </div>
@@ -193,12 +193,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Feet</label>
+                                        <label class="col-md-3 col-sm-3">Feet</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($feet as $feet)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="feet" value="{{ $feet }}"> {{ $feet }}
                                                         </label>
                                                     </div>
@@ -208,12 +208,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Boobs</label>
+                                        <label class="col-md-3 col-sm-3">Boobs</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($boobs as $boobs)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="boobs" value="{{ $boobs }}"> {{ $boobs }}
                                                         </label>
                                                     </div>
@@ -223,12 +223,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Butt size</label>
+                                        <label class="col-md-3 col-sm-3">Butt size</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($butt as $butt)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="butt" value="{{ $butt }}"> {{ $butt }}
                                                         </label>
                                                     </div>
@@ -238,12 +238,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Complexion</label>
+                                        <label class="col-md-3 col-sm-3">Complexion</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($complexions as $complexion)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="complexion" value="{{ $complexion }}"> {{ $complexion }}
                                                         </label>
                                                     </div>
@@ -253,12 +253,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Fingers type</label>
+                                        <label class="col-md-3 col-sm-3">Fingers type</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($fingers as $finger)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="fingers" value="{{ $finger }}"> {{ $finger }}
                                                         </label>
                                                     </div>
@@ -268,12 +268,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Nose type</label>
+                                        <label class="col-md-3 col-sm-3">Nose type</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($nosetype as $nose)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="nose" value="{{ $nose }}"> {{ $nose }}
                                                         </label>
                                                     </div>
@@ -283,12 +283,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Legs</label>
+                                        <label class="col-md-3 col-sm-3">Legs</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($legs as $leg)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="leg" value="{{ $leg }}"> {{ $leg }}
                                                         </label>
                                                     </div>
@@ -298,12 +298,12 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Shoulder</label>
+                                        <label class="col-md-3 col-sm-3">Shoulder</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($shoulder as $shoulder)
                                                     <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="shoulder" value="{{ $shoulder }}"> {{ $shoulder }}
                                                         </label>
                                                     </div>
@@ -318,7 +318,7 @@
                                         <div class="row">
                                             @foreach($fashionStyles as $style)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="fashionStyle" value="{{ $style }}"> {{ $style }}
                                                     </label>
                                                 </div>
@@ -334,7 +334,7 @@
                                         <div class="row">
                                             @foreach($wifeLooks as $look)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="wifeLook" value="{{ $look }}"> {{ $look }}
                                                     </label>
                                                 </div>
@@ -350,7 +350,7 @@
                                         <div class="row">
                                             @foreach($husbandLooks as $look)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="husbandLook" value="{{ $look }}"> {{ $look }}
                                                     </label>
                                                 </div>
@@ -359,7 +359,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">
+                                        <label class="col-md-3 col-sm-3">
                                             Your favorite music
                                         </label>
                                         <div class="col-md-9 col-sm-9">
@@ -373,7 +373,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">
+                                        <label class="col-md-3 col-sm-3">
                                             Sports/Fitness you love to do
                                         </label>
                                         <div class="col-md-9 col-sm-9">
@@ -387,7 +387,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">
+                                        <label class="col-md-3 col-sm-3">
                                             Travel Habits
                                         </label>
                                         <div class="col-md-9 col-sm-9">
@@ -408,7 +408,7 @@
                                         <div class="row">
                                             @foreach($descriptions as $description)
                                                 <div class="col-md-6 col-sm-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="about_self" value="{{ $description }}"> {{ $description }}
                                                     </label>
                                                 </div>
@@ -424,7 +424,7 @@
                                         <div class="row">
                                             @foreach($moreDescriptions as $description)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="your_description" value="{{ $description }}"> {{ $description }}
                                                     </label>
                                                 </div>
@@ -440,7 +440,7 @@
                                         <div class="row">
                                             @foreach($qualities as $quality)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="quality" value="{{ $quality }}"> {{ $quality }}
                                                     </label>
                                                 </div>
@@ -456,7 +456,7 @@
                                         <div class="row">
                                             @foreach($peopleDescriptions as $description)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="peopleDescription" value="{{ $description }}"> {{ $description }}
                                                     </label>
                                                 </div>
@@ -472,7 +472,7 @@
                                         <div class="row">
                                             @foreach($imperfections as $imperfection)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="imperfection" value="{{ $imperfection }}"> {{ $imperfection }}
                                                     </label>
                                                 </div>
@@ -488,7 +488,7 @@
                                         <div class="row">
                                             @foreach($lifeViews as $view)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="life_view" value="{{ $view }}"> {{ $view }}
                                                     </label>
                                                 </div>
@@ -526,7 +526,7 @@
                                         <div class="row">
                                             @foreach($interests as $interest)
                                                 <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="interest" value="{{ $interest }}"> {{ $interest }}
                                                     </label>
                                                 </div>
@@ -542,7 +542,7 @@
                                         <div class="row">
                                             @foreach($moviePlatforms as $moviePlatform)
                                                 <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="moviePlatform" value="{{ $moviePlatform }}"> {{ $moviePlatform }}
                                                     </label>
                                                 </div>
@@ -558,7 +558,7 @@
                                         <div class="row">
                                             @foreach($characteristics as $characteristic)
                                                 <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="characteristic" value="{{ $characteristic }}"> {{ $characteristic }}
                                                     </label>
                                                 </div>

@@ -52,9 +52,461 @@
                 <div class="col-md-9 col-sm-9 col-lg-9">
                         <form action="#" method="post" class="form-horizontal">
                             {{ csrf_field() }}
-                            <h3 class="cyan_text">Your Lifestyle Info</h3>
+                            <h2 class="cyan_text">Nigerian</h2>
                             <br>
-                            
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Would you consider being or having a second wife?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="secondwife" value="Yes"> Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="secondwife" value="No"> No
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="secondwife" value="Maybe"> Maybe
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Is it compulsory to have a legal/registry/court wedding or other forms 
+                                                like traditional/church/nikai or wedding ceremony is sufficient enough?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="courtWedding" value="Yes"> Yes, it is compulsory
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-6">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="courtWedding" value="No"> No, it is not compulsory
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you believe a wife should knee/curtsy when she&rsquo;s serving her 
+                                                husband/in-laws their food?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($curtsies as $curtsy)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="curtsy" value="{{ $curtsy }}"> {{ $curtsy }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you think it is compulsory to have a male child?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($haveMaleChild as $male)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="haveMaleChild" value="{{ $male }}"> {{ $male }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Does your family dedicate children to your family&rsquo;s deity/idol?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($familyidol as $idol)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="familyidol" value="{{ $idol }}"> {{ $idol }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                If your parents insist that you should not marry your intended spouse, what will 
+                                                you do?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($spouse as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="parent_spouse" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you think it is okay for your partner&rsquo;s family to live with 
+                                                you in the first year of marriage?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($partnersFamily as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="partner_family" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                How should your future spouse greet your parents?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($spouseGreetParents as $key => $value)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="spouse_greet_parents" value="{{ $key }}"> {{ $key . " (" . $value . ")" }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you think a woman should call her spouse&rsquo;s younger siblings 
+                                                Aunty or Uncle?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($spouseSiblings as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="spouse_siblings" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you believe in helping your partner pay for extended 
+                                                family expenses e.g. Wedding expenses of spouse's siblings?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($extendedFamilyExpenses as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="extendedFamilyExpenses" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                If your prophet/pastor/imam/religious leader prophesies that your 
+                                                partner is bad for you, will you still marry him or her?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($religiousProphecies as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="religiousProphecies" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <h3 class="cyan_text">Domesticated</h3>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you believe that cooking and domestic jobs are solely 
+                                                roles of the wife?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($domesticJobs as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="domesticJobs" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                When you get married, who will wash the clothes?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($clothesWasher as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="clothesWasher" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Must a woman enjoy cooking?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($enjoyCooking as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="enjoyCooking" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Must a woman enjoy cleaning and housekeeping?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($enjoyHousekeeping as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="enjoyHousekeeping" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                How tidy are you?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($tidyness as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="tidyness" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <h3 class="cyan_text">Relationship</h3>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                What are you like when you don&rsquo;t get 
+                                                what you want from your partner?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($unsatisfiedFeeling as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="unsatisfiedFeeling" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you have a car?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($hasCar as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="hasCar" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Can you date someone who does not have a car?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($partnerHasCar as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="partnerHasCar" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Do you live in the family house or on your own?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($liveInFamilyHouse as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="liveInFamilyHouse" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                What is most appealing?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($mostAppealing as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="mostAppealing" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                Who should call more at the start of the relationship?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($whoCallsMore as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="whoCallsMore" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                When you feel disconnected from your partner, what do you 
+                                                usually do to get back together?
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    @foreach($getBackTogetherActivity as $option)
+                                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="getBackTogetherActivity" value="{{ $option }}"> {{ $option }}
+                                                            </label>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <hr>
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">

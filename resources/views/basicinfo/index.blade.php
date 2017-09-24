@@ -247,7 +247,7 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+                                            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6" id="nigerianStates" style="display: none;">
                                                 <label for="state">State <span class="gray_text">(Nigerians)</span></label>
                                                 <br>
                                                 <select name="nigerianState" id="nigerianState" class="form-control">
@@ -417,29 +417,29 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="maritalStatus"> Never married
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="maritalStatus"> Widowed
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="maritalStatus"> Divorced
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="maritalStatus"> Awaiting Divorce
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="maritalStatus"> Married
                                                     </label>
                                                 </div>
@@ -465,12 +465,12 @@
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="children_location"> Living with me
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="children_location"> Not living with me
                                                     </label>
                                                 </div>
@@ -479,7 +479,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Want more children?</label>
+                                        <label class="col-md-3 col-sm-3">Want more children?</label>
                                         <div class="col-md-9 col-sm-9">
                                             <select name="want_more_children" id="want_more_children" class="form-control">
                                                 <option value="">Choose...</option>
@@ -490,16 +490,16 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Disabilities?</label>
+                                        <label class="col-md-3 col-sm-3">Disabilities?</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="disability"> Normal
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="radio-inline">
+                                                    <label class="radio-inline">
                                                         <input type="radio" name="disability"> Physically Challenged
                                                     </label>
                                                 </div>
@@ -553,21 +553,21 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Citizenship</label>
+                                        <label class="col-md-3 col-sm-3">Citizenship</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="citizenship"> Nigerian
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="citizenship"> British
                                                     </label>
                                                 </div>
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="citizenship"> French
                                                     </label>
                                                 </div>
@@ -575,12 +575,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Resident Status</label>
+                                        <label class="col-md-3 col-sm-3">Resident Status</label>
                                         <div class="col-md-9 col-sm-9">
                                             <div class="row">
                                                 @foreach($residentStatus as $residentStatus)
                                                     <div class="col-md-4 col-sm-4">
-                                                        <label for="" class="radio-inline">
+                                                        <label class="radio-inline">
                                                             <input type="radio" name="resident_status"> {{ $residentStatus }}
                                                         </label>
                                                     </div>
@@ -592,7 +592,7 @@
                                     <h4 class="gray_text">Education in Detail</h4>
                                     <br>
                                     <div class="form-group">
-                                        <label for="" class="col-md-3 col-sm-3">Course Studied</label>
+                                        <label class="col-md-3 col-sm-3">Course Studied</label>
                                         <div class="col-md-9 col-sm-9">
                                             <input type="text" name="course_studied" id="course_studied" placeholder="Course Studied" class="form-control">
                                         </div>
@@ -661,7 +661,7 @@
                                         <div class="row">
                                             @foreach($descriptionTags as $tag)
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="citizenship"> {{ $tag }}
                                                     </label>
                                                 </div>
@@ -674,7 +674,7 @@
                                         <div class="row">
                                             @foreach($hobbies as $hobby)
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="" class="checkbox-inline">
+                                                    <label class="checkbox-inline">
                                                         <input type="checkbox" name="citizenship"> {{ $hobby }}
                                                     </label>
                                                 </div>
