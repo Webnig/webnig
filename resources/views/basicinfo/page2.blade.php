@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+
     <link rel="alternative icon" type="icon" href="{{  asset('images/logo.png') }}">
 </head>
 <body>
@@ -313,7 +315,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">Personal Fashion Style <span class="gray_text">(Pick at least four)</span></label>
+                                        <label>Personal Fashion Style <span class="gray_text">(Pick at least four)</span></label>
                                         <br>
                                         <div class="row">
                                             @foreach($fashionStyles as $style)
@@ -327,7 +329,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             Which celebrity&rsquo;s look best describes 
                                             the wife of your dreams ? <span class="gray_text">(Male only)</span>
                                         </label>
@@ -343,7 +345,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             Which male celebrity look best describes the husband of your 
                                             dreams <span class="gray_text">(Female only)</span>
                                         </label>
@@ -401,7 +403,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             Describe yourself <span class="gray_text">(Choose at least 4)</span>
                                         </label>
                                         <br>
@@ -417,7 +419,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             Which of these best describes you? <span class="gray_text">(Choose at least 4)</span>
                                         </label>
                                         <br>
@@ -433,7 +435,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             Which of these qualitites do you possess? <span class="gray_text">(Choose at least 4)</span>
                                         </label>
                                         <br>
@@ -449,7 +451,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             How would people describe you? <span class="gray_text">(Choose four)</span>
                                         </label>
                                         <br>
@@ -465,7 +467,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             What imperfections do you possess? <span class="gray_text">(Choose four)</span>
                                         </label>
                                         <br>
@@ -481,7 +483,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             How well does the following statements apply to you? <span class="gray_text">(Choose at least four)</span>
                                         </label>
                                         <br>
@@ -497,29 +499,59 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             To what extent have you felt the emotions below in the last 30 days?
                                         </label>
                                         <br>
-                                        <span class="text-warning">1</span> is lowest while <span class="text-success">7</span> is highest
-                                        <div class="row">
-                                            @foreach($emotions as $emotion)
-                                                <div class="col-md-4 col-sm-4 col-xs-6">
-                                                    <label for="">{{ $emotion }}</label>
-                                                    <br>
-                                                    <select name="{{ $emotion }}" id="{{ $emotion }}" class="form-control">
-                                                        <option value="">Select One</option>
-                                                        @for($a=1;$a<=7;$a++)
-                                                            <option value="{{ $a }}">{{ $a }}</option>
-                                                        @endfor
-                                                    </select>
-                                                </div>
-                                            @endforeach
+                                        <span class="text-danger"><strong>1</strong></span> is lowest while 
+                                        <span class="text-success"><strong>7</strong></span> is highest
+                                        <br>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3"></label>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                @for ($a = 1; $a <= 7; $a++)
+                                                    <div class="col-md-1 col-sm-1 text-center">
+                                                        @if ($a == 1)
+                                                            <span class="text-danger">
+                                                                <strong>{{ $a }}</strong>
+                                                            </span>
+                                                        @elseif ($a == 4)
+                                                            <span class="text-warning">
+                                                                <strong>{{ $a }}</strong>
+                                                            </span>
+                                                        @elseif ($a == 7)
+                                                            <span class="text-success">
+                                                                <strong>{{ $a }}</strong>
+                                                            </span>
+                                                        @else
+                                                            <strong>{{ $a }}</strong>
+                                                        @endif
+                                                    </div>
+                                                @endfor
+                                            </div>
                                         </div>
                                     </div>
+                                    @foreach ($emotions as $emotion)
+                                        <div class="form-group">
+                                            <label class="col-md-3">{{ $emotion }}</label>
+                                            <div class="col-md-9">
+                                                <div class="row">
+                                                    @for ($a = 1; $a <= 7; $a++)
+                                                        <div class="col-md-1 col-sm-1 text-center">
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="{{ $emotion }}" value="{{ $a }}">
+                                                            </label>
+                                                        </div>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             What interests do you have? <span class="gray_text">(At least five)</span>
                                         </label>
                                         <br>
@@ -535,7 +567,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             What Movie Platforms do you enjoy?
                                         </label>
                                         <br>
@@ -551,7 +583,7 @@
                                     </div>
                                     <hr>
                                     <div class="form-group container-fluid">
-                                        <label for="">
+                                        <label>
                                             Which of these characteristics do you have? <span class="gray_text">(Choose at least five)</span>
                                         </label>
                                         <br>
@@ -609,7 +641,7 @@
             </p>
         </div>
     </div>
-    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/bundle.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

@@ -75,7 +75,7 @@ class Controller extends BaseController
         $countries = [
             'United States of America',
             'United Kingdom', 'Kenya', 'Ghana',
-            'China', 'India', 'Singapore'
+            'China', 'India', 'Singapore', 'Nigeria'
         ];
 
         $nigerianStates = [

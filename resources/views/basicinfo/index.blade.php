@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+
     <link rel="alternative icon" type="icon" href="{{  asset('images/logo.png') }}">
 </head>
 <body>
@@ -201,6 +203,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group" id="otherReligion">
+                                        <label class="col-md-3">Religion</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="otherReligion" id="otherReligion" 
+                                            placeholder="Religion" class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <hr>
@@ -236,30 +245,28 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                                     <div class="form-group">
-                                        <div class="row container-fluid">
-                                            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-                                                <label for="country">Country</label>
-                                                <br>
-                                                <select name="country" id="country" class="form-control">
-                                                    <option value="">Select Country</option>
-                                                    @foreach($countries as $country)
-                                                        <option value="{{ $country }}">{{ $country }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6" id="nigerianStates" style="display: none;">
-                                                <label for="state">State <span class="gray_text">(Nigerians)</span></label>
-                                                <br>
-                                                <select name="nigerianState" id="nigerianState" class="form-control">
-                                                    <option value="">Select State</option>
-                                                    @foreach($nigerianStates as $state)
-                                                        <option value="{{ $state }}">{{ $state }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
+                                        <label class="col-md-3 col-sm-3">Country</label>
+                                        <div class="col-md-9 col-sm-9">
+                                            <select name="country" id="country" class="form-control">
+                                                <option value="">Select Country</option>
+                                                @foreach($countries as $country)
+                                                    <option value="{{ $country }}">{{ $country }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" id="nigerianStates">
+                                        <label class="col-md-3 col-sm-3">State <span class="gray_text">(Nigerians)</span></label>
+                                        <div class="col-md-9 col-sm-9">
+                                            <select name="nigerianState" id="nigerianState" class="form-control">
+                                                <option value="">Select State</option>
+                                                @foreach($nigerianStates as $state)
+                                                    <option value="{{ $state }}">{{ $state }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="internationalStates">
                                         <label class="col-md-3 col-sm-3">State <span class="gray_text">(International)</span></label>
                                         <div class="col-md-9 col-sm-9">
                                             <input type="text" name="internationalState" id="internationalState" placeholder="State (International)" maxlength="200" class="form-control">
@@ -301,73 +308,67 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                                     <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <label>Father Status</label>
-                                                <br>
-                                                <select name="fatherStatus" id="fatherStatus" class="form-control">
-                                                    <option value="">Choose Father Status</option>
-                                                    @foreach($fatherStatus as $fatherStatus)
-                                                        <option value="{{ $fatherStatus }}">{{ $fatherStatus }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <label>Mother Status</label>
-                                                <br>
-                                                <select name="motherStatus" id="motherStatus" class="form-control">
-                                                    <option value="">Choose Mother Status</option>
-                                                    @foreach($motherStatus as $motherStatus)
-                                                        <option value="{{ $motherStatus }}">{{ $motherStatus }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
+                                        <label class="col-md-3">Father Status</label>
+                                        <div class="col-md-9">
+                                            <select name="fatherStatus" id="fatherStatus" class="form-control">
+                                                <option value="">Choose Father Status</option>
+                                                @foreach($fatherStatus as $fatherStatus)
+                                                    <option value="{{ $fatherStatus }}">{{ $fatherStatus }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <label>Brothers <span class="gray_text">(How many)</span></label>
-                                                <br>
-                                                <select name="num_of_brothers" id="num_of_brothers" class="form-control">
-                                                    <option value="">Please Choose</option>
-                                                    @for($a = 1; $a <= 10; $a++)
-                                                        <option value="{{ $a }}">{{ $a }}</option>
-                                                    @endfor
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6">
-                                                <label>Living with you?</label>
-                                                <br>
-                                                <select name="brothers_live_with" id="brothers_live_with" class="form-control">
-                                                    <option value="">Please Choose</option>
-                                                    <option value="yes">Yes</option>
-                                                    <option value="no">No</option>
-                                                </select>
-                                            </div>
+                                        <label class="col-md-3">Mother Status</label>
+                                        <div class="col-md-9">
+                                            <select name="motherStatus" id="motherStatus" class="form-control">
+                                                <option value="">Choose Mother Status</option>
+                                                @foreach($motherStatus as $motherStatus)
+                                                    <option value="{{ $motherStatus }}">{{ $motherStatus }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <label>Sisters <span class="gray_text">(How many)</span></label>
-                                                <br>
-                                                <select name="num_of_sisters" id="num_of_sisters" class="form-control">
-                                                    <option value="">Please Choose</option>
-                                                    @for($a = 1; $a <= 10; $a++)
-                                                        <option value="{{ $a }}">{{ $a }}</option>
-                                                    @endfor
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6">
-                                                <label>Living with you?</label>
-                                                <br>
-                                                <select name="sisters_live_with" id="sisters_live_with" class="form-control">
-                                                    <option value="">Please Choose</option>
-                                                    <option value="yes">Yes</option>
-                                                    <option value="no">No</option>
-                                                </select>
-                                            </div>
+                                        <label class="col-md-3">Brothers <span class="gray_text">(How many)</span></label>
+                                        <div class="col-md-9">
+                                            <select name="num_of_brothers" id="num_of_brothers" class="form-control">
+                                                <option value="">Please Choose</option>
+                                                @for($a = 1; $a <= 10; $a++)
+                                                    <option value="{{ $a }}">{{ $a }}</option>
+                                                @endfor
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3">Living with you?</label>
+                                        <div class="col-md-9">
+                                            <select name="brothers_live_with" id="brothers_live_with" class="form-control">
+                                                <option value="">Please Choose</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3">Sisters <span class="gray_text">(How many)</span></label>
+                                        <div class="col-md-9">
+                                            <select name="num_of_sisters" id="num_of_sisters" class="form-control">
+                                                <option value="">Please Choose</option>
+                                                @for($a = 1; $a <= 10; $a++)
+                                                    <option value="{{ $a }}">{{ $a }}</option>
+                                                @endfor
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3">Living with you?</label>
+                                        <div class="col-md-9">
+                                            <select name="sisters_live_with" id="sisters_live_with" class="form-control">
+                                                <option value="">Please Choose</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -388,21 +389,23 @@
                             <div class="row">
                                 <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
                                     <div class="form-group">
-                                        <label>How often in a week do you go to Church/Mosque</label>
-                                        <br>
-                                        <select name="worship_frequency" id="worship_frequency" class="form-control">
-                                            <option>Choose one...</option>
-                                            <option value="Once a week">Once a week</option>
-                                            <option value="Twice a week">Twice a week</option>
-                                            <option value="Everyday">Everyday</option>
-                                            <option value="I worship on the internet">I worship on the internet.</option>
-                                            <option value="I don&rsquo;t go anywhere to worship">I don&rsquo;t go anywhere to worship</option>
-                                        </select>
+                                        <label class="col-md-3 col-sm-3">How often in a week do you go to Church/Mosque</label>
+                                        <div class="col-md-9 col-sm-9">
+                                            <select name="worship_frequency" id="worship_frequency" class="form-control">
+                                                <option>Choose one...</option>
+                                                <option value="Once a week">Once a week</option>
+                                                <option value="Twice a week">Twice a week</option>
+                                                <option value="Everyday">Everyday</option>
+                                                <option value="I worship on the internet">I worship on the internet.</option>
+                                                <option value="I don&rsquo;t go anywhere to worship">I don&rsquo;t go anywhere to worship</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="form-group container-fluid">
+                                    <div class="form-group">
                                         <label class="col-md-3 col-sm-3">Name of Church/Mosque</label>
                                         <div class="col-md-9 col-sm-9">
-                                            <input type="text" name="name_of_worship_place" id="name_of_worship_place" placeholder="Church or Mosque name" class="form-control">
+                                            <input type="text" name="name_of_worship_place" id="name_of_worship_place" 
+                                            placeholder="Church or Mosque name" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -519,7 +522,7 @@
                                     <div class="form-group">
                                         <div class="row container-fluid">
                                             <div class="col-md-4 col-sm-4">
-                                                <label for="">Country</label>
+                                                <label>Country</label>
                                                 <br>
                                                 <select name="work_country" id="work_country" class="form-control">
                                                     <option value="">Choose...</option>
@@ -529,7 +532,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-4 col-sm-4">
-                                                <label for="">State</label>
+                                                <label>State</label>
                                                 <br>
                                                 <select name="work_state" id="work_state" class="form-control">
                                                     <option value="">Choose...</option>
@@ -540,7 +543,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-4 col-sm-4">
-                                                <label for="">City</label>
+                                                <label>City</label>
                                                 <br>
                                                 <select name="work_city" id="work_city" class="form-control">
                                                     <option value="">Choose...</option>
@@ -597,33 +600,31 @@
                                             <input type="text" name="course_studied" id="course_studied" placeholder="Course Studied" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="form-group container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <label for="">Employed in</label>
-                                                <br>
-                                                <select name="employer" id="employer" class="form-control">
-                                                    <option value="">Choose...</option>
-                                                    @foreach($employers as $employer)
-                                                        <option value="{{ $employer }}">{{ $employer }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6">
-                                                <label for="">Occupation</label>
-                                                <br>
-                                                <select name="occupation" id="occupation" class="form-control">
-                                                    <option value="">Choose...</option>
-                                                    <option value="Banker">Banker</option>
-                                                    <option value="Therapist">Therapist</option>
-                                                    <option value="Medical Doctor">Medical Doctor</option>
-                                                    <option value="Software Developer">Software Developer</option>
-                                                    <!-- fill this loop with occupations supplied by Yeside -->
-                                                    {{-- @foreach($employers as $employer)
-                                                        <option value="{{ $employer }}">{{ $employer }}</option>
-                                                    @endforeach --}}
-                                                </select>
-                                            </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3">Employed in</label>
+                                        <div class="col-md-9">
+                                            <select name="employer" id="employer" class="form-control">
+                                                <option value="">Choose...</option>
+                                                @foreach($employers as $employer)
+                                                    <option value="{{ $employer }}">{{ $employer }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3">Occupation</label>
+                                        <div class="col-md-9">
+                                            <select name="occupation" id="occupation" class="form-control">
+                                                <option value="">Choose...</option>
+                                                <option value="Banker">Banker</option>
+                                                <option value="Therapist">Therapist</option>
+                                                <option value="Medical Doctor">Medical Doctor</option>
+                                                <option value="Software Developer">Software Developer</option>
+                                                <!-- fill this loop with occupations supplied by Yeside -->
+                                                {{-- @foreach($employers as $employer)
+                                                    <option value="{{ $employer }}">{{ $employer }}</option>
+                                                @endforeach --}}
+                                            </select>
                                         </div>
                                     </div>
                                     <hr>
@@ -632,7 +633,7 @@
                                     <div class="form-group container-fluid">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6">
-                                                <label for="">Currency</label>
+                                                <label>Currency</label>
                                                 <br>
                                                 <select name="currency" id="currency" class="form-control">
                                                     <option value="">Choose...</option>
@@ -642,7 +643,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-6 col-sm-6">
-                                                <label for="">Income</label>
+                                                <label>Income</label>
                                                 <br>
                                                 <input type="number" placeholder="Income" name="income" id="income" class="form-control">
                                             </div>
@@ -651,12 +652,12 @@
                                     <div class="form-group container-fluid">
                                         {{-- this label should be based on what was selected earlier
                                         whether self or daughter or son :) --}}
-                                        <label for="">About Me/Daughter/Son</label>
+                                        <label>About Me/Daughter/Son</label>
                                         <br>
                                         <textarea name="about" id="about" rows="6" placeholder="About" maxlength="200" class="form-control"></textarea>
                                     </div>
                                     <div class="form-group container-fluid">
-                                        <label for="">People describe me as</label>
+                                        <label>People describe me as</label>
                                         <br>
                                         <div class="row">
                                             @foreach($descriptionTags as $tag)
@@ -669,7 +670,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group container-fluid">
-                                        <label for="">Hobbies and Interests</label>
+                                        <label>Hobbies and Interests</label>
                                         <br>
                                         <div class="row">
                                             @foreach($hobbies as $hobby)
@@ -725,7 +726,41 @@
             </p>
         </div>
     </div>
-    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('#nigerianStates').hide();
+            $('#otherReligion').hide();
+
+            $('#country').on('change', function() {
+                var selection = $(this).val();
+                switch (selection) {
+                    case "Nigeria":
+                        $('#nigerianStates').slideDown(400);
+                        $('#internationalStates').slideUp(400);
+                        break;
+                    default:
+                        $('#nigerianStates').slideUp(400);
+                        $('#internationalStates').slideDown(400);
+                        $('#internationalState').focus();
+                        break;
+                }
+            });
+
+            $('#religion').on('change', function() {
+                var selection = $(this).val();
+                switch (selection) {
+                    case "Other":
+                        $('#otherReligion').slideDown(300);
+                        break;
+                    default:
+                        $('#otherReligion').slideUp(300);
+                        break;
+                }
+            });
+        });
+    </script>
+    
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/bundle.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
