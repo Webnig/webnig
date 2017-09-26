@@ -352,6 +352,16 @@ class Controller extends BaseController
         ];
 
         $religiousProphecies = ['Yes, I will', 'No, I will not'];
+
+        return view('basicinfo.page3', compact(
+            'curtsies', 'haveMaleChild', 'familyidol', 'spouse',
+            'partnersFamily', 'spouseGreetParents', 'spouseSiblings',
+            'extendedFamilyExpenses', 'religiousProphecies'
+        ));
+    }
+
+    public function domesticatedInfo()
+    {
         $domesticJobs = [
             'Yes, it is her job to do house chores',
             'No, both of us work on house chores',
@@ -367,6 +377,15 @@ class Controller extends BaseController
         $enjoyCooking = ['Yes', 'No'];
         $enjoyHousekeeping = ['Yes', 'No'];
         $tidyness = ['Very tidy', 'Tidy', 'Not tidy'];
+
+        return view('basicinfo.domesticated', compact(
+            'domesticJobs', 'clothesWasher', 'enjoyCooking', 'enjoyHousekeeping',
+            'tidyness'
+        ));
+    }
+
+    public function relationshipInfo()
+    {
         $unsatisfiedFeeling = [
             'I will become very upset and plan my revenge',
             'I accept it in good stride and move on',
@@ -395,13 +414,228 @@ class Controller extends BaseController
             'We make love to reconnect our emotions'
         ];
 
-        return view('basicinfo.page3', compact(
-            'curtsies', 'haveMaleChild', 'familyidol', 'spouse',
-            'partnersFamily', 'spouseGreetParents', 'spouseSiblings',
-            'extendedFamilyExpenses', 'religiousProphecies', 'domesticJobs',
-            'clothesWasher', 'enjoyCooking', 'enjoyHousekeeping', 'tidyness',
-            'unsatisfiedFeeling', 'hasCar',  'partnerHasCar', 'liveInFamilyHouse',
-            'mostAppealing', 'whoCallsMore', 'getBackTogetherActivity'
+        $communicateEmotionalNeeds = [
+            'Absolutely, from the get-go',
+            'Maybe after a few months into the relationship',
+            'Absolutely not. I expect my partner to figure it out 
+            without me saying it verbally'
+        ];
+
+        $holdOntoResentment = [
+            'I do, but I am working on it',
+            'Only until my partner apologizes',
+            'I forgive easily'
+        ];
+
+        $typicalLoveExpression = [
+            'I give them thoughtful gifts',
+            'I show it throught acts of service',
+            'I spend quality time with them',
+            'I show it with physical touch and sex',
+            'I tell them how special they are to me'
+        ];
+
+        $whyNotDoSomething = [
+            'I have no funds to get started',
+            'I have no motivation to get started',
+            'Ancestral curse',
+            'I just haven\'t gotten around to it yet'
+        ];
+
+        $whyStillSingle = [
+            'Ancestral Curse', 'The right person has not come yet'
+        ];
+
+        $likeToBeWith = [
+            'Quiet person', 'Talkative person'
+        ];
+
+        $mostValued = [
+            'My space, peace and quiet', 'A partner that understands 
+            my peculiarities', 'Respect &amp; Honesty', 'A partner that 
+            will not try to change me but accept me the way I am'
+        ];
+
+        $choiceOfMusic = [
+            'I would play the music I like', 'I will allow my partner to choose 
+            the music', 'We should take turns choosing the music',
+            'It would be best to keep the stereo off'
+        ];
+
+        $domesticViolence = [
+            'Most people that beat their partners are provoked',
+            'No man or woman should beat their partner no matter what',
+            'It is one of those things you experience in marriage'
+        ];
+
+        $forgiveForgetAbility = [
+            'Yes', 'No', 'It really depends on circumstances',
+            'I can forgive, but I never forget'
+        ];
+
+        $annoyanceFrequency = [
+            'All the time', 'Frequently', 'Once in a while',
+            'Never'
+        ];
+
+        $promiscuousFriendsView = [
+            'It is their life, I do not care, I still love them',
+            'I will never move with friends that are promiscuous',
+            'They can cheat so long as they are yet to get married'
+        ];
+
+        $partnerKeepLateNights = [
+            'I do not mind', 'I really mind', 'So long as they come back 
+            home I do not care', 'We will rock the night together'
+        ];
+
+        $cannotCompromise = [
+            'Faithfulness', 'Sex', 'Food', 'Respect', 'Neatness', 'Money'
+        ];
+
+        $phoneInPartnerPocket = [
+            'Call the number to see whose it is',
+            'Openly ask what/who the number is for',
+            'Nothing, I would trust my partner',
+            'Nothing, my partner\'s privacy should be respected',
+            'Ask them but also search for the number on Truecaller'
+        ];
+
+        $forgiveCheatingPartner = [
+            'Yes, I will forgive, if he/she was sincerely sorry',
+            'No! NEVER I will not forgive',
+            'I don\'t believe in monogamy anyway',
+            'Drag him/her to take an STD test'
+        ];
+
+        $partnerWeight = [
+            'No, my partner\'s weight is irrelevant to me',
+            'No, my parnter\'s health is what is most important',
+            'Not if they are willing to work hard and lose it',
+            'Yes, weight gain is so unattractive'
+        ];
+
+        $considerOpenRelationship = [
+            'Yes', 'No'
+        ];
+
+        $avoidContactWithEx = [
+            'Yes, of course!', 'No. This would be an unacceptable demand',
+            'Only if their justification seems reasonable'
+        ];
+
+        $stayWithAttractiveFriend = [
+            'It would be totally unacceptable. Get an hotel',
+            'It might be ok, but I\'d want to discuss it first',
+            'It\'s fine &mdash; I don\'t see any problem',
+            'It sounds sexy &mdash; Hopefully they\'ll hook up'
+        ];
+
+        $relationshipMistake = [
+            'Keep trying. Marriage means commitment',
+            'Get a divorce. It\'ll be better for both of you'
+        ];
+
+        $affectionTolerance = [
+            'Bring it on!!! Infinite', 'Most of it', 'Small-small abeg',
+            'Get off me!!! It is too much'
+        ];
+
+        $ownUniqueThing = [
+            'Very - I need some ME time to be happy',
+            'Sort of - I need friends outside of my partner',
+            'Not much - I like sharing stuff with my partner',
+            'I\'d prefer not to have exclusive things'
+        ];
+
+        $makeBetterRelationship = [
+            'Passion' => 'Fire burns out after a while',
+            'Commitment' => 'Water is always there'
+        ];
+
+        $ensureDailyCommunication = [
+            'Yes, no matter what', 'Yes, unless otherwise specified',
+            'No, it\'s not necessary', 'No, I\'d prefer not to communicate daily'
+        ];
+
+        $nextRelationshipDescription = [
+            'Someone to come home to', 'Someone to go out with',
+            'Someone for tonight'
+        ];
+
+        $stillHurting = ['Yes', 'No'];
+        $sharePhonePassword = ['Yes', 'No'];
+        $idealMatchPreference = ['Sports', 'Books', 'Music', 'Movies'];
+        $intoAnime = ['Yes', 'No'];
+        $sarcasmOpinion = [
+            'I like it or love it', 'It\'s okay',
+            'Sarcasm is formulaic and lame'
+        ];
+
+        $singingVoice = [
+            'Really awesome, actually', 'Very good', 'Okay', 'Crappy'
+        ];
+
+        $signupForMarriage = ['Yes', 'No'];
+        $marryHowSoon = [
+            'In 3 months', 'In 6 months', 'In a year\'s time',
+            'In 2 years time'
+        ];
+
+        $weekendsActivity = [
+            'Get up and do something', 'Sleep late and relax',
+            'It varies'
+        ];
+
+        return view('basicinfo.relationship', compact(
+            'unsatisfiedFeeling', 'hasCar', 'partnerHasCar', 'liveInFamilyHouse',
+            'mostAppealing', 'whoCallsMore', 'getBackTogetherActivity',
+            'communicateEmotionalNeeds', 'holdOntoResentment',
+            'typicalLoveExpression', 'whyNotDoSomething', 'whyStillSingle',
+            'likeToBeWith', 'mostValued', 'choiceOfMusic', 'domesticViolence',
+            'forgiveForgetAbility', 'annoyanceFrequency', 'promiscuousFriendsView',
+            'partnerKeepLateNights', 'cannotCompromise', 'phoneInPartnerPocket',
+            'forgiveCheatingPartner', 'partnerWeight', 'considerOpenRelationship',
+            'avoidContactWithEx', 'stayWithAttractiveFriend', 'relationshipMistake',
+            'affectionTolerance', 'ownUniqueThing', 'makeBetterRelationship',
+            'ensureDailyCommunication', 'nextRelationshipDescription', 'stillHurting',
+            'sharePhonePassword', 'idealMatchPreference', 'intoAnime', 'sarcasmOpinion',
+            'singingVoice', 'signupForMarriage', 'marryHowSoon', 'weekendsActivity'
+        ));
+    }
+
+    public function lifeAndDeathInfo()
+    {
+        $viewOnDeath = [
+            'A biological phenomenon', 'A spiritual progression',
+            'Just a fact of life', 'We won\'t know until we die &amp; then 
+            still might not know'
+        ];
+        $abortion = ['Yes', 'No'];
+        
+        $greatestMotivation = [
+            'Love/Family', 'Wealth', 'Expression', 'Freedom',
+            'Knowledge', 'Excellence'
+        ];
+
+        $stopEnjoyingNature = [
+            'Yes, I do', 'No, I don\'t'
+        ];
+
+        $happyWithYourLife = ['Yes', 'No', 'Sometimes'];
+
+        $genderBiasedRemarks = [
+            'Yes', 'No', 'Only if they were inaccurate'
+        ];
+
+        $socialActivities = [
+            'Lots', 'Sometimes', 'Rarely', 'Never but will love to',
+            'Never not my thing'
+        ];
+
+        return view('basicinfo.lifeanddeath', compact(
+            'viewOnDeath', 'abortion', 'greatestMotivation', 'stopEnjoyingNature',
+            'happyWithYourLife', 'genderBiasedRemarks', 'socialActivities'
         ));
     }
 

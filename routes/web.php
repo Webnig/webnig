@@ -57,6 +57,9 @@ Route::get('/matches', 'Controller@matches')->name('display_matches');
 Route::get('/basicinfo', 'Controller@basicInfo');
 Route::get('/basicinfo/2', 'Controller@basicInfo2');
 Route::get('/basicinfo/3', 'Controller@basicInfo3');
+Route::get('/basicinfo/3/domesticated', 'Controller@domesticatedInfo');
+Route::get('/basicinfo/3/relationship', 'Controller@relationshipInfo');
+Route::get('/basicinfo/3/life-and-death', 'Controller@lifeAndDeathInfo');
 
 Route::get('/dashboard', function() {
     return view('dashboard');
