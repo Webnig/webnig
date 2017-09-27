@@ -60,6 +60,10 @@ Route::get('/basicinfo/3', 'Controller@basicInfo3');
 Route::get('/basicinfo/3/domesticated', 'Controller@domesticatedInfo');
 Route::get('/basicinfo/3/relationship', 'Controller@relationshipInfo');
 Route::get('/basicinfo/3/life-and-death', 'Controller@lifeAndDeathInfo');
+Route::get('/basicinfo/3/finance', 'Controller@financeInfo');
+Route::get('/basicinfo/3/hygiene', 'Controller@hygieneInfo');
+Route::get('/basicinfo/3/iqinfo', 'Controller@iqInfo');
+Route::get('/basicinfo/3/sexinfo', 'Controller@sexInfo');
 
 Route::get('/dashboard', function() {
     return view('dashboard');
