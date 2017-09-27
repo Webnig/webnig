@@ -77,6 +77,9 @@ Route::get('/basicinfo', 'Controller@basicInfo')->name('edit_profile_1');
 Route::get('/basicinfo/2', 'Controller@basicInfo2')->name('edit_profile_2');
 
 Route::get('/basicinfo/3', 'Controller@basicInfo3');
+Route::get('/basicinfo/3/domesticated', 'Controller@domesticatedInfo');
+Route::get('/basicinfo/3/relationship', 'Controller@relationshipInfo');
+Route::get('/basicinfo/3/life-and-death', 'Controller@lifeAndDeathInfo');
 
 Route::get('/dashboard', function() {
     return view('dashboard');
