@@ -12,8 +12,11 @@ class SavedUserSearches extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function saveSearch(Request $request)
+    public function saveSearch(Request $request, $existing = false)
     {
-        
+        if ($existing){
+            $searchID = $request->get('search_id');
+            $savedSearch = self::where('id', $searchID);
+        }
     }
 }
