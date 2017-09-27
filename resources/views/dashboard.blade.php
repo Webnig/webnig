@@ -49,6 +49,7 @@
                 display: none;
             }
         }
+
         .dash-head{
             background-image:url({{ asset('assets/img/family.png') }});
             width:100%;
@@ -134,75 +135,78 @@
             border-radius:5%;
             padding-bottom:20px;
         }
+
         .view-profile img {
             border-radius: 50%;
         }
+        
+        .editable-box {
+            background: transparent;
+            text-decoration: none;
+            padding-left: 10px;
+            padding-right: 3px;
+            border: solid 1px #ccd1d9;
+        }
 
-        .editable-box{
-            background:transparent;
-            text-decoration:none;
-            padding-left:10px;
-            padding-right:3px;
-            border:solid 1px #ccd1d9;
+        .editable-box:focus {
+            background: transparent;
+            text-decoration: none;
+            padding-left: 10px;
+            padding-right: 3px;
+            border: solid 1px #ccd1d9;
         }
-        .editable-box:focus{
-            background:transparent;
-            text-decoration:none;
-            padding-left:10px;
-            padding-right:3px;
-            border-color:;
-            border:solid 1px #ccd1d9;
+
+        .editable-box-1 {
+            background: transparent;
+            text-decoration: none;
+            padding-left: 10px;
+            padding-right: 3px;
+            width: 37%;
+            border: solid 1px #ccd1d9;
         }
-        .editable-box-1{
-            background:transparent;
-            text-decoration:none;
-            padding-left:10px;
-            padding-right:3px;
-            border-color:;
-            width:37%;
-            border:solid 1px #ccd1d9;
+
+        .editable-box-1:focus {
+            background: transparent;
+            text-decoration: none;
+            padding-left: 10px;
+            padding-right: 3px;
+            width: 37%;
+            border: solid 1px #ccd1d9;
         }
-        .editable-box-1:focus{
-            background:transparent;
-            text-decoration:none;
-            padding-left:10px;
-            padding-right:3px;
-            border-color:;
-            width:37%;
-            border:solid 1px #ccd1d9;
+
+        .search {
+            color: white;
+            font-size: 25px;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            background-color: #f26aa8;
+            border-radius: 20px;
+            border-color: #f26aa8;
+            padding-top: 7px;
+            border: solid 0.5px;
+            padding-bottom: 7px;
+            padding-right: 40px;
+            padding-left: 40px;
+            transition: 0.3s all;
         }
-        .search{
-            color:white;
-            font-size:25px;
-            font-weight:lighter;
-            letter-spacing:2px;
-            background-color:#f26aa8;
-            border-radius:20px;
-            border-color:#f26aa8;
-            padding-top:7px;
-            border:solid 0.5px;
-            padding-bottom:7px;
-            padding-right:40px;
-            padding-left:40px;
-            transition:0.3s all;
-        }
-        .search:hover{
+
+        .search:hover {
             /*color:#f26aa8;*/
-            font-size:25px;
-            font-weight:lighter;
-            letter-spacing:4px;
+            font-size: 25px;
+            font-weight: lighter;
+            letter-spacing: 4px;
             /*background-color:white;*/
             /*border-radius:10%;*/
-            border-color:white;
-            border:solid 0.5;
-            padding-top:7px;
-            padding-bottom:7px;
+            border:1px solid white;
+            padding-top: 7px;
+            padding-bottom: 7px;
             text-decoration: none;
             color: #fff;
             /*padding-right:30px;*/
             /*padding-left:50px;*/
             /*transition:0.3s all;*/
         }
+        
         .img{
             border-radius:50%;
             border:solid 4px #ffffff;
@@ -344,51 +348,174 @@
                 </div>
             </div>
         </div>
-        <div class="stats" style="padding-top:10px;padding-bottom:10px">
-            <center><span style="color:#38c7da;font-weight: bold;font-size: 12px;text-transform: uppercase;">activity stats in the last one month</span></center>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
-                        <div class="container">
-                    <center>
+    </div>
+    <div class="stats" style="padding-top:10px;padding-bottom:10px">
+        <center><span style="color:#38c7da;font-weight: bold;font-size: 12px;text-transform: uppercase;">activity stats in the last one month</span>
+        </center>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
+                    <div class="container">
+                        <center>
                             <span class="number"> 7 </span> <br>
                             <span class="number-detail">viewed your profile</span><br>
-                    </center>
-                        </div>
+                        </center>
                     </div>
-                    <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
-                        <div class="stats-number">
-                            <div class="container">
-                    <center>
-                            <span class="number"> 23 </span> <br>
-                            <span class="number-detail">admire you</span><br>
-                    </center>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
-                        <div class="stats-number">
-                            <div class="container">
-                    <center>
-                            <span class="number"> 12 </span> <br>
-                            <span class="number-detail">match your preference</span><br>
-                    </center>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
-                        <div class="stats-number">
-                            <div class="container">
-                    <center>
-                            <span class="number"> 3 </span> <br>
-                            <span class="number-detail">you admire</span><br>
-                    </center>
-                        </div>
+                </div>
+                <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
+                    <div class="stats-number">
+                        <div class="container">
+                            <center>
+                                <span class="number"> 23 </span> <br>
+                                <span class="number-detail">admire you</span><br>
+                            </center>
                         </div>
                     </div>
                 </div>
-                <br>
-                <hr>
+                <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
+                    <div class="stats-number">
+                        <div class="container">
+                            <center>
+                                <span class="number"> 12 </span> <br>
+                                <span class="number-detail">match your preference</span><br>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
+                    <div class="stats-number">
+                        <div class="container">
+                            <center>
+                                <span class="number"> 3 </span> <br>
+                                <span class="number-detail">you admire</span><br>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-hidden col-sm-hidden col-md-8 col-lg-8 col-xl-8" style="border-right:solid 1px #ccd1d9">
+                <div class="latest-activity">
+                    <h3>Latest Activities</h3><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-hidden col-xs-hidden col-md-2 col-lg-2 col-xl-2">
+                                <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                     height="50px" width="50px"/>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-7 col-lg-7 col-xl-7">
+                                <p><a href="" style="color:#52c9d8;font-size:15px ;">Dele Asiwaju,</a> <span
+                                            style="color:#848484;font-size: 15px">(34 yrs, 178cm) accepted to view your <br>profile</span>
+                                    <span><a href="" style="color:#ec9f00;font-size:13px;"> Send interest |</a><a
+                                                href="" style="color:#ec9f00;font-size:13px;"> View Profile |</a> <a
+                                                href="" style="color:#ec9f00;font-size:13px;">Upgrade to view
+                                            profile</a></span></p>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-3 col-lg-3 col-xl-3"
+                                 style="font-size:15px;color:#848c8d;font-weight:bolder">
+                                35 mins
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-hidden col-xs-hidden col-md-2 col-lg-2 col-xl-2">
+                                <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                     height="50px" width="50px"/>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-7 col-lg-7 col-xl-7">
+                                <p><a href="" style="color:#f26aa8;font-size:15px ;">Debo Faranjeunku,</a> <span
+                                            style="color:#848484;font-size: 15px">(34 yrs, 178cm) accepted to view your <br>profile</span>
+                                    <span><a href="" style="color:#ec9f00;font-size:13px;"> Send interest |</a><a
+                                                href="" style="color:#ec9f00;font-size:13px;"> View Profile |</a> <a
+                                                href="" style="color:#ec9f00;font-size:13px;">Upgrade to view
+                                            profile</a></span></p>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-3 col-lg-3 col-xl-3"
+                                 style="font-size:15px;color:#848c8d;font-weight:bolder">
+                                36 mins
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-hidden col-xs-hidden col-md-2 col-lg-2 col-xl-2">
+                                <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                     height="50px" width="50px"/>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-7 col-lg-7 col-xl-7">
+                                <p><a href="" style="color:#52c9d8;font-size:15px ;">Dele Asiwaju,</a> <span
+                                            style="color:#848484;font-size: 15px">(34 yrs, 178cm) accepted to view your <br>profile</span>
+                                    <span><a href="" style="color:#ec9f00;font-size:13px;"> Send interest |</a><a
+                                                href="" style="color:#ec9f00;font-size:13px;"> View Profile |</a> <a
+                                                href="" style="color:#ec9f00;font-size:13px;">Upgrade to view
+                                            profile</a></span></p>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-3 col-lg-3 col-xl-3"
+                                 style="font-size:15px;color:#848c8d;font-weight:bolder">
+                                35 mins
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-hidden col-xs-hidden col-md-2 col-lg-2 col-xl-2">
+                                <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                     height="50px" width="50px"/>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-7 col-lg-7 col-xl-7">
+                                <p><a href="" style="color:#f26aa8;font-size:15px ;">Debo Faranjeunku,</a> <span
+                                            style="color:#848484;font-size: 15px">(34 yrs, 178cm) accepted to view your <br>profile</span>
+                                    <span><a href="" style="color:#ec9f00;font-size:13px;"> Send interest |</a><a
+                                                href="" style="color:#ec9f00;font-size:13px;"> View Profile |</a> <a
+                                                href="" style="color:#ec9f00;font-size:13px;">Upgrade to view
+                                            profile</a></span></p>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-3 col-lg-3 col-xl-3"
+                                 style="font-size:15px;color:#848c8d;font-weight:bolder">
+                                36 mins
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-hidden col-xs-hidden col-md-2 col-lg-2 col-xl-2">
+                                <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                     height="50px" width="50px"/>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-7 col-lg-7 col-xl-7">
+                                <p><a href="" style="color:#52c9d8;font-size:15px ;">Dele Asiwaju,</a> <span
+                                            style="color:#848484;font-size: 15px">(34 yrs, 178cm) accepted to view your <br>profile</span>
+                                    <span><a href="" style="color:#ec9f00;font-size:13px;"> Send interest |</a><a
+                                                href="" style="color:#ec9f00;font-size:13px;"> View Profile |</a> <a
+                                                href="" style="color:#ec9f00;font-size:13px;">Upgrade to view
+                                            profile</a></span></p>
+                            </div>
+                            <div class="col-sm-hidden col-xs-hidden col-md-3 col-lg-3 col-xl-3"
+                                 style="font-size:15px;color:#848c8d;font-weight:bolder">
+                                35 mins
+                            </div>
+
+                        </div>
+                    </div>
+                    <br><br>
+                    <center><a href="" style="color:#848c8d;font-size:22px ;font-weight: bolder">View All</a></center>
+                    <br><br>
+                    <h3 style="color:#848484;font-weight:lighter;text-align: center">Trending recommendations</h3>
+                </div>
             </div>
         </div>
             <div class="container">
@@ -470,35 +597,69 @@
                             </div><br><br>
                             <center><a href="" style="color:#848c8d;font-size:22px ;font-weight: bolder">View All</a></center><br><br>
                             <h3 style="color:#848484;font-weight:lighter;text-align: center">Trending recommendations</h3>
+
+            <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
+                <h3 style="color:#848484;font-weight:lighter;text-align: center">New Matches</h3>
+                <center><p style="font-size:13px;color:#848484">We found <a href="" style="color:#f26aa8">12</a> new
+                        matches you might be interested in</p></center>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+                            <div class="view-profile" style="width:100%">
+                                <center>
+                                    <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle" alt="Male"
+                                         title=""
+                                         style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                    <b style="font-size:9px;color:">Mat ID: 13609####</b><br>
+                                    <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
+                                    <span style="font-size:8px;color:;">Christian | Abuja</span><br>
+                                    <span style="font-size:8px;">I am attracted to so many things</span><br>
+                                    <div><a href="#"><input type="submit" class="button" value="View Profile"
+                                                            style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
+                                    </div>
+                                </center>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+                            <div class="view-profile" style="width:100%">
+                                <center>
+                                    <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle" alt="Male"
+                                         title=""
+                                         style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                    <b style="font-size:9px;color:">Mat ID: 13609####</b><br>
+                                    <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
+                                    <span style="font-size:8px;color:;">Christian | Abuja</span><br>
+                                    <span style="font-size:8px;">I am attracted to so many things</span><br>
+                                    <div><a href="#"><input type="submit" class="button" value="View Profile"
+                                                            style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
+                                    </div>
+                                </center>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                        <h3 style="color:#848484;font-weight:lighter;text-align: center">New Matches</h3>
-                        <center><p style="font-size:13px;color:#848484">We found <a href="" style="color:#f26aa8">12</a> new matches you might be interested in</p></center><br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
-                                    <div class="view-profile" style="width:100%">
-                                    <center>
-                                        <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                        <b style="font-size:9px;color:">Mat ID: 13609####</b><br>
-                                            <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
-                                            <span style="font-size:8px;color:;">Christian | Abuja</span><br>
-                                            <span style="font-size:8px;">I am attracted to so many things</span><br>
-                                            <div><a href="#"><input type="submit" class="button" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div>
-                                    </center>
-                                    </div>
-                                    <br>
-                                    </div><div class="clearfix"></div>
-                                    <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+                    <br>
+                    <h3 style="color:#848484;font-weight:lighter;text-align: center">Daily Matches</h3>
+                    <center><p style="font-size:13px;color:#848484">We found <a href="" style="color:#f26aa8">3</a> you
+                            might be interested in</p></center>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
                                 <div class="view-profile" style="width:100%">
                                     <center>
-                                        <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                        <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle"
+                                             alt="Male" title=""
+                                             style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
                                         <b style="font-size:9px;color:">Mat ID: 13609####</b><br>
-                                            <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
-                                            <span style="font-size:8px;color:;">Christian | Abuja</span><br>
-                                            <span style="font-size:8px;">I am attracted to so many things</span><br>
-                                            <div><a href="#"><input type="submit" class="button" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div>
+                                        <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
+                                        <span style="font-size:8px;color:;">Christian | Abuja</span><br>
+                                        <span style="font-size:8px;">I am attracted to so many things</span><br>
+                                        <div><a href="#"><input type="submit" class="button" value="View Profile"
+                                                                style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
+                                        </div>
                                     </center>
                                     </div>
                                 </div>
@@ -509,13 +670,23 @@
                             <div class="row">
                                 <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
                                     <div class="view-profile" style="width:100%">
+                                </div>
+                                <br>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+                                <div class="view-profile" style="width:100%">
                                     <center>
-                                        <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                        <img src="{{ asset('assets/img/blurred.jpg') }}" class="img img-circle"
+                                             alt="Male" title=""
+                                             style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
                                         <b style="font-size:9px;color:">Mat ID: 13609####</b><br>
-                                            <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
-                                            <span style="font-size:8px;color:;">Christian | Abuja</span><br>
-                                            <span style="font-size:8px;">I am attracted to so many things</span><br>
-                                            <div><a href="#"><input type="submit" class="button" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div>
+                                        <span style="font-size:19px;font-family:;color:#00b7cf">Male, 28</span><br>
+                                        <span style="font-size:8px;color:;">Christian | Abuja</span><br>
+                                        <span style="font-size:8px;">I am attracted to so many things</span><br>
+                                        <div><a href="#"><input type="submit" class="button" value="View Profile"
+                                                                style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
+                                        </div>
                                     </center>
                                     </div>
                                     <br>
@@ -536,87 +707,491 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-hidden col-md-9 col-lg-9 col-xl-9">
-                        <div>
-                            <center><a href="" style="color:#848c8d;font-size:20px ;font-weight: bolder">View All (12)</a></center><br><br>
-                            <h3 style="color:#848484;font-weight:lighter;text-align: center">Viewed your profile in the last month</h3>
-                        </div>
-                        <div>
-                            <center><a href="" style="color:#848c8d;font-size:22px ;font-weight: bolder">View All(43)</a></center><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-hidden col-sm-hidden col-md-9 col-lg-9 col-xl-9">
+                <div>
+                    <center><a href="" style="color:#848c8d;font-size:20px ;font-weight: bolder">View All (12)</a>
+                    </center>
+                    <br><br>
+                    <h3 style="color:#848484;font-weight:lighter;text-align: center">Viewed your profile in the last
+                        month</h3>
+                </div>
+                <div>
+                    <center><a href="" style="color:#848c8d;font-size:22px ;font-weight: bolder">View All(43)</a>
+                    </center>
+                    <br><br>
+                </div>
+            </div>
+            <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
+                <form role="form">
+                    <h3 style="font-family:;font-size: 40px;text-align:left;color: #848484;font-weight:lighter;">
+                        Search</h3><br>
+                    <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">I am a</p>
+                    <select class="form-control selectpicker show-menu-arrow" name="" title="" value=""
+                            data-live-search="true">
+                        <option value="">Select one...</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                    <br>
+                    <center style="font-size:12px;color:#848484">wishing to meet a</center>
+                    <br>
+                    <select class=" form-control selectpicker show-menu-arrow" title="" value=""
+                            data-live-search="true">
+                        <option value="">Select one...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br>
+                    <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">Age</p>
+                    <div class="container">
+                        <div class="row">
+                            <select class="editable-box-1 form-control selectpicker show-menu-arrow" name="fromAge"
+                                    data-live-search="true">
+                                <option value="">Select age</option>
+                                @for ($age = 18; $age <= 40; $age++)
+                                    <option value="{{ $age }}">{{ $age }}</option>
+                                @endfor
+                            </select>
+                            <p style="padding-top:7px;padding-left:25px;padding-right:25px"> to </p>
+                            <select class="editable-box-1 form-control selectpicker show-tick show-menu-arrow"
+                                    name="toAge" data-live-search="true">
+                                <option value="">Select age</option>
+                                @for ($age = 18; $age <= 40; $age++)
+                                    <option value="{{ $age }}">{{ $age }}</option>
+                                @endfor
+                            </select>
+
                         </div>
                     </div>
-                    <div class="col-xs-hidden col-sm-hidden col-md-3 col-lg-3 col-xl-3">
-                        <form role="form">
-                            <h3 style="font-family:;font-size: 40px;text-align:left;color: #848484;font-weight:lighter;">Search</h3><br>
-                            <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">I am a</p>
-                        <select class="form-control selectpicker show-menu-arrow" name="" title="" value="" data-live-search="true">
-                            <option value="">Select one...</option>
-                            <option value="Female">Female</option>
-                            <option value="Male">Male</option>
-                        </select>
-                        <br>
-                        <center style="font-size:12px;color:#848484">wishing to meet a</center>
-                        <br>
-                        <select class=" form-control selectpicker show-menu-arrow" title="" value="" data-live-search="true">
-                            <option value="">Select one...</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                        <br>
-                    <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">Age</p>
+                    <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">
+                        Religion</p>
+                    <select class=" form-control selectpicker show-menu-arrow" name="religion" data-live-search="true">
+                        <option value="">Select one</option>
+                        <option value="Christianity">Christianity</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Buddism">Buddism</option>
+                    </select>
+                    <br>
+                    <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">State of
+                        Origin</p>
+                    <select class=" form-control selectpicker show-menu-arrow" name="stateOfOrigin"
+                            data-live-search="true">
+                        <option value="">Select One</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="Abia">Abia</option>
+                        <option value="Ondo">Ondo</option>
+                    </select>
+                    <br><br>
+                    <div>
+                        <center>
+                            <a href="#" class="search">
+                                Search
+                            </a>
+                        </center>
+                    </div>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mobile-content">
+    <div class="dash-head" style="padding-bottom:0px;height:200px;padding-right:50px">
+        <center><img src="{{ asset('assets/img/profile_pic.jpg') }}" class="img img-circle" width="150px" height="150px"
+                     style="margin-top:70px"/></center>
+    </div>
+    <br><br><br>
+    <center style="padding-left:30px;padding-right:30px">
+        <br>
+        <h3 style="font-size:15px;color:#358a96;font-weight:bold; ">Lekki, Lagos</h3>
+        <span class="name" style="font-size:32px;color:#848484;font-weight:lighter;">Aisha Makanjuola</span>
+        <div><span class="gender" style="font-size:24px;color:#52c9d8;font-weight:lighter;">Female, 26</span><span
+                    class="height" style="font-size:15px;color:#d19595;font-weight:bold;padding-left:10px;">176cm</span>
+        </div>
+        <span style="color:#868686;font-weight:lighter;font-size:16px">Student | University of Lagos | Christian</span><br><br>
+        <span style="font-size:18px;color:#d8d8d8;opacity:1;font-weight:bolder;">What's on your mind</span><br><br>
+        <span class="mind-child" style="font-size:18px;color:#d8d8d8;opacity:0,9;font-weight:lighter;">I am attracted to so many things</span><br><br>
+                <span style="margin-top: 3px">
+                    <a href="" class="pull-left" style="font-size:10px;color:#38c7da">Edit Profile</a>
+                    <a href="" style="font-size:10px;color:#38c7da;" class="pull-right">Edit Preferences</a>
+                </span>
+        <span style="margin-bottom: 6px"><a href="" style="font-size:10px;color:#cdad76">Upgrade Membership</a></span>
+    </center>
+    <div class="stats" style="padding-top:10px;padding-bottom:10px">
+        <center><span style="color:#38c7da;font-weight: bold;font-size: 20px;text-transform: uppercase;">activity stats in the last one month</span>
+        </center>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <div class="container">
+                        <center>
+                            <span class="number"> 7 </span> <br>
+                            <span class="number-detail">viewed your profile</span><br>
+                        </center>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <div class="stats-number">
+                        <div class="container">
+                            <center>
+                                <span class="number"> 23 </span> <br>
+                                <span class="number-detail">admire you</span><br>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <div class="stats-number">
+                        <div class="container">
+                            <center>
+                                <span class="number"> 12 </span> <br>
+                                <span class="number-detail">match your preference</span><br>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <div class="stats-number">
+                        <div class="container">
+                            <center>
+                                <span class="number"> 3 </span> <br>
+                                <span class="number-detail">you admire</span><br>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="latest-activity text-center">
+                    <h3>Latest Activity</h3>
+                    <br>
+                </div>
                 <div class="container">
                     <div class="row">
-                        <select class="editable-box-1 form-control selectpicker show-menu-arrow" name="fromAge" data-live-search="true">
-                            <option value="">Select age</option>
-                            @for ($age = 18; $age <= 40; $age++)
-                                <option value="{{ $age }}">{{ $age }}</option>
-                            @endfor
-                        </select>
-                        <p style="padding-top:7px;padding-left:25px;padding-right:25px"> to </p>
-                        <select class="editable-box-1 form-control selectpicker show-tick show-menu-arrow" name="toAge" data-live-search="true">
-                            <option value="">Select age</option>
-                            @for ($age = 18; $age <= 40; $age++)
-                                <option value="{{ $age }}">{{ $age }}</option>
-                            @endfor
-                        </select>
+                        <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
+                            <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                 height="50px" width="50px"/>
+                        </div>
+                        <div class="col-sm-7 col-xs-7 col-md-7 col-lg-7 col-xl-7">
+                            <p>
+                                <a href="" style="color:#52c9d8;font-size:15px;">Dele Asiwaju,</a>
+                                <span style="color:#848484;font-size: 15px">(34 yrs, 178cm)</span>
+                                <br>
+                                <span style="color:#848484;font-size: 15px">accepted to view your profile</span>
+                                <br>
+                            <div style="color: #ec9f00">
+                                        <span>
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> Send interest </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> View Profile </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;">Upgrade to view profile</a>
+                                        </span>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 col-xl-3"
+                             style="font-size:15px;color:#848c8d;font-weight:bolder">
+                            35 mins
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
+                            <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                 height="50px" width="50px"/>
+                        </div>
+                        <div class="col-sm-7 col-xs-7 col-md-7 col-lg-7 col-xl-7">
+                            <p>
+                                <a href="" style="color:#52c9d8;font-size:15px;">Dele Asiwaju,</a>
+                                <span style="color:#848484;font-size: 15px">(34 yrs, 178cm)</span>
+                                <br>
+                                <span style="color:#848484;font-size: 15px">accepted to view your profile</span>
+                                <br>
+                            <div style="color: #ec9f00">
+                                        <span>
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> Send interest </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> View Profile </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;">Upgrade to view profile</a>
+                                        </span>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 col-xl-3"
+                             style="font-size:15px;color:#848c8d;font-weight:bolder">
+                            35 mins
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
+                            <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                 height="50px" width="50px"/>
+                        </div>
+                        <div class="col-sm-7 col-xs-7 col-md-7 col-lg-7 col-xl-7">
+                            <p>
+                                <a href="" style="color:#52c9d8;font-size:15px;">Dele Asiwaju,</a>
+                                <span style="color:#848484;font-size: 15px">(34 yrs, 178cm)</span>
+                                <br>
+                                <span style="color:#848484;font-size: 15px">accepted to view your profile</span>
+                                <br>
+                            <div style="color: #ec9f00">
+                                        <span>
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> Send interest </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> View Profile </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;">Upgrade to view profile</a>
+                                        </span>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 col-xl-3"
+                             style="font-size:15px;color:#848c8d;font-weight:bolder">
+                            35 mins
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
+                            <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                 height="50px" width="50px"/>
+                        </div>
+                        <div class="col-sm-7 col-xs-7 col-md-7 col-lg-7 col-xl-7">
+                            <p>
+                                <a href="" style="color:#52c9d8;font-size:15px;">Dele Asiwaju,</a>
+                                <span style="color:#848484;font-size: 15px">(34 yrs, 178cm)</span>
+                                <br>
+                                <span style="color:#848484;font-size: 15px">accepted to view your profile</span>
+                                <br>
+                            <div style="color: #ec9f00">
+                                        <span>
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> Send interest </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> View Profile </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;">Upgrade to view profile</a>
+                                        </span>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 col-xl-3"
+                             style="font-size:15px;color:#848c8d;font-weight:bolder">
+                            35 mins
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-xl-2">
+                            <img src="{{ asset('images/bitmap@2x.png') }}" class="img img-circle" alt="" title=""
+                                 height="50px" width="50px"/>
+                        </div>
+                        <div class="col-sm-7 col-xs-7 col-md-7 col-lg-7 col-xl-7">
+                            <p>
+                                <a href="" style="color:#52c9d8;font-size:15px;">Dele Asiwaju,</a>
+                                <span style="color:#848484;font-size: 15px">(34 yrs, 178cm)</span>
+                                <br>
+                                <span style="color:#848484;font-size: 15px">accepted to view your profile</span>
+                                <br>
+                            <div style="color: #ec9f00">
+                                        <span>
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> Send interest </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;"> View Profile </a> |
+                                            <a href="" style="color:#ec9f00;font-size:13px;">Upgrade to view profile</a>
+                                        </span>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 col-xl-3"
+                             style="font-size:15px;color:#848c8d;font-weight:bolder">
+                            35 mins
+                        </div>
 
                     </div>
                 </div>
-                <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">Religion</p>
-                <select class=" form-control selectpicker show-menu-arrow" name="religion" data-live-search="true">
-                    <option value="">Select one</option>
-                    <option value="Christianity">Christianity</option>
-                    <option value="Islam">Islam</option>
-                    <option value="Buddism">Buddism</option>
-                </select>
-                        <br>
-                <p style="font-family:;font-size: 15px;text-align: left;color: #848c8d;font-weight:bold;">State of Origin</p>
-                <select class=" form-control selectpicker show-menu-arrow" name="stateOfOrigin" data-live-search="true">
-                    <option value="">Select One</option>
-                    <option value="Osun">Osun</option>
-                    <option value="Lagos">Lagos</option>
-                    <option value="Oyo">Oyo</option>
-                    <option value="Abia">Abia</option>
-                    <option value="Ondo">Ondo</option>
-                </select>
-                <br><br>
-            <div>
-                <center>
-                        <a href="#" class="search">
-                            Search
-                        </a>
-                </center>
+                <br>
             </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <center><h3 style="color:#848484;font-weight:bold;font-size:30px;">Trending Recommendations</h3></center>
             <br><br>
-                        </form>
-                    </div>
+            <div class="row">
+                <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+                    <center>
+                        <div class="view-profile">
+                            <center>
+                                <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
+                                     style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                <b style="font-size:9px;color:">Mat ID: 13609####</b>
+                                <p style="font-size:25px;font-family:;color:#00b7cf">Male, 28</p>
+                                <p style="font-size:9px;color:;">181cm | Christian | Abuja</p>
+                                {{--
+                                <p style="font-size:8px;">I am a nice and easygoing lady</p>
+                                <p style="color:#d1a55d;font-weight:lighter;font-size:10px">Teacher | Unversity of Lagos</p>
+                                <div>
+                                    <a href="#"><input type="submit" class="submit" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a>
+                                </div>
+                                --}}
+                            </center>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+                    <center>
+                        <div class="view-profile">
+                            <center>
+                                <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
+                                     style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                <b style="font-size:9px;color:">Mat ID: 13609####</b>
+                                <p style="font-size:25px;font-family:;color:#00b7cf">Male, 28</p>
+                                <p style="font-size:9px;color:;">181cm | Christian | Abuja</p>
+                                {{--
+                                <p style="font-size:8px;">I am a nice and easygoing lady</p>
+                                <p style="color:#d1a55d;font-weight:lighter;font-size:10px">Teacher | Unversity of Lagos</p><div><a href="#"><input type="submit" class="submit" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div>
+                                --}}
+                            </center>
+                        </div>
+                    </center>
                 </div>
             </div>
+            <center>
+                <div></div>
+            </center>
+            <br>
+            <center>
+                <style>
+                    .view_all_button {
+                        padding: 10px;
+                        border: 2px solid pink;
+                        color: pink;
+                        width: 60%;
+                        border-radius: 25px;
+                    }
+
+                    .view_all_button:hover {
+                        text-decoration: none;
+                        color: pink;
+                    }
+                </style>
+                <a href="#" class="btn view_all_button">
+                    View All
+                </a>
+            </center>
+            <br><br>
+        </div>
+        <br><br>
+        <div class="container">
+            <center><h3 style="color:#848484;font-weight:bold;font-size:30px;">Newly Matches</h3></center>
+            <br><br>
+            <div class="row">
+                <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+                    <center>
+                        <div class="view-profile">
+                            <center>
+                                <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
+                                     style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                <b style="font-size:9px;color:">Mat ID: 13609####</b>
+                                <p style="font-size:25px;font-family:;color:#00b7cf">Male, 28</p>
+                                <p style="font-size:9px;color:;">181cm | Christian | Abuja</p>
+                                {{-- <p style="font-size:8px;">I am a nice and easygoing lady</p>
+                                <p style="color:#d1a55d;font-weight:lighter;font-size:10px">Teacher | Unversity of Lagos</p><div><a href="#"><input type="submit" class="submit" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div> --}}
+                            </center>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+                    <center>
+                        <div class="view-profile">
+                            <center>
+                                <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
+                                     style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                <b style="font-size:9px;color:">Mat ID: 13609####</b>
+                                <p style="font-size:25px;font-family:;color:#00b7cf">Male, 28</p>
+                                <p style="font-size:9px;color:;">181cm | Christian | Abuja</p>
+                                {{-- <p style="font-size:8px;">I am a nice and easygoing lady</p>
+                                <p style="color:#d1a55d;font-weight:lighter;font-size:10px">Teacher | Unversity of Lagos</p><div><a href="#"><input type="submit" class="submit" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div> --}}
+                            </center>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <br>
+            <center>
+                <a href="#" class="btn view_all_button">
+                    View All
+                </a>
+            </center>
+            <br><br>
+        </div>
+        <br><br><br><br>
+        <div class="container">
+            <center><h3 style="color:#848484;font-weight:bold;font-size:30px;">Daily Matches</h3></center>
+            <br><br>
+            <div class="row">
+                <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+                    <center>
+                        <div class="view-profile">
+                            <center>
+                                <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
+                                     style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                <b style="font-size:9px;color:">Mat ID: 13609####</b>
+                                <p style="font-size:25px;font-family:;color:#00b7cf">Male, 28</p>
+                                <p style="font-size:9px;color:;">181cm | Christian | Abuja</p>
+                                {{-- <p style="font-size:8px;">I am a nice and easygoing lady</p>
+                                <p style="color:#d1a55d;font-weight:lighter;font-size:10px">Teacher | Unversity of Lagos</p><div><a href="#"><input type="submit" class="submit" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div> --}}
+                            </center>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">
+                    <center>
+                        <div class="view-profile">
+                            <center>
+                                <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
+                                     style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                <b style="font-size:9px;color:">Mat ID: 13609####</b>
+                                <p style="font-size:25px;font-family:;color:#00b7cf">Male, 28</p>
+                                <p style="font-size:9px;color:;">181cm | Christian | Abuja</p>
+                                {{-- <p style="font-size:8px;">I am a nice and easygoing lady</p>
+                                <p style="color:#d1a55d;font-weight:lighter;font-size:10px">Teacher | Unversity of Lagos</p><div><a href="#"><input type="submit" class="submit" value="View Profile" style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" /></a></div> --}}
+                            </center>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <br>
+            <center>
+                <a href="#" class="btn view_all_button">
+                    View All
+                </a>
+            </center>
+            <br><br>
+        </div>
+        <div class="question">
+            <h3 style="color:#ffffff;font-size: 25px;text-align: center;font-weight:lighter;">Interested in Aisha?</h3>
+            <br>
+            {{-- <div class="container"> --}}
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-hidden col-lg-hidden col-xl-hidden">
+                    <a href="#"">
+                    <button type="button" value="" class="btn footer_button">Yes</button>
+                    </a>
+                    <a href="#">
+                        <button type="button" value="" class="btn footer_button">No</button>
+                    </a>
+                </div>
+            </div>
+            {{-- </div> --}}
         </div>
             <div id="mobile-content">
             <div class="dash-head" style="padding-bottom:0px;height:200px;padding-right:50px">
@@ -978,5 +1553,7 @@
             </div>
         </div>
         </div>
+    </div>
+</div>
 </body>
 </html>

@@ -8,6 +8,7 @@ use App\User;
 use App\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -38,7 +39,7 @@ class HomeController extends Controller
         $notifications = $user->notifications();
 
         $interests = $user->load('interestShownIn')->load('interestShownFrom');
-        //return $interests;
+
         $interests = [
             'interest_from' => $user->interestShownFrom->where('status', '=', '0'),
 
@@ -71,7 +72,7 @@ class HomeController extends Controller
         $user->age = Helper::getUserAge($user->date_of_birth);
 
 
-        $randomUsers = User::query()->inRandomOrder()->take(3)->get()->each(function ($item, $key) {
+        $randomUsers = User::query()->inRandomOrder()->take(3)->get()->each(function($item, $key){
             $item->mat_id = Helper::hashMatIdString($item->mat_id);
             $item->age = Helper::getUserAge($item->date_of_birth);
             $item->gender = Helper::getReadableGender($item->gender);
@@ -81,11 +82,25 @@ class HomeController extends Controller
         $monthAgo = date('Y-m-d H:i:s', strtotime('1 month ago'));
         $notification = $user->notifications->where('created_at', '>=', $monthAgo);
 
-        $profile_views = $notification->where('type', '=', Notification::$PROFILE_VIEW)->count();
-        $admired = $user->outGoingNotifications->where('created_at', '>=', $monthAgo)
-            ->where('type', '=', Notification::$ADMIRE_MADE)->count();
 
-        $admiredBy = $notification->where('type', '=', Notification::$ADMIRE_FROM)->count();
+        $profileActivity = $notification->where('type', Notification::$PROFILE_VIEW)->load('source')->take(3);
+
+        $profile_views = $profileActivity->count();
+
+        $profile_viewed_by = [ ];
+        if ($profile_views > 0){
+            foreach ($profileActivity as $p) {
+                $p->source->gender = Helper::getReadableGender($p->source->gender);
+                $p->source->mat_id = Helper::hashMatIdString($p->source->mat_id);
+                $p->source->age = Helper::getUserAge($p->source->date_of_birth);
+                array_push($profile_viewed_by, $p->source);
+            }
+        }
+
+        $admired = $user->outGoingNotifications->where('created_at', '>=', $monthAgo)
+            ->where('type', Notification::$ADMIRES)->count();
+
+        $admiredBy = $notification->where('type', '=', Notification::$ADMIRED_BY)->count();
 
         $matches = $notification->where('type', '=', Notification::$NEW_MATCHES)->count();
 
@@ -95,7 +110,8 @@ class HomeController extends Controller
             'admiredBy',
             'matches',
             'user',
-            'randomUsers'
+            'randomUsers',
+            'profile_viewed_by'
         ));
     }
 }

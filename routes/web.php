@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +13,16 @@
 */
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function(){
-    return view('photo');
+
+/*
+ * TODO ::::: THIS FILE NEEDS CLEANING
+ *
+ * */
+Route::get('/test', function () {
+    return view('matches.matches');
 });
+
+Route::get('/mail/registration_success', 'MailController@sendRegistrationSuccess');
 
 Route::get('/', 'Controller@index')->name('index_page');
 
@@ -23,13 +31,11 @@ Route::get('/login', 'Auth\LoginController@index')->name('login');
 
 Route::post('/login', 'Auth\LoginController@login')->name('process_login');
 
-Route::get('/login/channel/facebook', function(){ return ''; })->name('facebook_login');
+Route::get('/auth/{provider}', 'Auth\LoginController@redirectToProvider')->name('social_login');
 
-Route::get('/login/channel/twitter', function(){ return ''; })->name('twitter_login');
+Route::get('/auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('/login/channel/google', function(){ return ''; })->name('google_plus_login');
-
-Route::get('/password/forgot', function(){
+Route::get('/password/forgot', function () {
     return '';
 })->name('forgot_password');
 
@@ -44,18 +50,32 @@ Route::post('/register', 'Auth\RegisterController@register')->name('process_regi
 // frequently asked questions
 Route::get('faqs', 'Controller@faqs');
 
+
 // keyword search
 // do remember to remove these search routes if necessary @PENS
-Route::get('/search', 'Controller@keywordSearch')->name('user.keyword_search');
-Route::get('/search/advance', 'Controller@advanceSearch')->name('user.advance_search');
-Route::get('/search/regular', 'Controller@regularSearch')->name('user.regular_search');
+Route::get('/search', 'SearchController@index')->name('user.keyword_search');
+
+Route::get('/search/advance', 'SearchController@advance')->name('user.advance_search');
+
+Route::get('/search/regular', 'SearchController@regular')->name('user.regular_search');
+
+Route::get('/search/results', 'SearchController@processKeywordSearch')->name('process_search');
+
+Route::get('/search/regular/results', 'SearchController@processRegularSearch')->name('process_regular_search');
+
+Route::get('/search/advance/results', 'SearchController@processAdvanceSearch')->name('process_advanced_search');
+
+Route::get('/search/byMatID/results', 'SearchController@searchByMatID')->name('process_search_by_mat_id');
+
 
 // matches
 Route::get('/matches', 'Controller@matches')->name('display_matches');
 
 // Routes for Basic Info
-Route::get('/basicinfo', 'Controller@basicInfo');
-Route::get('/basicinfo/2', 'Controller@basicInfo2');
+Route::get('/basicinfo', 'Controller@basicInfo')->name('edit_profile_1');
+
+Route::get('/basicinfo/2', 'Controller@basicInfo2')->name('edit_profile_2');
+
 Route::get('/basicinfo/3', 'Controller@basicInfo3');
 Route::get('/basicinfo/3/domesticated', 'Controller@domesticatedInfo');
 Route::get('/basicinfo/3/relationship', 'Controller@relationshipInfo');
@@ -66,13 +86,17 @@ Route::get('/dashboard', function() {
 });
 
 // Payment
-Route::get('payment', 'Controller@payment');
+Route::get('/upgrade', 'Controller@payment')->name('upgrade');
 
 Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
-    // remote this @PENS
-    // Route::get('/dashboard', 'HomeController@viewDashboard')->name('view_dashboard');
+
+
+    Route::get('/dashboard', 'HomeController@viewDashboard')->name('view_dashboard');
+
 
     Route::get('/profile', 'HomeController@viewProfile')->name('view_profile');
+    
+    Route::get('/user/{user}/profile', 'HomeController@viewProfile')->name('view_user_profile');
 
 //TODO::resolve the conflicts between these two routes {{--}}
 //Route::get('/profile/edit', '');
@@ -81,25 +105,12 @@ Route::middleware([ 'auth', 'reg.complete' ])->group(function () {
 // TODO::uncomment this route
     // Route::get('/matches', 'MatchesController@index')->name('viewMatches');
 
-//search routes
-    // Route::get('/search', 'SearchController@index');
-
-    // Route::get('search/advance', 'SearchController@advanceIndex');
-
-    Route::post('/search', 'SearchController@processSearch');
-
-    Route::post('/search/advance', 'SearchController@processAdvanceSearch');
-
 
 //interests routes
 
     Route::get('/interests', 'InterestsController@index');
 
     Route::get('/interests/{interest}', 'InterestsController@view');
-
-//
-//Route::delete('/interests/{interest}', 'InterestsController@delete');
-
 });
 
 

@@ -14,7 +14,7 @@ class Controller extends BaseController
 
     public function index()
     {
-        $users = User::where('id', '<=', '4')->get();
+        $users = User::paginate(4);
         // exit;
         return view('homepage', compact('users'));
     }

@@ -212,236 +212,70 @@
                                     interest to all</label>
                             </span>
                             <div class="pagination" style="float:right;color:#4990e2;">
-                                <li class="active"><a href="#" class="active">First</a></li>
-                                <a href="#">&laquo;</a>
-                                <li class="active"><a href="#" class="active">10</a></li>
-                                <li class="active"><a href="#" class="active">11</a></li>
-                                <li class="active"><a href="#" class="active"> ... </a></li>
-                                <li class="active"><a href="#" class="active">25</a></li>
-                                <li class="active"><a href="#" class="active">26</a></li>
-                                <a href="#">&raquo;</a>
-                                <li class="active"><a href="#" class="active">Last</a></li>
+                                {{--{{ $searchResults->links() }}--}}
                             </div>
                         </span><br><br>
                         <div class="container" style="padding-right:-150px;padding-left:80px"><br><br>
                             <div class="row">
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
+                                @if(empty($searchResults))
+                                    <div class="jumbotron text-center">
+                                        No results found
                                     </div>
-                                    <br>
-                                    <center
+                                @else
+                                    @for($i = 0; $i < count($searchResults); $i++)
+                                        <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
+                                            <div class="view-profile">
+                                                <center>
+                                                    <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male"
+                                                         title="Member"
+                                                         style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+                                                    <b style="font-size:12px;color:">Mat ID: {{ $searchResults[$i]->mat_id }}</b>
+                                                    <p style="font-size:27px;font-family:;color:#00b7cf">{{ $searchResults[$i]->gender }}, 28</p>
+                                                    <p style="font-size:12px;color:;">181cm |  | Abuja</p>
+                                                    <p style="font-size:10px;">I am a nice and easygoing lady</p>
+                                                    <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher
+                                                        |
+                                                        Unversity of Lagos</p><a href="#"><input type="submit"
+                                                                                                 class="button"
+                                                                                                 value="View Profile"
+                                                                                                 style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
+                                                </center>
+                                            </div>
+                                            <br>
+                                            <center
                                     <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
                                                 href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
+                                        </div>
 
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="container" style="margin-left:20px">
-                            <div class="accepted-requests">
-                                <img src="{{ asset('assets/img/clear.jpg') }}" height="150px" alt="BRAND" title="BRAND" width="150px"
-                                     class="img img-circle pull-left"/>
-                                <div class="accepted-requests-child">
-                                    <center>
-                                        <h3 style="font-family:;font-size: 22px;text-align:center;color: #848484;font-weight:bold;">
-                                            AWESOME!</h3><br>
-                                        <span style="color:#00b7cf;font-size:30px;font-weight:lighter">You have accepted Deles request</span><br>
-                                        <span style="color:#838383;font-size:15px;">Take the next st12p to call him on 0802342####</span><br><br>
+                                       {{-- @if($i == 2)
+                                            <div class="container" style="margin-left:20px">
+                                                <div class="accepted-requests">
+                                                    <img src="{{ asset('assets/img/clear.jpg') }}" height="150px" alt="BRAND" title="BRAND"
+                                                         width="150px"
+                                                         class="img img-circle pull-left"/>
+                                                    <div class="accepted-requests-child">
+
+                                                        <center>
+                                                            <h3 style="font-family:;font-size: 22px;text-align:center;color: #848484;font-weight:bold;">
+                                                                AWESOME!</h3><br>
+                                                            <span style="color:#00b7cf;font-size:30px;font-weight:lighter">You have accepted Deles request</span><br>
+                                                            <span style="color:#838383;font-size:15px;">Take the next st12p to call him on 0802342####</span><br><br>
                                         <span><a href="tel:0802342####"><input type="submit" class="button"
                                                                                value="View Phone Number"
                                                                                style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a></span>
-                                    </center>
+                                                        </center>
 
-                                </div>
+                                                    </div>
+                                                </div>
+                                            </div><br>
+                                        @endif--}}
+                                    @endfor
+                                @endif
                             </div>
                         </div>
-                        <div class="container" style="padding-right:-150px;padding-left:80px"><br><br>
-                            <div class="row">
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p>
-                                            <a href="#"><input type="submit" class="button" value="View Profile"
-                                                               style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="container" style="padding-right:-150px;padding-left:80px"><br><br>
-                            <div class="row">
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-                                <div class="col-xs-hidden col-sm-hidden col-md-4 col-lg-4 col-xl-4">
-                                    <div class="view-profile">
-                                        <center>
-                                            <img src="{{ asset('assets/img/blurred.jpg') }}" alt="Male" title="Member"
-                                                 style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
-                                            <b style="font-size:12px;color:">Mat ID: 13609####</b>
-                                            <p style="font-size:27px;font-family:;color:#00b7cf">Male, 28</p>
-                                            <p style="font-size:12px;color:;">181cm | Christian | Abuja</p>
-                                            <p style="font-size:10px;">I am a nice and easygoing lady</p>
-                                            <p style="color:#d1a55d;font-weight:lighter;font-size:12px">Teacher |
-                                                Unversity of Lagos</p><a href="#"><input type="submit" class="button"
-                                                                                         value="View Profile"
-                                                                                         style="border-radius: 12px;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/></a>
-                                        </center>
-                                    </div>
-                                    <br>
-                                    <span style="color:#00b7cf;font-weight:lighter;font-size:12px;padding-left:50px"><a
-                                                href="#">Send Mail</a>  |  <a href="#">Shortlist</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
 
                         <span><div class="pagination" style="float:right;color:#4990e2;">
-                                <li class="active"><a href="#" class="active">First</a></li>
-                                <a href="#">&laquo;</a>
-                                <li class="active"><a href="#" class="active">10</a></li>
-                                <li class="active"><a href="#" class="active">11</a></li>
-                                <li class="active"><a href="#" class="active"> ... </a></li>
-                                <li class="active"><a href="#" class="active">25</a></li>
-                                <li class="active"><a href="#" class="active">26</a></li>
-                                <a href="#">&raquo;</a>
-                                <li class="active"><a href="#" class="active">Last</a></li>
+                                {{--{{ $searchResults->link() }}--}}
                             </div></span>
                     </div>
 
