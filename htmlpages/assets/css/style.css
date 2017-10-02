@@ -1,0 +1,611 @@
+body {
+    overflow-x: hidden;
+	color: #989dac;
+	font-family: tahoma;
+}
+
+/*css for navbar general*/
+div.container-fluid > div.collapse > ul.nav {
+    padding-top: 18px;
+}
+div.container-fluid > div.collapse > ul > li {
+    display: inline-grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 500;
+}
+div.container-fluid > div.collapse > ul > li > a > span {
+
+}
+div.navbar-header > a.navbar-brand > img.img-responsive {
+    margin-right: 70px;
+    margin-left: 38px;
+}
+div.collapse > ul.navbar-right > li > a.account_link {
+    color: #38c7da;
+    font-size: 18px;
+    padding-top: 18px;
+    margin-right: 0px;
+}
+nav.navbar-default .navbar-nav > li > a {
+    color: #989dac;
+    font-size: 16px;
+}
+div.collapse > ul.navbar-right {
+    border-left: 1px solid rgba(221, 221, 221, 0.49);
+}
+
+/*End of css for navbar general*/
+
+
+nav.secondNav  {
+    width: 100%;
+    background-color: #b34376;
+    color: #FFFFFF;
+}
+nav.secondNav > ul  {
+    font-size: 14px;
+    padding-left: 20px;
+}
+nav.secondNav > ul > li {
+    display: inline-block;
+    font-family: tahoma;
+    font-weight: 500;
+    letter-spacing: .5px;
+    padding-right: 20px;
+}
+nav.secondNav > ul > li:nth-child(1) {
+    padding-left: 35px;
+}
+nav.secondNav > ul > li:nth-child(2) {
+    padding-left: 20px;
+    border-right: 0.8px solid rgba(221, 221, 221, 0.49);
+    border-left: 0.8px solid rgba(221, 221, 221, 0.49);
+}
+nav.secondNav > ul > li:nth-child(3)  {
+    display: inline-block;
+    font-family: tahoma;
+    font-weight: 800;
+    border-left: 0.8px solid transparent;
+    border-right: 0.8px solid transparent;
+    letter-spacing: .5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+nav.secondNav > ul > li:nth-child(4)  {
+    width: 14%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+nav.secondNav > ul > li:nth-child(4) > div.progress  {
+    border-radius: 0;
+    height: 30px;
+    margin-bottom: 0px;
+}
+nav.secondNav > ul > li:nth-child(4) > div.progress > .progress-bar-success {
+    background-color: rgba(92, 184, 92, 0.44);
+}
+nav.secondNav > ul > li:nth-child(4) > div.progress > div.progress-bar {
+    padding-top: 3px;
+}
+nav.secondNav > ul > li:nth-child(5)  {
+    width: 14%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+nav.secondNav > ul > li:nth-child(5) > div.progress  {
+    border-radius: 0;
+    height: 30px;
+    margin-bottom: 0px;
+}
+nav.secondNav > ul > li:nth-child(5) > div.progress > .progress-bar-purple {
+    background-color: rgba(138, 48, 237, 0.37);
+}
+nav.secondNav > ul > li:nth-child(5) > div.progress > div.progress-bar {
+    padding-top: 3px;
+}
+nav.secondNav > ul > li:nth-child(6)  {
+    width: 14%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+nav.secondNav > ul > li:nth-child(6) > div.progress  {
+    border-radius: 0;
+    height: 30px;
+    margin-bottom: 0px;
+}
+nav.secondNav > ul > li:nth-child(6) > div.progress > .progress-bar-lime {
+    background-color: rgba(37, 173, 117, 0.59);
+}
+nav.secondNav > ul > li:nth-child(6) > div.progress > div.progress-bar {
+    padding-top: 3px;
+}
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+    margin: 0 auto;
+    display: inline;
+}
+
+
+
+/*End of style for secondNavnbar*/
+
+a {
+    text-decoration: none !important;
+}
+
+
+.header-list ul li {
+    display: inline-block;
+    list-style-type: none;
+    border-right: 1px solid #eee;
+    margin: 5px 30px;
+    padding-right: 10px;
+}
+
+.empty {
+    border-bottom: 5px solid #f892c1;
+}
+
+.empty1 {
+    border-bottom: 5px solid #ddd;
+}
+
+.empty2 {
+    border-bottom: 5px solid #52c9d8;
+}
+
+.get-start button {
+    padding: 7px 30px;
+    background: #f892c1;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+}
+
+
+/* navbar */
+
+
+
+/* Title */
+
+.navbar-default .navbar-brand {
+    color: #777;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+
+
+/* Link */
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #f9f9f8;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #8c137e;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    color: #fff;
+    background-color: #8c137e;
+}
+
+
+/* Caret */
+
+.navbar-default .navbar-nav>.dropdown>a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:hover .caret,
+.navbar-default .navbar-nav>.dropdown>a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+
+.navbar-default .navbar-nav>.open>a .caret,
+.navbar-default .navbar-nav>.open>a:hover .caret,
+.navbar-default .navbar-nav>.open>a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+
+
+/* Mobile version */
+
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #333;
+    }
+}
+
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+
+
+/* The controlsy */
+
+.carousel-control {
+    left: 0px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #f892c1;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+.carousel-control.right {
+    right: 0px;
+}
+
+
+/* The indicators */
+
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -10px;
+
+    margin-right: -19px;
+}
+
+
+/* The colour of the indicators */
+
+.carousel-indicators li {
+    background: #52c9d8;
+    
+}
+
+.carousel-indicators .active {
+    background: #f892c1;
+}
+
+.flexy {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.src-image {
+    display: none;
+}
+
+.card {
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0;
+    background-color: #eee;
+    color: #222;
+    -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
+}
+
+.card .header-bg {
+    /* This stretches the canvas across the entire hero unit */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    /* This positions the canvas under the text */
+    z-index: 1;
+}
+
+.card .avatar {
+    position: relative;
+    margin-top: -10px;
+    z-index: 100;
+}
+
+.card .avatar img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.gender {
+    color: #f892c1;
+    font-size: 26px;
+}
+
+.age {
+    color: #f892c1;
+    font-size: 26px;
+}
+
+.view-profile {
+    background: #f892c1;
+    padding: 6px 20px;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+}
+
+.view-profile2 {
+    background: #52c9d8;
+    padding: 6px 20px;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+}
+
+.c-blue {
+    color: #52c9d8 !important;
+}
+
+.c-pink {
+    color: #f892c1 !important;
+}
+
+.c-white {
+    color: #fff;
+}
+
+.bg-pink {
+
+    background: #f892c1 !important;
+}
+
+.msg-span {
+    border: 1px solid #fff;
+    padding-left: 0px !important;
+    padding: 5px;
+}
+
+.msg-span1 {
+    background: #8cdbbb;
+
+    padding: 5px 8px;
+}
+
+.msg-span2 {
+    background: #9184a5;
+    padding: 5px;
+}
+
+.msg-span3 {
+    background: #bae8f2;
+    padding: 5px;
+}
+
+.large-banner {
+    width: 100%;
+    height: 468px;
+    background: url('../img/lostrib.jpg');
+    background-size: cover;
+}
+
+
+/*banner-search*/
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px; 
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    height: 50px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #52c9d8;
+}
+
+.search-query:focus+button {
+    z-index: 3;
+}
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #fff;
+  font-size: 2.0em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+  padding-bottom: 20px;
+
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #f892c1;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background:#f892c1;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+.sel-drop {
+    padding: 5px 70px;
+    background: #eee;
+}
+
+.how-it {
+    width: 100%;
+    min-height: 350px;
+    background: url('../img/lovers.png');
+    background-size: cover;
+}
+
+/*Appended css*/
+.bg-purple {
+    background: #3a6186 !important;
+    background: -webkit-linear-gradient(to right, #89253e, #3a6186) !important;
+    background: linear-gradient(to right, #89253e, #3a6186) !important;
+}
+div.how-it-works > * {
+    text-align: right;
+    padding-right: 58px;
+}
+div.how-it-works {
+    color: #848484;
+}
+div.how-it-works > h1 {
+    color: #f26aa8;
+    margin-top: 24px;
+}
+div.how-it-works > h4 {
+    margin-top: 22px;
+}
+div.col-md-6 > div.button-flexy {
+    padding-top: 32px;
+    padding-bottom: 58px;
+    padding-right: 58px;
+}
+a {
+    text-decoration: none;
+}
+.button-flexy {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+section > div.how-it {
+    background-color: rgba(250, 249, 247, 0.77);
+}
+.container-fluid {
+    padding: 0;
+}
+/*End of appended css*/
