@@ -183,6 +183,18 @@ hr.small {
     font-family: AvenirNext, 'Caviar Dreams';
 }
 
+.orange_text {
+    color: #ec9f00;
+    font-family: AvenirNext, 'Caviar Dreams';
+}
+
+a.orange_link {
+    color: #ec9f00;
+    text-decoration: underline;
+    font-weight: 500;
+    font-family: AvenirNext, 'Caviar Dreams';
+}
+
 .gray_rule {
 	width: 100%;
 	background: #e0e8e9;

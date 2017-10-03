@@ -1,0 +1,29 @@
+.roboto {
+    font-family: Roboto;
+}
+
+.viewprofilebtn {
+    background: #f26aa8;
+    padding: 10px 30px;
+    color: #fff;
+    font-family: Roboto;
+    border-radius: 5px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    #mobile-content {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #desktop-content {
+        display: none;
+    }
+
+    #mobile-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
