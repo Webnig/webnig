@@ -1,0 +1,105 @@
+/*css for DashBoard only*/
+div.container-fluid > div.row {
+    height: 500px;
+    background-image: url('');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+}
+div.container-fluid > div.row > div.landing > div.col-md-8 {
+
+}
+
+.img-bg{
+	background: url('../img/family.png');
+	min-height: 300px;
+	background-size:cover;
+}
+.subscribe button {
+    padding: 8px 40px;
+    background: #f892c1;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+}
+.preview_ask{
+	border-top: 2px solid #ddd;
+}
+.header-list2 ul li {
+    display: inline-block;
+    list-style-type: none;
+   
+    margin: 5px 36px;
+    
+}
+.header-list2 ul li a{
+	 border-right: 1px solid #eee;
+	 padding-right: 10px;
+}
+
+select { 
+	width: 200px; 
+	padding: 5px 20px;
+	border-radius: 3px;
+	text-align:center; 
+}
+.aged{
+	width: 90px !important;
+	padding: 5px 10px !important;
+	text-align: center !important;
+}
+select .lt { text-align:center; }
+select { text-indent: 0px; }
+.search-form .form-group {
+  
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border-right: none !important;
+}
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width:150px;
+  border-radius: 4px 25px 25px 4px;
+}
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height:auto;
+  line-height: 34px;
+  text-align: center;
+  color: #3596e0;
+  left: initial;
+  font-size: 14px;
+}
+/*End of css for DashBoard*/
+

@@ -66,7 +66,7 @@ class Controller extends BaseController
         ];
 
         $religions = [
-            'Christian', 'Muslim', 'Atheist', 'Agnostic', 
+            'Christian', 'Muslim', 'Atheist', 'Agnostic',
             'Traditional Worshipper', 'Christian + Traditional',
             'Muslim + Traditional', 'Non Religious but Spiritual',
             'Other'
@@ -169,14 +169,14 @@ class Controller extends BaseController
             'Formal', 'Corporate', 'Semi Formal',
             'Comfortable'
         ];
-        
+
         $wifeLooks = [
             'Genevieve', 'Asa', 'Beyonce', 'Toolz',
             'Omotola Jalade', 'Chidinma', 'Mo\' Chedda',
             'Toke Makinwa', 'Tiwa Savage', 'Yemi Alade',
             'Ini Edo', 'Mercy Johnson'
         ];
-        
+
         $husbandLooks = [
             'Don Jazzy', 'Banky W', 'Olamide', 'Davido',
             'Jidenna', 'Wizkid', 'Sound Sultan', 'Timi Dakolo',
@@ -417,7 +417,7 @@ class Controller extends BaseController
         $communicateEmotionalNeeds = [
             'Absolutely, from the get-go',
             'Maybe after a few months into the relationship',
-            'Absolutely not. I expect my partner to figure it out 
+            'Absolutely not. I expect my partner to figure it out
             without me saying it verbally'
         ];
 
@@ -451,13 +451,13 @@ class Controller extends BaseController
         ];
 
         $mostValued = [
-            'My space, peace and quiet', 'A partner that understands 
-            my peculiarities', 'Respect &amp; Honesty', 'A partner that 
+            'My space, peace and quiet', 'A partner that understands
+            my peculiarities', 'Respect &amp; Honesty', 'A partner that
             will not try to change me but accept me the way I am'
         ];
 
         $choiceOfMusic = [
-            'I would play the music I like', 'I will allow my partner to choose 
+            'I would play the music I like', 'I will allow my partner to choose
             the music', 'We should take turns choosing the music',
             'It would be best to keep the stereo off'
         ];
@@ -485,7 +485,7 @@ class Controller extends BaseController
         ];
 
         $partnerKeepLateNights = [
-            'I do not mind', 'I really mind', 'So long as they come back 
+            'I do not mind', 'I really mind', 'So long as they come back
             home I do not care', 'We will rock the night together'
         ];
 
@@ -608,11 +608,11 @@ class Controller extends BaseController
     {
         $viewOnDeath = [
             'A biological phenomenon', 'A spiritual progression',
-            'Just a fact of life', 'We won\'t know until we die &amp; then 
+            'Just a fact of life', 'We won\'t know until we die &amp; then
             still might not know'
         ];
         $abortion = ['Yes', 'No'];
-        
+
         $greatestMotivation = [
             'Love/Family', 'Wealth', 'Expression', 'Freedom',
             'Knowledge', 'Excellence'
@@ -633,9 +633,210 @@ class Controller extends BaseController
             'Never not my thing'
         ];
 
+        $fashionMatter = ['A lot', 'A little', 'Not at all'];
+        $childAdoptionChoice = [
+            'Yes, and I\'d keep dating',
+            'Yes, and I\'d dedicate myself to the child',
+            'No, I wouldn\'t do it'
+        ];
+
+        $dateMentalHealthPatient = ['Yes', 'No', 'I\'m not sure'];
+        $loveOverrated = [
+            'Yes, absolutely', 'Yes, a bit', 'No, it\'s fine',
+            'No, it\'s underrated'
+        ];
+        $freakOutWhenUpset = [
+            'Yes', 'No', 'Only when no one is around',
+            'Only when someone is around'
+        ];
+
         return view('basicinfo.lifeanddeath', compact(
             'viewOnDeath', 'abortion', 'greatestMotivation', 'stopEnjoyingNature',
-            'happyWithYourLife', 'genderBiasedRemarks', 'socialActivities'
+            'happyWithYourLife', 'genderBiasedRemarks', 'socialActivities',
+            'fashionMatter', 'childAdoptionChoice', 'dateMentalHealthPatient',
+            'loveOverrated', 'freakOutWhenUpset'
+        ));
+    }
+
+    public function financeInfo()
+    {
+        $carefulWithMoney = ['Yes', 'No'];
+        $husbandProvidesEverything = [
+            'Yes, the husband provides everything',
+            'No, the husband and wife provide an equal percentage',
+            'Yes, with a little support from the wife'
+        ];
+        $isEntrepreneural = ['Yes', 'No'];
+        $keepJointAccount = ['Yes', 'No'];
+        $giftToReceive = [
+            'Flowers', 'Wallet/Boxers', 'A box of chocolates',
+            'Latest phone', 'Money &mdash; Raw cash',
+            'A creative item made by them'
+        ];
+        $raiseKidsAtHome = ['Yes', 'No'];
+        $spouseGiftingFrequency = [
+            'Ver frequently', 'From time to time',
+            'On special occasions (birthdays, Christmas, etc.)',
+            'Never, it is not about gifts for me'
+        ];
+        $keepBudget = [
+            'Yes', 'No', 'Sometimes'
+        ];
+        $dumpForGenerosity = ['Yes', 'No'];
+        $moneyBuyHappiness = ['Yes', 'No'];
+
+        return view('basicinfo.finances', compact(
+            'carefulWithMoney', 'husbandProvidesEverything', 'isEntrepreneural',
+            'keepJointAccount', 'giftToReceive', 'raiseKidsAtHome',
+            'spouseGiftingFrequency', 'keepBudget', 'dumpForGenerosity',
+            'moneyBuyHappiness'
+        ));
+    }
+
+    public function hygieneInfo()
+    {
+        $washHandsBeforeMeal = ['Yes', 'No'];
+        $washHandsAfterToilet = ['Yes', 'No'];
+        $showerFrequency = [
+            'At least once a day',
+            'Usually daily. I skip some',
+            'A couple times a week',
+            'Once a week or less'
+        ];
+        $brushTeethFrequency = [
+            'Twice or more a day',
+            'Once a day', 'Only on days I feel like it',
+            'Rarely/Never'
+        ];
+        $wearsCologne = ['Yes', 'No'];
+
+        return view('basicinfo.hygiene', compact(
+            'washHandsBeforeMeal', 'washHandsAfterToilet', 'showerFrequency',
+            'brushTeethFrequency', 'wearsCologne'
+        ));
+    }
+
+    public function iqInfo()
+    {
+        $intelligenceTurnsOn = [
+            'Intelligence can turn me on a lot!',
+            'Intelligence can turn me on a bit',
+            'Intelligence does nothing for me either way',
+            'Intelligence turns me off'
+        ];
+
+        $iqtest1 = [
+            '89457', '98547', '89754', '89547',
+            'Don\'t know/Don\'t care/Dislike this'
+        ];
+
+        $iqtest2 = [
+            '36', '48', '46',
+            'Don\'t know/Don\'t care/Dislike this'
+        ];
+
+        $bitchySentence = [
+            'The profanity', 'The grammar', 'They both bother me equally',
+            'Neither one bothers me'
+        ];
+
+        $intelligenceType = [
+            'Logical/Mathematical', 'Social/Interpersonal',
+            'Visual/Spatial/Artistic'
+        ];
+
+        return view('basicinfo.iqinfo', compact(
+            'intelligenceTurnsOn', 'iqtest1', 'iqtest2', 'bitchySentence',
+            'intelligenceType'
+        ));
+    }
+
+    public function sexInfo()
+    {
+        $sleepOptions = [
+            'Alone', 'With my partner, but apart (not touching)',
+            'Touching my partner', 'Embracing/Cuddling my partner'
+        ];
+
+        $romanticActivity = [
+            'Kissing in public in Paris, France',
+            'Kissing in a tent at the beach in Lagos'
+        ];
+
+        $hornyOrLonely = [
+            'Horny', 'Lonely'
+        ];
+
+        $settleSexIssues = [
+            'Talk to them about it',
+            'Try to spice things up (Toys, fantasies, etc.)',
+            'Do nothing, but hope things change naturally',
+            'Cheat on them/Break up with them'
+        ];
+
+        $testForSTDs = [
+            '1 year ago', '6 months ago', '3 months ago',
+            '1 month ago'
+        ];
+
+        $testBeforeFirstSex = [
+            'Positive' => 'Relieved, accepting, happy or proud',
+            'Neutral' => '',
+            'Negative' => 'Offended, annoyed, angry or afraid'
+        ];
+
+        $slapDuringSex = [
+            'Horrified', 'Aroused', 'Nostalgic', 'Indifferent'
+        ];
+
+        $masturbationView = [
+            'Yes', 'No, it is unhealthy',
+            'No, it is against my beliefs',
+            'No, it is both unhealthy and against my beliefs'
+        ];
+
+        $howLongBeforeSex = [
+            '1 - 2 dates', '3 - 5 dates', '6 or more dates',
+            'Only after the wedding'
+        ];
+
+        $dateSTDPerson = [
+            'Yes', 'No'
+        ];
+
+        $sexFrequency = [
+            'Every day', '3 to 4 times per week', '1 to 2 times per week',
+            'Less than once per week'
+        ];
+
+        $tryNewMovesInBed = [
+            'Very open. I\'ll try anything once',
+            'I\'m open, but I don\'t get too crazy',
+            'Hesitant, but it might happen',
+            'Not at all'
+        ];
+
+        $likeCuddle = [
+            'Yes', 'No', 'Sometimes &mdash; it depends'
+        ];
+
+        $contraceptionView = [
+            'Yes', 'No', 'Depends on the kind'
+        ];
+
+        $socialMedium = [
+            'LinkedIn', 'A friend', 'Instagram', 'Facebook', 'Nairaland',
+            'Twitter', 'Newsletter', 'Newspaper', 'Magazine', 'Blogs',
+            'Words of Mouth', 'Banner', 'Google Search', 'Radio', 'YouTube',
+            'Television'
+        ];
+
+        return view('basicinfo.sexinfo', compact(
+            'sleepOptions', 'romanticActivity', 'hornyOrLonely',
+            'settleSexIssues', 'testForSTDs', 'testBeforeFirstSex',
+            'slapDuringSex', 'masturbationView', 'howLongBeforeSex',
+            'dateSTDPerson', 'sexFrequency', 'tryNewMovesInBed',
+            'likeCuddle', 'contraceptionView', 'socialMedium'
         ));
     }
 

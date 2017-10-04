@@ -1,0 +1,101 @@
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/AvenirNext/AvenirNextLTPro-Regular.woff);
+}
+/*-----------------------------------------------------------*/
+/*The Main Header*/
+#main-header #header-link{
+  margin-top: 20px;
+}
+#main-header #header-link ul{
+  color: #989dac;
+  padding-left: 0px;
+}
+#main-header #header-link li{
+ 	padding: 0px 20px;
+}
+#main-header #header-link li a:hover{
+	text-decoration: none;
+}
+#main-header #header-link li:hover{
+  border-bottom: 2px solid #ccd1d9;
+}
+#main-header #header-link #link-1,
+#main-header #header-link #link-2,
+#main-header #header-link #link-3,
+#main-header #header-link #link-4,
+#main-header #header-link #link-5{
+	border-right: 0px;
+}
+#main-header #header-link #link-5 i{
+	font-size: 22px;
+}
+#main-header #header-link #link-6{
+  border-left: 1px solid #ccd1d9;
+	font-size: 22px;
+	height: 40px;
+}
+#main-header #header-link #link-6 a{
+	color: #38c7da;
+}
+/*------------------------------------------------------------------*/
+/*The FAQ Search Form*/
+#faqSearch{
+	padding: 35px 10px;
+  background-color: #ffffff;
+  font-family: AvenirNext;
+}
+#faqSearch h3{
+	font-size: 36px;
+  color: #848484;
+  margin-bottom: 30px;
+}
+#faqSearch input.form-control{
+	height: 40px;
+	width: 350px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+#faqSearch .btnSearch{
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	border: 1px solid;
+	border-radius: 20px;
+  background-color: #52c9d8;
+  color: #ffffff;
+}
+/*-----------------------------------------------------------------*/
+/*The Main Content of the FAQ Page*/
+#faq-content .row{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	border-top: 1px solid #ccd1d9;
+}
+#faq-content h3{
+	font-size: 24px;
+  color: #848484;
+  padding-left: 15px;
+	padding-bottom: 12px;
+}
+#faq-content .list-group-item{
+	border: 1px transparent;
+	font-size: 14px;
+  letter-spacing: 0.2px;
+}
+#faq-content .list-group-item a{
+  text-decoration: underline;
+  color: #52c9d8;
+}
+#faq-content .list-group-item a:hover{
+	text-decoration: none;
+	/*color: #52c9d8;*/
+}
+/*-------------------------------------------------------------*/
+/*Media Queries*/
+@media (max-width: 991px){
+	#faqSearch .form-inline{
+		display: inline-block;
+	}
+}

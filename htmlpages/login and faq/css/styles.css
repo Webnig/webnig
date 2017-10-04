@@ -1,0 +1,750 @@
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/AvenirNext/AvenirNextLTPro-Regular.woff);
+}
+body {
+  /*font-family: AvenirNext;*/
+}
+/*--------------------------------------------------------------------*/
+/*-------------------The Main Header-------------------*/
+#main-header{
+  background: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+/*For the Mobile View*/
+#main-header #header-menu-button,
+#main-header .mobile{
+  display: none;
+}
+#main-header #header-logo{
+  float: left;
+}
+#main-header #header-logo img{
+  float: left;
+  object-fit: contain;
+  width: 80%;
+}
+#main-header #header-link{
+  float: right;
+}
+#main-header #header-link ul{
+  list-style-type: none;
+  float: right;
+  color: #989dac;
+  padding-left: 0px;
+}
+#main-header #header-link a{
+  font-size: 18px;
+  color: #989dac;
+  font-family: AvenirNext;
+  vertical-align: middle;
+}
+#main-header #header-link li{
+  display: inline-block;
+  padding: 0px 12px;
+  vertical-align: middle;
+}
+#main-header #header-link li:hover{
+  border-bottom: 2px solid #989dac;
+}
+#main-header #header-link #link-1,
+#main-header #header-link #link-2,
+#main-header #header-link #link-3,
+#main-header #header-link #link-4{
+  border-right: 1px solid;
+}
+#main-header #header-link #link-5{
+  border-right: 1px solid #ccd1d9;
+}
+/*--------------------------------------------------------------------*/
+/*-------------------The Mask-------------------*/
+#mask{
+  background-color: #b34376;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#mask .mask #noOfUsers{
+  width: 28%;
+  display: inline-block;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  vertical-align: middle;
+}
+#mask .mask #noOfUsers p{
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+#mask .mask #noOfUsers img{
+  object-fit: contain;
+  border-radius: 50px;
+  border: 1px transparent;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#mask .mask #justJoined,
+#mask .mask #activities,
+#mask .mask #sentMessages,
+#mask .mask #profileViews,
+#mask .mask #searches{
+  width: 14%;
+  display: inline-block;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  margin: auto;
+  vertical-align: middle;
+}
+#mask .mask #justJoined{
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #ffffff;
+}
+#mask #justJoined img{
+  display: none;
+}
+#mask .mask #justJoined h3, .mask #activities h3{
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#mask .mask #justJoined p, .mask #activities p{
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+#mask .mask #sentMessages p, .mask #profileViews p, .mask #searches p{
+  font-size: 14px;
+  margin-bottom: 0px;
+  color: #ffffff;
+  /*Beginnig of Dummy progress Bar*/
+  border: 1px solid;
+  padding: 5px 0px;
+}
+#mask .mask #sentMessages p{
+  background-color: #b8cbb0;
+}
+#mask .mask #profileViews p{
+  background-color: #d3b3f4;
+}
+#mask .mask #searches p{
+  background-color: #d8d5ac;
+}
+  /*End of Dummy Progress Bar*/
+
+
+/*------------------------------------------------------------*/
+/*-------------------Profile Carousel-------------------*/
+#profileCarousel .colmd{
+  display: inline-block;
+  width: 18%;
+  padding: 10px;
+  margin: auto;
+  vertical-align: middle;
+}
+#profileCarousel .colmd #profile p{
+  color: #868686;
+  font-size: 12px;
+  font-family: AvenirNext;
+}
+#profileCarousel .colmd #profile h3{
+  margin-top: 10px;
+  color: #f26aa8;
+  font-family: AvenirNext;
+/*-------nth child-------*/
+}
+#profileCarousel .colmd #profile #matrimony{
+  font-weight: bold;
+}
+#profileCarousel .colmd #profile img{
+  width: 70%;
+  border-radius: 90px;
+  position: relative;
+  bottom: 15px;
+}
+#profileCarousel .colmd #profile{
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  padding-top: 0px;
+  margin-top: 20px;
+}
+#profileCarousel .details .height {
+  display: none;
+}
+#profileCarousel .colmd #profile .btn{
+  object-fit: contain;
+  border-radius: 50px;
+  width: 60%;
+  color: #ffffff;
+  border: 1px;
+  text-align: center;
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  background-color: #f26aa8;
+  /*-------nth child-------*/
+}
+/*---*/
+#profileCarousel .colmd #addMeHere{
+  padding: 8px;
+  /*Extras*/
+  overflow: visible;
+}
+#profileCarousel .colmd #addMeHere #addMeImg{
+  object-fit: contain;
+  width: 118%;
+  float: right;
+}
+#profileCarousel .colmd #addMeHere #addMeImg:hover{
+  width: 119%;
+}
+/*----------Profile Carousel Indicator----------*/
+/*-----Needs Editing--------*/
+#profileCarouselIndicator{
+  background-color: #52c9d8;
+  color: white;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+
+/*--------------------------------------------------------------*/
+/*-------------------Let Me In-------------------*/
+#letMeIn .jumbotron{
+  margin-bottom: 0px;
+  background-image: url(../img/finder-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  min-height: 420px;
+  padding: 45px 0px;
+}
+#letMeIn .jumbotron h2{
+  font-family: AvenirNext;
+  font-weight: bolder;
+  color: #ffffff;
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  letter-spacing: -0.9px;
+  line-height: 0.9;
+  padding: 0px 50px;
+}
+#letMeIn label{
+  font-family: AvenirNext;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+#letMeIn .form-group{
+  margin: 0px 20px;
+}
+#letMeIn .form-control{
+  width: 115%;
+  height: 60px;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+#letMeIn .jumbotron .btn{
+  object-fit: contain;
+  border-radius: 50px;
+  width: 35%;
+  background-color: #f26aa8;
+  font-family: AvenirNext;
+  color: #ffffff;
+  border: 1px transparent;
+  margin-top: 25px;
+}
+
+/*----------------------------------------------------------------*/
+/*-------------------Special Someone-------------------*/
+#specialSomeone{
+  background-color: #ffffff;
+  font-family: AvenirNext;
+}
+#specialSomeone .specialHeading h3{
+  color: #848484;
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+#options .fa{
+  font-size: 70px;
+  color: #52c9d8;
+}
+#options h3{
+  color: #f26aa8;
+  font-weight: 600;
+}
+#options p{
+  color: #848484;
+  font-family: AvenirNext;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+    /*Everyone else willing to meet you*/
+    /*select option*/
+#specialSomeone .period{
+  margin-bottom: 10px;
+}
+#specialSomeone .period p span{
+  color: #989dac;
+}
+#specialSomeone .period select{
+  color: #4e4e57;
+  font-family: PTSans-Caption;
+  width: 60%;
+  background-color: #e9eaef;
+  border-radius: 1.5px;
+  box-shadow: inset 0.5px 0.5px 1.5px 0 rgba(122, 125, 128, 0.2);
+  border: solid 0.5px rgba(122, 125, 128, 0.3);
+}
+#specialSomeone .period select option{
+  font-family: PTSans-Caption;
+}
+/*Profiles*/
+    /*View profile button*/
+#specialSomeone #profiles .btn{
+  object-fit: contain;
+  border-radius: 50px;
+  width: 50%;
+  color: #ffffff;
+  border: 1px;
+  margin-bottom: 15px;
+}
+#specialSomeone #profiles div:nth-child(odd) a{
+  background-color: #f26aa8;
+}
+#specialSomeone #profiles a:nth-child(even){
+  background-color: #52c9d8;
+}
+    /*Profiles Paragraph Text*/
+#specialSomeone #profiles p{
+  color: #868686;
+  font-size: 12px;
+}
+#specialSomeone #profiles #matrimony{
+  font-weight: bold;
+}
+/*Profile Heading Text*/
+#specialSomeone #profiles h3{
+  margin-top: 10px;
+  color: #52c9d8;
+}
+#specialSomeone #profiles div:nth-child(odd) h3{
+  color: #f26aa8;
+}
+#specialSomeone #profiles img{
+  width: 70%;
+  /*Extras*/
+  border-radius: 90px;
+  position: relative;
+  bottom: 15px;
+}
+#specialSomeone .details .height{
+    display: none;
+}
+    /*Profiles Div Background color*/
+#specialSomeone #profiles div #profile{
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  margin-top: 20px;
+}
+    /*Pagination*/
+#specialSomeone #displayingPage{
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+#specialSomeone #displayingPage p{
+  color: #4a4a4a;
+  font-family: HelveticaNeue;
+}
+#specialSomeone #displayingPage #pageTotal{
+  color: #4990e2;
+  font-family: HelveticaNeue;
+}
+/*-------------------To Be Edited----------------*/
+#specialSomeone .btn{
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 0.6px solid #bbbbbb;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#specialSomeone #displayingPage .fa-caret-right{
+  color: #4990e2;
+}
+#specialSomeone #currentPage{
+  background-color: #ffffff;
+  color: #4a4a4a;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+/*------------------To Be Edited----------------*/
+
+/*----------------------------------------------------------------*/
+/*-------------------How It Works-------------------*/
+/*-----jumbotron-----*/
+#howItWorks .jumbotron{
+  margin-bottom: 0px;
+  background-image: url(../img/how-it-works.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+#howItWorks .jumbotron h2{
+  font-family: AvenirNext;
+  font-weight: 600;
+  color: #f26aa8;
+  font-size: 35px;
+  margin-top: 15px;
+}
+#howItWorks .jumbotron h4{
+  color: #848484;
+  font-family: AvenirNext;
+  font-size: 18px;
+}
+#howItWorks .jumbotron p{
+  color: #848484;
+  font-family: AvenirNext;
+  font-size: 15px;
+}
+#howItWorks .jumbotron img{
+  object-fit: contain;
+  border-radius: 50px;
+  width: 35%;
+}
+
+/*----------------------------------------------------------------*/
+/*-------------------Love Stories-------------------*/
+.story {
+  min-height: 320px;
+  background: -webkit-linear-gradient(#52c9d8, #f26aa8); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#52c9d8, #f26aa8); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#52c9d8, #f26aa8); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#52c9d8, #f26aa8); /* Standard syntax */
+}
+.story h2{
+  font-weight: 600;
+  font-family: AvenirNext;
+  color: #f26aa8;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+.story p{
+  font-family: AvenirNext;
+  color: #ffffff;
+  opacity: 0.57;
+}
+.story .text-right{
+  padding-right: 5px;
+}
+.story img {
+  object-fit: contain;
+  width: 100%;
+}
+.story .text-left p{
+  font-family: AvenirNext;
+  opacity: 0.95;
+  margin-bottom: 5px;
+}
+.story blockquote{
+  border: 0px;
+  margin: auto;
+  font-family: AvenirNext;
+  padding-right: 15px;
+  padding-left: 8px;
+}
+.story .text-left cite{
+  font-family: AvenirNext;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.57;
+  text-decoration: underline;
+}
+
+/*---------------------------------------------------------*/
+/*-------------------Footer-------------------*/
+footer {
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+footer img{
+  object-fit: contain;
+  margin-bottom: 15px;
+  width: 150px;
+}
+footer p {
+  font-family: AvenirNext;
+  color: #3e6373;
+}
+
+
+/*-------------------- Media Queries --------------------*/
+@media(max-width: 991px){
+  /*Header*/
+  #main-header{
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  #main-header .desktop{
+    display: none;
+  }
+  #main-header #header-menu-button,
+  #main-header .mobile{
+    display: inline-block;
+  }
+  /*Mobile Menu Icon*/
+  #main-header #header-menu-button .fa{
+    font-size: 30px;
+    color: #989dac;
+  }
+  /*Logo*/
+  #main-header #header-logo img{
+    object-fit: contain;
+    width: 125%;
+    float: left;
+  }
+  /*Icons*/
+  #main-header #header-icons ul{
+    float: right;
+    padding: 0px 0px;
+    list-style-type: none;
+  }
+  #main-header #header-icons a{
+    font-size: 30px;
+    color: #989dac;
+    text-decoration: none;
+  }
+  #main-header #header-icons li{
+    display: inline-block;
+    padding: 0px 0px;
+    margin: 0px 10px;
+  }
+  #main-header #header-icons .badge{
+     background-color: #f26aa8;
+     color: #ffffff;
+     margin-left: -12px;
+     margin-right: 1px;
+     vertical-align: top;
+  }
+  /*The HamBurger Dropdown*/
+  #main-header ul.dropdown-menu{
+      margin-top: 45px;
+      width: 1200%;
+      text-align: center;
+  }
+/*--------------------------------------------------*/
+  /*Mask Moblie*/
+  #mask{
+    background-color: #01afc7;
+    margin-bottom: 15px;
+  }
+  #mask .row{
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+    display: flex;
+  }
+  #mask #noOfUsers{
+   display: none !important;
+  }
+  #mask #justJoined{
+    order: 2;
+    flex-basis: 25%;
+    border-left: 0px !important;
+  }
+  #mask #activities{
+    order: 1;
+    flex-basis: 100%;
+  }
+  #mask #sentMessages{
+    order: 3;
+    flex-basis: 25%;
+  }
+  #mask #profileViews{
+    order: 4;
+    flex-basis: 25%;
+  }
+  #mask #searches{
+    order: 5;   
+    flex-basis: 25%;    
+  }
+  #mask #justJoined h3{
+    font-size: 14px !important;
+    font-weight: bold;
+  }
+  #mask #justJoined p{
+    opacity: 0.6;
+    font-size: 10px !important;
+    text-align: center;
+  }
+  #mask #justJoined img{
+    display: inline-block;
+    float: left;
+    height: 35px;
+  }
+  #mask #activities h3{
+    font-size: 14px;
+    font-weight: bold;
+    display: inline;
+  }
+  #mask #activities p{
+    font-size: 10px;
+    display: inline;
+  }
+  #mask #justJoined,
+  #mask #sentMessages,
+  #mask #profileViews,
+  #mask #searches {
+    padding: 5px 10px !important;
+    /*margin: 0px !important;*/
+  }
+  #mask #sentMessages p,
+  #mask #profileViews p,
+  #mask #searches p {
+    font-size: 12px !important;
+  }
+/*-------------------------------------------------*/
+  /*Profile Carousel*/
+  #profileCarousel .comtainer-fluid{
+    width: 100% !important;
+  }
+  #profileCarousel .container-fluid .pro{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  #profileCarousel .colmd{
+    width: 220px;
+  }
+  #profileCarousel .details .height{
+    display: inline;
+  }   
+  #profileCarousel .details .description,
+  #profileCarousel .details .btn{
+    display: none;
+  }
+
+/*--------------------------------------------------*/
+  /*Let Me In*/
+  #letMeIn .jumbotron{
+    background-position: ;
+  }
+  #letMeIn .jumbotron h2{
+    font-size: 30px;
+    padding: 0px 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    letter-spacing: normal;
+  }
+  #letMeIn .form-group{
+    margin: 5px 10px;
+    display: block;
+  }
+  #letMeIn label{
+    font-size: 18px;
+    margin-bottom: auto;
+    display: inline-block;
+  }
+  #letMeIn .form-control{
+    width: 60%;
+    display: inline-block;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+/*--------------------------------------------------*/
+  /*Special Someone*/
+  #options .fa{
+    font-size: 90px;
+  }
+  #specialSomeone .container{
+    width: 100% !important;
+  }
+  #specialSomeone #profiles{
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+  }
+  #specialSomeone #profiles div#profileCol{
+    width: 220px !important;
+    margin: 0px 5px;
+    white-space: nowrap;
+  }
+  #specialSomeone .details .height{
+    display: inline;
+  }
+  #specialSomeone #profile .details .description,
+  #specialSomeone #profile .details .btn{
+    display: none;
+  }
+
+/*--------------------------------------------------*/
+  /*How It Works and Jumbotron*/
+  #howItWorks .jumbotron h2{
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  #howItWorks .jumbotron h4{
+    font-size: 16px;
+    color: #111111;
+  }
+  #howItWorks .jumbotron p{
+    font-size: 14px;
+    color: #333333;
+  }
+  #howItWorks .jumbotron img{
+    width: 50%;
+  }
+/*---------------------------------------------------*/
+  /*Love Stories*/
+  .story h2{
+    font-size: 35px;
+    margin-top: 25px;
+  }
+  .story p{
+    color: #ffffff;
+    opacity: 0.85;
+  }
+  .story .text-right{
+    padding-right: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .story img{
+    object-fit: contain;
+    width: 15%;
+  }
+  .story .text-left{
+    padding: 0px 25px;
+  }
+  .story .text-left p{
+    opacity: 0.85;
+  }
+  .story .text-left cite{
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .story blockquote{
+    padding: 0px 15px;
+  }
+  /*Footer*/
+  footer{
+    margin-bottom: 10px;
+  }
+  footer img{
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}

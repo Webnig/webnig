@@ -1,0 +1,231 @@
+/*
+Author:WebWizard;
+Author URL:https://www.facebook.com/iamwebwiz;
+*/
+body{
+    box-sizing: border-box;
+}
+.body{
+    height:auto;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.header{
+    background-color:white;
+    height:20%;
+    width:100%;
+    padding-left:20px;
+    padding-right:20px;
+}
+.navbar-default {
+    background: none;
+    border: none;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-collapse {
+    padding: 0;
+    box-shadow: none;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+}
+.navbar-nav {
+    float: right;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #212121;
+}
+/*-- agileits --*/
+.logo i {
+    display: inline-block;
+    color: #de0f17;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background: none;
+    color: #de0f17;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+        color: #de0f17;
+    text-decoration: line-through;
+}
+.navbar-nav > li > a {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding:19px 18px 0;
+     font-weight:600;
+         transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.header-bottom {
+    padding: 0.7em 3em;
+}
+.navbar-default .navbar-nav > li > a {
+        color: #111;
+}
+.navbar-brand {
+    float: left;
+    height: 70px;
+    font-size: 0.9em;
+    line-height: 15px;
+    text-align: left;
+    padding: 10px 10px!important;
+}
+.logo p {
+    display: block;
+    color: #de0f17;
+    line-height: 9px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 10px;
+}
+.agile_short_dropdown > li > a:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #de0f17;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: auto;
+ }
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Gray */
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    border-radius: 5px;
+}
+.users{
+    background-color: #b34376;
+    color:white;
+    height:40px;
+    width:100%;
+    padding-top:9px;
+    padding-bottom:2px;
+    text-align:center;
+}
+.soulmate-click{
+    height:auto;
+    background-image:url(images/mast-banner-copy@2x.jpg);
+}
+.fyss{
+    height:auto;
+    width:100%;
+    background-color:;
+    padding-bottom:20px;
+    padding-top:30px;
+}
+/*botton*/
+input[type="submit"]{
+    color:;
+}
+/**/
+.fa{
+    color:#00b7cf;
+    height:100px;
+    width:100px;
+    align-self: center;
+
+}
+.lists{
+    text-align:center;
+}
+.lists > h3 {
+    color:#f26aa8;
+    font-size:;
+}
+.lists > p {
+    color: #848484;
+    font-size:;
+}
+.view-profile1{
+    height:auto;
+    width:100%;
+    padding-bottom:20px;
+    padding-top:20px;
+    background-color:white;
+}
+.view_profile{
+    background-color:white;
+    height:auto;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+
+}
+/*Love Stories*/
+.love-stories{
+    background-image:linear-gradient(to bottom, #52c9d8, #f26aa8);
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:10%;
+    padding-right:0%;
+    height:430px;
+    width:100%;
+}
+.love-stories > .container > h2{
+    font-family:;
+    font-size:45px;
+    color:#f26aa8;
+    text-align:center;
+}
+/*how it works*/
+.how-it-works{
+    background-image:url(..images/);
+    align-content:right;
+    text-align:right;
+
+}
+.how-it-works > h2{
+    font-family:;
+    font-size:45px;
+    color:#f26aa8;
+    text-align:right;
+}
+.how-it-works > p{
+
+}
+/*Footer*/
+.footer{
+    background-color:white;
+    height:80px;
+    width:100%;
+    color:#000;
+    padding:20px;
+    padding-bottom:20px;
+}
+/*Copyright*/
+.copy-right{
+    color:#000;
+    padding-top:20px;
+}
+.copy-right > a{
+
+}
+.copy-right > a:hover{
+
+}
+.clear-fix{
+    padding:10px;
+}

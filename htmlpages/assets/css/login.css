@@ -1,0 +1,136 @@
+/*css for login page only*/
+section.login > div.container-fluid > div.row > div.well {
+    padding: 0;
+}
+div.container-fluid > div.row > div.well-white {
+    background-color: #FFFFFF;
+}
+div.container-fluid > div.row > div.background {
+    height: 500px;
+    background-image: url('../img/login_image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -20px;
+}
+div.login_area {
+    background-color: white;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 #dcdcdc;
+    border: solid 0.5px #dcdcdc;
+    margin-top: 75px;
+}
+div.row > div.col-md-6 >div.container > div.row > div.well-sm > h4 {
+    color: #3e6373;
+    font-size: 18px;
+    width: 230px;
+}
+form > div.form-group > input.form-control {
+    width: 230px;
+    background-color: #ccc;
+    height: 52px;
+}
+form > div.checkbox > button {
+    background-color: #f26aa8;
+    color: white;
+}
+form > div.checkbox > button:hover {
+    background-color: #f26aa8;
+    color: #000;
+}
+div.checkbox > label {
+    color: #3e6373;
+}
+div.row > div.col-md-6 > div > h5 > span:nth-child(1) {
+    color: aqua;
+    margin-right: 5px;
+}
+div > h5 > span:nth-child(2) {
+    margin-left: 5px;
+}
+div.login_area > div.container > div.row  .btn-block {
+    width: 330px;
+    height: 52px;
+}
+div.login_area > div.container > div.row  .btn-aqua {
+    background-color: #64ccf1;
+    color: white;
+}
+div.login_area > div.container > div.row  .btn-brown {
+    background-color: #df4930;
+    color: white;
+}
+div.social_login  button > span {
+    float: right;
+    padding-right: 47px;
+    padding-left: 28px;
+}
+div.social_login  button {
+    font-size: 14px;
+}
+div.social_login > div:nth-child(1) {
+    padding-top: 46px;
+    padding-bottom: 29px;
+    padding-left: 40px;
+}
+div.social_login > div:nth-child(2) {
+    padding-left: 40px;
+    padding-bottom: 25px;
+
+}
+div.social_login > div:nth-child(3) {
+    padding-left: 40px;
+    padding-bottom: 64px;
+}
+
+.wrapper {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    margin: 10px;
+}
+
+.line {
+    position: absolute;
+    left: 49%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ccc;
+    z-index: 1;
+}
+
+.wordwrapper {
+    text-align: center;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    z-index: 2;
+}
+
+.word {
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 1px solid black;
+    color: #ccc;
+    font-family: SourceSansPro;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px;
+    background: #fff;
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
+    line-height: 500px;
+    text-align: center;
+    background: #fff
+}

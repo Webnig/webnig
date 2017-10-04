@@ -52,21 +52,22 @@
                 <div class="col-md-9 col-sm-9 col-lg-9">
                         <form action="#" method="post" class="form-horizontal">
                             {{ csrf_field() }}
-                            <h2 class="cyan_text">Life and Death</h2>
+                            <h2 class="cyan_text">Finances</h2>
                             <br>
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                Death is
+                                                Are you careful with your money?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($viewOnDeath as $option)
+                                                    @foreach($carefulWithMoney as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="viewOnDeath" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="carefulWithMoney" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -78,15 +79,15 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                To you, is abortion an option in case of an unwanted
-                                                accidental pregnancy?
+                                                Do you believe the husband provides everything in
+                                                the home?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($abortion as $option)
+                                                    @foreach($husbandProvidesEverything as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="abortion" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="husbandProvidesEverything" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -98,15 +99,14 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                If you had to name your greatest motivation in life thus
-                                                far, what would it be?
+                                                Are you entrepreneural?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($greatestMotivation as $option)
+                                                    @foreach($isEntrepreneural as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="greatestMotivation" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="isEntrepreneural" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -118,25 +118,14 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                What is difficult about dating you?
-                                            </div>
-                                            <div class="panel-body">
-                                                <input type="text" name="datingDifficulty" placeholder="Please enter" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="panel panel-info">
-                                            <div class="panel-heading">
-                                                Do you stop to enjoy simple things in nature?
+                                                Do you believe a couple should keep a joint account?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($stopEnjoyingNature as $option)
+                                                    @foreach($keepJointAccount as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="stopEnjoyingNature" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="keepJointAccount" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -148,14 +137,15 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                Are you happy with your life?
+                                                If an intended spouse were to give you a gift, which would
+                                                you rather receive?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($happyWithYourLife as $option)
+                                                    @foreach($giftToReceive as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="happyWithYourLife" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="giftToReceive" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -167,14 +157,15 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                Would it bother you if a date made gender-biased remarks?
+                                                Will you be hapy at home raising the kids while your
+                                                spouse worked?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($genderBiasedRemarks as $option)
+                                                    @foreach($raiseKidsAtHome as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="genderBiasedRemarks" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="raiseKidsAtHome" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -186,15 +177,15 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                How much do you go &ldquo;clubbing&rdquo; (out
-                                                dancing in bars, owambes etc)?
+                                                How often should your significant other buy you gifts, jewelry,
+                                                or other things more expensive than, say, dinner, cards, or flowers?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($genderBiasedRemarks as $option)
+                                                    @foreach($spouseGiftingFrequency as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="genderBiasedRemarks" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="spouseGiftingFrequency" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -206,14 +197,14 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                Does fashion matter to you?
+                                                Do you keep a budget (of your finances)?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($fashionMatter as $option)
+                                                    @foreach($keepBudget as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="fashionMatter" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="keepBudget" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -225,15 +216,14 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                Would you ever consider adopting a child or being artificially
-                                                inseminated on your own if you gave up on finding a life partner?
+                                                Would you dump someone because they were not generous with money?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($childAdoptionChoice as $option)
+                                                    @foreach($dumpForGenerosity as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="childAdoptionChoice" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="dumpForGenerosity" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -245,54 +235,14 @@
                                     <div class="form-group">
                                         <div class="panel panel-info">
                                             <div class="panel-heading">
-                                                Would you consider dating someone who had spent considerable
-                                                time in a mental health facility (i.e. hospital/institution) ?
+                                                Do you believe that money can buy happiness?
                                             </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    @foreach($dateMentalHealthPatient as $option)
+                                                    @foreach($moneyBuyHappiness as $option)
                                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                                             <label class="radio-inline">
-                                                                <input type="radio" name="dateMentalHealthPatient" value="{{ $option }}"> {{ $option }}
-                                                            </label>
-                                                        </div>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="panel panel-info">
-                                            <div class="panel-heading">
-                                                Is love overrated?
-                                            </div>
-                                            <div class="panel-body">
-                                                <div class="row">
-                                                    @foreach($loveOverrated as $option)
-                                                        <div class="col-md-4 col-sm-4 col-xs-6">
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="loveOverrated" value="{{ $option }}"> {{ $option }}
-                                                            </label>
-                                                        </div>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="panel panel-info">
-                                            <div class="panel-heading">
-                                                Do you freak out when you get a little upset?
-                                                (i.e. scream, yell and cry)
-                                            </div>
-                                            <div class="panel-body">
-                                                <div class="row">
-                                                    @foreach($freakOutWhenUpset as $option)
-                                                        <div class="col-md-4 col-sm-4 col-xs-6">
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="freakOutWhenUpset" value="{{ $option }}"> {{ $option }}
+                                                                <input type="radio" name="moneyBuyHappiness" value="{{ $option }}"> {{ $option }}
                                                             </label>
                                                         </div>
                                                     @endforeach
@@ -311,7 +261,7 @@
                                     {{-- <button class="btn btn-info medium_button" type="submit">
                                         Proceed
                                     </button> --}}
-                                    <a class="btn btn-info medium_button" href="/basicinfo/3/finance">
+                                    <a class="btn btn-info medium_button" href="/basicinfo/3/hygiene">
                                         Next
                                     </a>
                                 </div>
