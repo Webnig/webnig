@@ -83,6 +83,8 @@ Route::get('/basicinfo/3/life-and-death', 'Controller@lifeAndDeathInfo');
 Route::get('/basicinfo/3/finance', 'Controller@financeInfo');
 Route::get('/basicinfo/3/hygiene', 'Controller@hygieneInfo');
 Route::get('/basicinfo/3/iqinfo', 'Controller@iqInfo');
+
+
 Route::get('/basicinfo/3/sexinfo', 'Controller@sexInfo');
 
 Route::get('/dashboard', function() {
