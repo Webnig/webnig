@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+    #mobile-content {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #desktop-content {
+        display: none;
+    }
+
+    .circular {
+        padding: 7px;
+        border: 1px solid #848484;
+        border-radius: 50%;
+        position: absolute;
+        background: #fff;
+        color: #848484;
+        margin-top: -40px;
+        margin-left: 40%;
+        margin-right: 40%
+    }
+}
+
+.cyan_background {
+    background: #52c8d7;
+    height: 8px;
+}
+
+.profileimage {
+    cursor: pointer;
+}
