@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta Data -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no"> -->
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+		<!-- <meta http-equiv="refresh" content="3"> -->
+		<!-- <meta name="Author" content=""> -->
+		<!-- <meta name="keywords" content=""> -->
+		<!-- <meta http-equiv="robots" content="no index, no follow"> -->
+		<!-- Favicon Icon -->
+		<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
+
+		<!-- Linked Stylesheets -->
+		<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700"> -->
+		<!-- <link rel="stylesheet" type="text/css" href='//fonts.googleapis.com/css?family=Open+Sans'> -->
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.css">
+		<link rel="stylesheet" type="text/css" href="css/mobile-profile.css">
+
+		<!-- Linked javascript -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<!-- title -->
+		<title>Your Profile | LostRib</title>
+		<!-- Styles -->
+		<style type="text/css">
+			@media only screen and (min-width:320px){
+				#desktop-content{
+					display:none;
+				}
+			}
+			/*Phone*/
+			@media only screen and (max-width:320px){
+				#desktop-content{
+					display:none;
+				}
+			}
+			/*Tablet*/
+			@media only screen and (min-width:321px) and (max-width:768px){
+
+			}
+			/*Desktop*/
+			@media only screen and (min-width:769px){
+				#mobile-content{
+					display:none;
+				}
+				#desktop-content{
+					display:block;
+				}
+			}
+
+			#desktop-content .header-img{
+				height:auto;
+				width:10%;
+				border-radius:3px;
+			}
+			#desktop-content .bio p{
+				color:#868686;
+				font-size:13px;
+			}
+			#desktop-content .bio{
+				padding-right:20px;
+			}
+			#desktop-content .image-slider{
+				padding-top:5px;
+				padding-bottom:5px;
+			}
+			#desktop-content .slider-question{
+				padding-top:10px;
+				padding-bottom:10px;
+				padding-left:5px;
+				padding-right:5px;
+				align-content: center;
+				text-align: center;
+				background-color:#e2f6f9;
+				height:auto;
+				width:100%;
+			}
+			#desktop-content .btn-footer-1{
+				background-color:#52c9d8;
+				color:white;
+				font-size:12px;
+				border:2px solid white;
+				border-radius:10%;
+				padding-top:2px;
+				padding-bottom:2px;
+				transition:0.5s all;
+			}
+			#desktop-content .btn-footer-1:hover{
+				color:#00b7cf;
+				font-size:12px;
+				border:1px solid #00b7cf;
+				background-color:#ffffff;
+				border-radius:10%;
+				padding-top:2px;
+				padding-bottom:2px;
+				transition:0.5s all;
+			}
+			#desktop-content .question .btn-footer-1:active{
+				color:#00b7cf;
+				font-size:12px;
+				border:2px solid #00b7cf;
+				background-color:#ffffff;
+				opacity:0.2;
+				border-radius:10%;
+				padding-top:2px;
+				padding-bottom:2px;
+				transition:0.5s all;
+			}
+			#desktop-content .img{
+				border-radius:50%;
+			}
+			#desktop-content .view-profile{
+				background-color:#f5f5f5;
+				width:150px;
+				padding-bottom:20px;
+				border-radius:8px;
+				margin-right:;
+
+			}
+			#desktop-content .view-profile-2{
+				border-radius:3px;
+				background-color:#f5f5f5;
+				width:200px;
+				padding-bottom:20px;
+				margin-left:29%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- ========== Main Header ========== -->
+		<header id="main-header">
+	    <div class="container">
+	      <div class="row">
+	        <div id="header-menu-button" class="col-sm-1 col-xs-1">
+	          <!-- <a href="#" type="button" class="dropdown-toggle" data-toggle="dropdown"> -->
+						<a href="">
+	            <i class="fa fa-undo" aria-hidden="true"></i>
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li id="link-1">
+	              <a href="#">Search</a>
+	            </li>
+	            <li class="divider"></li>
+	            <li id="link-2">
+	              <a href="#">Matches</a>
+	            </li>
+	            <li class="divider"></li>
+	            <li id="link-3">
+	              <a href="#">Daily Matches</a>
+	            </li>
+	            <li class="divider"></li>
+	            <li id="link-4">
+	              <a href="#">Premium</a>
+	            </li>
+	            <li class="divider"></li>
+	            <li id="link-5">
+	              <a href="#">Upgrade</a>
+	            </li>
+	            <li class="divider"></li>
+	            <li id="link-6">
+	              <a href="#">Help to the top</a>
+	            </li>
+	          </ul>
+	        </div>
+	        <div id="header-logo" class="col-md-3 col-sm-4 col-xs-4">
+	          <img src="img/logo.png" alt="LostRib Logo">
+	        </div>
+	        <div id="header-link" class="col-md-9 desktop">
+	          <ul>
+	            <a href="#"><li id="link-1">Search</li></a>
+	            <a href="#"><li id="link-2">Matches</li></a>
+	            <a href="#"><li id="link-3">Daily Matches</li></a>
+	            <a href="#"><li id="link-4">Premium</li></a>
+	            <a href="#"><li id="link-5">Upgrade</li></a>
+	            <a href="#"><li id="link-6">Help to the top</li></a>
+	          </ul>
+	        </div>
+	        <div id="header-icons" class="col-sm-7 col-xs-7 mobile">
+	          <ul>
+	            <li id="link-7">
+	              <a href="#search">
+	                <i class="fa fa-search" aria-hidden="true"></i>
+	              </a>
+	            </li>
+	            <li id="link-7">
+	              <a href="#notify">
+	                <i class="fa fa-bell-o" aria-hidden="true"><span class="badge">5</span></i>
+	              </a>
+	            </li>
+	            <li id="link-7">
+	              <a href="#users">
+	                <i class="fa fa-user-o" aria-hidden="true"></i>
+	              </a>
+	            </li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </header>
+	  <section id="mask">
+		    <div class="container-fluid">
+		      <div class="row mask">
+		        <div id="noOfUsers" class="">
+		          <p>Over 1,200,203 genuine <span><img src="img/nija.jpg" alt=""></span> users since 2006</p>
+		        </div>
+		        <div id="justJoined" class="">
+		          <img src="img/profile-pic-3x.png" alt="Profile Picture">
+		          <h3>YESIMAMA</h3>
+		          <p>just joined</p>
+		        </div>
+		        <div id="activities" class="">
+		          <h3>Recent Activities</h3>
+		          <p>in the last one hour</p>
+		        </div>
+		        <div id="sentMessages" class="">
+		          <p>1392 Messages Sent</p>
+		        </div>
+		        <div id="profileViews" class="">
+		          <p>1392 Profile Views</p>
+		        </div>
+		        <div id="searches" class="">
+		          <p>1392 Searches</p>
+		        </div>
+		      </div>
+		    </div>
+		</section>
+		
+		<!-- ========= Desktop Content======== -->
+		<div id="desktop-content">
+			<div class="container">
+				<div class="row">
+					<!-- Left Column -->
+					<div class="col-md-9 col-lg-9 col-xl-9" style="border-right:solid 1px #ccd1d9;margin-top:10px;">
+						<!-- header -->
+						<header>
+							<span style="color:#868686;font-size:12px;font-weight:bold;">
+								MAT ID:133609####
+							</span><br>
+							<span style="color:#848484;font-size:30px;font-weight:lighter;">
+								Aisha Majekodunmi
+								<span style="color:#358a96;font-size:13px;font-weight:bold;padding-left:1%">Lekki, Lagos</span>
+							</span>
+							<div class="row">
+								<div class="col-md-3 col-lg-3 col-xl-3">
+									<div class="header-img">
+										<img src="images/portrait.png" class="img-responsive" height="200px" width="180px" alt="" title="" />
+									</div>
+								</div>
+								<div class="col-md-9 col-lg-9 col-xl-9">
+									<div class="bio">
+										<span style="color:#52c9d8;font-size:28px;">Female, 26
+											<span style="color:#d19595;font-size:17px;padding-left:1%;">176 cm</span>
+											<span class="pull-right" style="color:#868686;font-weight:bold;font-size:10px;float:right;padding-top:15px;">
+												whats on your mind?
+											</span>
+										</span>
+										<p>Ijebu, Ogun State</p>
+										<p>Muslim</p>
+										<p>University of Lagos, Lagos</p>
+										<p>Front Desk Officer</p>
+										<p>N45,000</p>
+									</div>
+								</div>
+							</div>
+						</header>
+
+						<div class="row" style="height:auto;width:100%;padding-bottom:10px">
+							<div class="col-md-3 col-lg-3 col-xl-3">
+								<div class="image-slider">
+									<div class="row">
+										<div class="col-md-3 col-lg-3 col-xl-3">
+											<i style="padding-top:4px;color:#e1e1e1;" class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
+										</div>
+										<div class="col-md-2 col-lg-2 col-xl-2">
+											<img src="images/portrait.png" style="opacity:0.3;margin-left:-22px" height="38px" width="38px" alt="" title="Slider Image 1" />
+										</div>
+										<div class="col-md-2 col-lg-2 col-xl-2">
+											<img src="images/portrait.png" style="margin-left:-15px" height="41px" width="41px" alt="" title="Slider Image 1" />
+										</div>
+										<div class="col-md-2 col-lg-2 col-xl-2">
+											<img src="images/portrait.png" style="opacity:0.3;margin-left:-6px" height="38px" width="38px" alt="" 	title="Slider Image 1" />
+										</div>
+										<div class="col-md-3 col-lg-3 col-xl-3">
+											<i style="padding-top:4px;color:#e1e1e1" class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>
+										</div>
+										<center><a href="" style="color:#38c7da;font-size:10px;text-align: center;"></a></center>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-9 col-lg-9 col-xl-9">
+
+								<div class="slider-question">
+								<h4 style="color:#868686;font-size:12px;font-weight:bolder;">Would you like to know more about this member?</h4>
+								<div class="row">
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<!-- <a href="#myModal" id="yes-interest" class="btn btn-default" type="" data-toggle="modal" data-target="#myModal"> -->
+										<a href="#"><button style="width: 100px;height: 30px; font-size: 18px;padding-bottom: 5px;" type="button" value="" class="btn btn-footer-1 pull-right" data-toggle="modal" data-target="#myModal2">Yes</button></a>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6" style="margin-bottom:10px;">
+										<a href="#"><button style="width: 100px;height: 30px; font-size: 18px;padding-bottom: 5px;" typw="button" value="" class="btn btn-footer-1 pull-left" active="true">No</button></a>
+									</div>									
+
+									<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-body">
+									        <div id="matID" class="row">
+									        	<div class="col-md-12 col-sm-12 col-xs-12">
+									        		<span id="matrimony"> Mat ID: 133609#### </span>
+									        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        	</div>
+									        </div>
+									        <div id="name-location" class="row">
+									        	<div class="col-md-8 col-sm-8 col-xs-8">
+									        		<h3 id="name">Aisha Majekodunmi</h3>
+									        	</div>
+									        	<div class="col-md-4 col-sm-4 col-xs-4">
+									        		<p id="location">Lekki, Lagos</p>
+									        	</div>
+									        </div>
+									        <div id="profile-details" class="row">
+									        	<div class="col-md-7 col-sm-7 col-xs-7">
+									        		<img src="images/portrait.png" alt="Profile Picture">
+									        	</div>
+									        	<div class="col-md-5 col-sm-5 col-xs-5">
+									        		<h3 class="text-left">Female, 26 <span>176cm</span></h3>
+								        			<div>
+								        				<p>Ijebu, Ogun State</p><br>
+																<p>Muslim</p><br>
+																<p>University of Lagos, Lagos</p><br>
+																<p>Front Desk Officer</p><br>
+																<p>N45,000</p><br>
+									        		</div>
+									        	</div>
+									        </div>
+									      	<div id="call" class="row">
+														<div class="col-md-12 col-sm-12 col-xs-12">
+															<p id="accepted">You have accepted her interest</p>
+															<p id="call-now"><a href="">Call +23480123#### right away</a></p>
+														</div>
+													</div>
+													<div id="upgrade" class="row text-center">
+									        	<div class="col-md-12 col-sm-12 col-xs-12">
+									        		<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+									        		<a href="#upgrade" class="btn btn-default" role="button">Upgrade now</a>
+									        	</div>
+													</div>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+
+								</div>
+								<h4 style="color:#868686;font-size:10px;font-weight:bold">Contact him directly through the app</h4>
+							</div>
+							<!-- ========== Mobile Modal ============ -->
+
+							</div>
+
+						</div>
+
+						<div class="Personal-info">
+							<h2 style="color:#848484;font-weight:lighter;">Personal Information</h2><br>
+							<h4 style="color:#52c9d8;font-weight:lighter;">The Need To Know</h4><br>
+							<div class="row">
+								<div class="col-md-2 col-lg-2 col-xl-2">
+									<i class="fa fa-user-circle fa-3x" aria-hidden="true" style="color:#52c9d8;"></i>
+								</div>
+								<div class="col-md-10 col-lg-10 col-xl-10">
+									<div>
+										<p style="color:#848484;font-size:14px">I am a down to earth person who rejoice in laughing and making people laugh, I believe in <br>
+											the LIVE and Let LIVE philosophy. Academically I have done my mcom from reputed instititute.<br>
+											I am currently working as Sr. Accounts officer in one of the biggest French MNC and in the past I have <br>
+											worked with companies like Crew Bas an Riello Group i belong to well educated family and <br>
+											My family consists of my mother and  my elder brother. Father expired in 2010 and was retired <br>
+											as <a href="" style="color:#52c9d8;font-size:13px;">MORE</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<br>
+
+							<div class="row">
+								<div class="col-md-2 col-lg-2 col-xl-2">
+									<i class="fa fa-briefcase fa-3x" aria-hidden="true" style="color:#52c9d8;"></i>
+								</div>
+								<div class="col-md-10 col-lg-10 col-xl-10">
+									<h4 style="color:#848484;font-weight:lighter;">Personal Information</h4><br>
+									<div class="row">
+										<div class="col-md-4 col-lg-4 col-xl-4">
+											<span style="color:#848484;font-size:13px; ">Education</span><br>
+											<span style="color:#848484;font-size:13px; ">College / Institution</span><br>
+											<span style="color:#848484;font-size:13px; ">Education in Detail</span><br>
+											<span style="color:#848484;font-size:13px; ">Employed in</span><br>
+											<span style="color:#848484;font-size:13px; ">Occupation</span><br>
+											<span style="color:#848484;font-size:13px; ">Occupation in Detail</span><br>
+											<span style="color:#848484;font-size:13px; ">Annual Income</span>
+										</div>
+										<div class="col-md-8 col-lg-8 col-xl-8">
+											<span style="color:#848484;font-size:13px; ">MCom</span><br>
+											<span style="color:#848484;font-size:13px; ">Distance</span><br>
+											<span style="color:#848484;font-size:13px; ">MDU Rohtak haryana</span><br>
+											<span style="color:#848484;font-size:13px; ">Private Sector</span><br>
+											<span style="color:#848484;font-size:13px; ">Officer</span><br>
+											<span style="color:#848484;font-size:13px; ">Working as a senior account officer</span><br>
+											<span style="color:#848484;font-size:13px; ">Rs. 5.00 lakhs</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div><br><br>
+
+						<center>
+							<i class="fa fa-lock fa-5x" style="color:#f26aa8;float:left" aria-hidden="true"></i>
+							<p class="">
+								<span style="color:#848484;font-size: 28px;">Upgrade your membership to unlock contact details</span><br>
+								<a href="" style="color:#f26aa8;font-size:14px">Upgrade your account now</a>
+								<span style="color:"></span>
+							</p>
+						</center>
+						<br>
+
+						<div class="Personal-info"><br>
+							<div class="row">
+								<div class="col-md-2 col-lg-2 col-xl-2">
+									<i class="fa fa-book fa-3x" aria-hidden="true" style="color:#52c9d8;"></i>
+								</div>
+								<div class="col-md-10 col-lg-10 col-xl-10">
+									<h4 style="color:#848484;font-weight:lighter;">Religion Information</h4><br>
+									<div class="row">
+										<div class="col-md-4 col-lg-4 col-xl-4">
+											<span style="color:#848484;font-size:13px; ">Religion</span><br>
+											<span style="color:#848484;font-size:13px; ">Caste / Sub</span><br>
+											<span style="color:#848484;font-size:13px; ">Gothram</span><br>
+											<span style="color:#848484;font-size:13px; ">Zodiac</span><br>
+											<span style="color:#848484;font-size:13px; ">Star / Raasi</span><br>
+											<span style="color:#848484;font-size:13px; ">Dosh</span>
+										</div>
+										<div class="col-md-8 col-lg-8 col-xl-8">
+											<span style="color:#848484;font-size:13px; ">Jain - Digimbar</span><br>
+											<span style="color:#848484;font-size:13px; ">Caste(Caste No Bar) / Not Specfied</span><br>
+											<span style="color:#848484;font-size:13px; ">Not Specified | Requested</span><br>
+											<span style="color:#848484;font-size:13px; ">Scorpio</span><br>
+											<span style="color:#848484;font-size:13px; ">Anuradha / Vrishchik</span><br>
+											<span style="color:#848484;font-size:13px; ">No</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<hr style="border:solid 2px #ccd1d9"><br>
+
+						<div class="container">
+								<div class="preferences">
+									<h1 style="color:#848484;font-weight:lighter;">His Partner Preferences</h1><br>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<img src="images/portrait.png" class="img-responsive" height="110px" width="100px" alt="" title="" />
+										<center style="color:#f26aa8;font-size:12px;padding-right:43%" >You</center>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<center>
+											<h5 style="color:#848484;font-size:20px;letter-spacing:2px;margin-bottom: -3%">
+												Your Profile matches with
+											</h5>
+											<span class="fa fa-random" style="font-size:55px;font-weight:lighter" aria-hidden="true"></span>
+											<span style="color:#52c9d8;font-size:60px;padding-bottom:0px"> 20 / 21</span>
+											<h5 style="color:#848484;font-size:20px;letter-spacing:2px;margin-top:-10%">
+												of Bode Peter's preferences!
+											</h5>
+										</center>
+									</div>
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<img src="images/kiss.png" class="img-responsive" height="110px" width="110px" alt="" title="" />
+										<center style="color:#4c4c4c;font-size:12px;padding-right:35%" >Bode Peter</center>
+									</div>
+								</div>
+						</div>
+						<br>
+						<br>
+
+						<div class="basic-preference">
+							<div class="container">
+								<h4 style="color:#848484;font-weight:lighter;">Basic Preferences</h4><br>
+								<div class="row">
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<span style="color:#848484;font-size:13px; ">Bride's Age</span>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<span style="color:#848484;font-size:13px; ">18 - 35 Yrs</span>
+									</div>
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;margin-bottom:-40%"></i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<span style="color:#848484;font-size:13px; ">Height</span>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<span style="color:#848484;font-size:13px; ">4 Ft 6 In - 6 Ft 6 In / 137 Cms - 199 Cms</span>
+									</div>
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;margin-bottom:-40%"></i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<span style="color:#848484;font-size:13px;">Marital Status</span>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<span style="color:#848484;font-size:13px;">Never Married</span>
+									</div>
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<i class="fa fa-check-circle" aria-hidden="true" style="color:#ccd1d9;margin-bottom:-40%"></i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<span style="color:#848484;font-size:13px; ">Physical Status</span>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<span style="color:#848484;font-size:13px; ">Normal</span>
+									</div>
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;margin-bottom:-40%"></i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<span style="color:#848484;font-size:13px; ">Physical Status</span>
+									</div>
+									<div class="col-md-6 col-lg-6 col-xl-6">
+										<span style="color:#848484;font-size:13px; ">Any Mother Tongue</span>
+									</div>
+									<div class="col-md-3 col-lg-3 col-xl-3">
+										<i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- End if Left Coloumn -->
+
+					<!-- Right Column -->
+					<div class="col-md-3 col-lg-3 col-xl-3" style="margin-left:-1%;"><br>
+						<h5 style="color:#848484;font-weight:lighter;text-align:right;padding-left:28%;margin-right:%;">
+							View Similar Profiles
+						</h5><br>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+											<div class="view-profile">
+												<center>
+													<img src="images/profile-pic.jpg" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+													<b style="font-size:9px;">Mat ID: 13609####</b><br>
+													<center style="font-size:22px;font-family:;color:#00b7cf;">Male, 28</center>
+													<center style="font-size:14px;color:;">Christian | Abuja</center>
+													<center style="font-size:9px;">I am attracted to so many things</center>
+													<div>
+														<a href="#">
+															<input type="submit" class="button" value="View Profile" style="border-radius: 12px;margin-top:5%;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/>
+														</a>
+													</div>
+												</center>
+											</div><br>
+										</div>
+								<div class="clearfix"></div>
+								<div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+											<div class="view-profile" style="background-color:#f5f5f5;margin-left:60%">
+												<center>
+													<img src="images/kiss.png" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+													<b style="font-size:9px;">Mat ID: 13609####</b><br>
+													<center style="font-size:22px;font-family:;color:#00b7cf;">Male, 28</center>
+													<center style="font-size:14px;color:;">Christian | Abuja</center>
+													<center style="font-size:9px;">I am attracted to so many things</center>
+													<div>
+														<a href="#">
+															<input type="submit" class="button" value="View Profile" style="border-radius: 12px;margin-top:5%;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white"/>
+														</a>
+													</div>
+												</center>
+											</div>
+										</div>
+							</div><br>
+							<div class="row">
+								<div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+									<div class="view-profile">
+												<center>
+													<img src="images/profile-pic.jpg" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+													<b style="font-size:9px;">Mat ID: 13609####</b><br>
+													<center style="font-size:22px;font-family:;color:#00b7cf;">Male, 28</center>
+													<center style="font-size:14px;color:;">Christian | Abuja</center>
+													<center style="font-size:9px;">I am attracted to so many things</center>
+													<div>
+														<a href="#">
+															<input type="submit" class="button" value="View Profile" style="border-radius: 12px;margin-top:5%;background-color: #00b7cf;border-color:#f26aa8;border:solid #00b7cf;color:white" />
+														</a>
+													</div>
+												</center>
+											</div><br>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-xs-hidden col-sm-hidden col-md-6 col-lg-6 col-xl-6">
+									<div class="view-profile" style="background-color:#f5f5f5;margin-left:60%">
+											<center>
+												<img src="images/kiss.png" class="img img-circle" alt="Male" title="" style="height:80px;width:80px;margin-top:-15px;margin-right:-4px"/><br>
+												<b style="font-size:9px;">Mat ID: 13609####</b><br>
+												<center style="font-size:22px;font-family:;color:#00b7cf;">Male, 28</center>
+												<center style="font-size:14px;color:;">Christian | Abuja</center>
+												<center style="font-size:9px;">I am attracted to so many things</center>
+												<div>
+														<a href="#">
+															<input type="submit" class="button" value="View Profile" style="border-radius: 12px;
+																	margin-top:5%;
+																	background-color: #00b7cf;
+																	border-color:#f26aa8;
+																	border:solid #00b7cf;
+																	color:white" />
+												 			</a>
+													</div>
+											</center>
+										</div>
+								</div>
+							</div><br>
+							<!-- Interest Accepted -->
+							<h4 style="color:#848484;font-weight:lighter;text-align: right;padding-left:20%;margin-right:-15%; ">
+								Interest Accepted
+							</h4><br>
+							<div class="view-profile-2">
+									<center>
+										<img src="images/kiss.png" class="img img-circle" alt="Male" title="" style="height:100px;width:100px;margin-top:-15px;margin-right:-2px"/><br>
+										<b style="font-size:9px;">Mat ID: 13609####</b><br>
+										<center style="font-size:22px;font-family:;color:#f26aa8;">Male, 28</center>
+										<center style="font-size:14px;color:;">Christian | Abuja</center>
+										<center style="font-size:12px;">I am attracted to so many things</center>
+										<div>
+											<a href="#">
+												<input type="submit" class="button" value="View Profile" style="border-radius: 12px;
+														margin-top:5%;
+														background-color: #f26aa8;
+														border-color:#f26aa8;
+														border:solid #f26aa8;
+														color:white" />
+											</a>
+										</div>
+									</center>
+								</div><br><br><br>
+							<!-- Interest Pending -->
+							<h4 style="color:#848484;font-weight:lighter;text-align: right;padding-left:20%;margin-right:-12%; ">
+								Interest Pending
+							</h4><br>
+							<div class="view-profile-2">
+								<center>
+									<img src="images/profile-pic.jpg" class="img img-circle" alt="Male" title="" style="height:100px;width:100px;margin-top:-15px;margin-right:-2px"/><br>
+									<b style="font-size:9px;">Mat ID: 13609####</b><br>
+									<center style="font-size:22px;font-family:;color:#f26aa8;">Female, 28</center>
+									<center style="font-size:14px;color:;">Christian | Abuja</center>
+									<center style="font-size:12px;">I am attracted to so many things</center>
+									<div>
+										<a href="#">
+											<input type="submit" class="button" value="View Profile" style="border-radius: 12px;
+													margin-top:5%;
+													background-color: #f26aa8;
+													border-color:#f26aa8;
+													border:solid #f26aa8;
+													color:white" />
+										 </a>
+									</div>
+								</center>
+							</div>
+						</div><!-- End of container-fluid -->
+					</div>
+				</div>
+			</div><!-- End of Container -->
+		</div>
+		<!--  ==========End of Desktop Content========= -->
+		<!-- Mobile Contenet -->
+		<div id="mobile-content" class="text-center" style="width:100%;margin:0px;">
+			<!-- Profile Roll -->
+			<section id="profile-roll">
+				<div class="container-fluid">
+					<div id="top" class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+							<p>Like him?</p>
+							<p>Upgrade to contact</p>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6 text-right">
+							<p id="matrimony">Mat ID: 133609####</p>
+						</div>
+					</div>
+
+					<div id="middle" class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+							<a href="#"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></a>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6 text-right">
+							<a href="#"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></a>
+						</div>
+					</div>
+
+					<div id="bottom" class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+							<a href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i></a>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6 text-right">
+							<p id="genderAge">Female, 26</p>
+							<h3>Aisha M.</h3>
+							<p><span id="membership">Premium Member</span><span id="height">176cm</span></p>
+							<p>Ijebu, Ogun State  |  Nigeria <br>Muslim</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="services">
+				<div class="container-fluid">
+					<div id="assisted" class="row text-center">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<p>Personalised Service by an expert Relationship Manager</p>
+							<p><a href="">Get Assisted Service</a></p>
+						</div>
+					</div>
+
+					<div id="profile-actions" class="row text-center">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div id="shortlist">
+								<i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Shortlist
+							</div>
+							<div id="mobile">
+								<i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;View Mobile
+							</div>
+							<div id="status">
+								<i class="fa fa-comments-o fa-2x" aria-hidden="true" style="color: #b9b9b9;"></i>&nbsp;&nbsp;&nbsp;&nbsp;Offline
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="informations">
+				<div class="container">
+					<div id ="personal-info" class="row text-center">
+						<h3>Personal Information</h3>
+						<h5>Few words about my friend</h5>
+						<p>I am a down to earth person who rejoices in laughing and making people laugh. I believe in LIVE and Let LIVE philosphy. Acadamically I have done By mcom from reputed institute .I am currently working as Sr</p>
+					</div>
+					<div id="professional-info" class="row text-center">
+						<h3><span class="fa fa-briefcase fa-2x" aria-hidden="true" style="color:#52c9d8;margin-right:10px;"></span>
+						Professional Information</h3>
+						<table class="table table-responsive">
+							<tbody>
+								<tr class="table-row">
+									<td class="text-left">Education</td>
+									<td class="text-left">MCom</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">College / Institution</td>
+									<td class="text-left">Distancwe</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Education in Detail</td>
+									<td class="text-left">MDU Rohtak haryana</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Employed in</td>
+									<td class="text-left">Private Sector</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Occupation</td>
+									<td class="text-left">Officer</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Occupation in Detail</td>
+									<td class="text-left">Working as an senior account officer</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Annual Income</td>
+									<td class="text-left">Rs. 5.00 lakhs</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="religious-info" class="row text-center">
+						<h3><span class="fa fa-book fa-2x" aria-hidden="true" style="color: #52c9d8; margin-right: 10px;"></span>Religious Information</h3>
+						<table class="table table-responsive">
+							<tbody>
+								<tr class="table-row">
+									<td class="text-left">Religion</td>
+									<td class="text-left">Jain - Digambar</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Caste / Sub</td>
+									<td class="text-left">Caste (Caste No Bar) / Not Specified</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Gothram</td>
+									<td class="text-left">Not Specified | Request</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Zodiac</td>
+									<td class="text-left">Scorpio</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Star / Raasi</td>
+									<td class="text-left">Anuradha / Vrishchik (Scorpio)</td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Dosh</td>
+									<td class="text-left">No</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="partner-preference" class="row text-center">
+						<h3>Her Partner Preference</h3><br>
+						<div id="profile-me" class="col-md-2 col-md-offset-1">
+							<a href="#"><img src="images/kiss.png" alt="Profile Picture"></a>
+						</div>
+
+						<div id="profile-match" class="col-md-4 col-md-offset-1">
+							<p>Your profile matches with</p>
+							<span class="fa fa-random fa-2x">  20 / 21</span><br>
+							<p>of Bode Peter's<br>preferences!</p>
+						</div>
+
+						<div id="profile-other" class="col-md-2 col-md-offset-1">
+							<a href="#"><img src="images/kiss.png" alt="Profile Picture"></a>
+						</div>
+					</div>
+					<div id="basic-preference" class="row text-center">
+						<h3>Basic Preference</h3>
+						<table class="table table-responsive">
+							<tbody>
+								<tr class="table-row">
+									<td class="text-left">Bride's Age</td>
+									<td class="text-center">18 - 35 Yrs</td>
+									<td class="text-right"><i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;"></i></td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Height</td>
+									<td class="text-center">4 Ft 6 In - 6 Ft 6 In / 137 Cms - 199 Cms</td>
+									<td class="text-right"><i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;"></i></td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Marital Status</td>
+									<td class="text-center">Never married</td>
+									<td class="text-right"><i class="fa fa-check-circle" aria-hidden="true" style="color:#ccd1d9;"></i></td>
+								</tr>
+								<tr class="table-row">
+									<td class="text-left">Mother Tongue</td>
+									<td class="text-center">Any Mother Tongue</td>
+									<td class="text-right"><i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;"></i></td>
+								</tr>
+								<tr class="table-row">
+								<td class="text-left">Physical Status</td>
+								<td class="text-center">Normal</td>
+								<td class="text-right"><i class="fa fa-check-circle" aria-hidden="true" style="color:#97c223;"></i></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- End of Container -->
+			</section>
+
+			<!-- Profile Carousel -->
+		  <section id="profileCarousel">
+		    <div class="container-fluid">
+					<h3 class="text-center">Other Profiles your might like</h3>
+		      <div class="row text-center pro">
+		        <div class="colmd">
+		          <div id="profile">
+		            <div class="profileImg">
+		              <img src="img/blurred.jpg" alt="Profile Picture">
+		              <p id="matrimony">Mat ID: 133609####</p>
+		            </div>
+		            <div class="details">
+		              <h3 class="genderAge">Female, 26</h3>
+		              <p><span class="height">181cm | </span>Christain | Abuja</p>
+		              <p class="description">I an nice and easy going lady...</p>
+		              <a class="btn btn-default" href="#" role="button">View Profile</a>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="colmd">
+		          <div id="profile">
+		            <div class="profileImg">
+		              <img src="img/blurred.jpg" alt="Profile Picture">
+		              <p id="matrimony">Mat ID: 133609####</p>
+		            </div>
+		            <div class="details">
+		              <h3 class="genderAge">Male, 26</h3>
+		              <p><span class="height">181cm | </span>Muslim | Kano</p>
+		              <p class="description">I am attracted to so many things...</p>
+		              <a class="btn btn-default" href="#" role="button">View Profile</a>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="colmd">
+		          <div id="profile">
+		            <div class="profileImg">
+		              <img src="img/blurred.jpg" alt="Profile Picture">
+		              <p id="matrimony">Mat ID: 133609####</p>
+		            </div>
+		            <div class="details">
+		              <h3 class="genderAge">Female, 26</h3>
+		              <p><span class="height">181cm | </span>Christain | Abuja</p>
+		              <p class="description">I an nice and easy going lady...</p>
+		              <a class="btn btn-default" href="#" role="button">View Profile</a>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="colmd">
+		          <div id="profile">
+		            <div class="profileImg">
+		              <img src="img/blurred.jpg" alt="Profile Picture">
+		              <p id="matrimony">Mat ID: 133609####</p>
+		            </div>
+		            <div class="details">
+		              <h3 class="genderAge">Male, 26</h3>
+		              <p><span class="height">181cm | </span>Muslim | Kano</p>
+		              <p class="description">I am attracted to so many things...</p>
+		              <a class="btn btn-default" href="#" role="button">View Profile</a>
+		            </div>
+		          </div>
+		        </div>
+		      </div><!-- End of Row-->
+					<div class="row text-center">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<a href="#" class="btn btn-default" style="object-fit: contain;text-align:center;height: 45px;width:150px;border-radius: 40px;margin: 20px; border:2px solid #f26aa8;color: #f26aa8;font-size:16px;font-weight: 600;vertical-align: center;padding-top: 10px;">View All</a>
+						</div>
+					</div>
+		  </section>
+
+			<section id="interest">
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>Interested in Aisha?</h3>
+							<div>
+								<a href="#myModal" id="yes-interest" class="btn btn-default" type="" data-toggle="modal" data-target="#myModal">
+									Yes
+								</a>
+								<a href="" id="no-interest" class="btn btn-default">
+									No
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- ========== End of Mobile Content ========== -->
+
+		<!-- ==========Mobile Modal========== -->
+		<div id="mobile-content">
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+
+		      <div class="modal-body">
+		        <div id="matID" class="row">
+		        	<div class="col-md-12 col-sm-12 col-xs-12">
+		        		<span id="matrimony"> Mat ID: 133609#### </span>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        	</div>
+		        </div>
+		        <div id="name-location" class="row">
+		        	<div class="col-md-8 col-sm-8 col-xs-8">
+		        		<h3 id="name">Aisha Majekodunmi</h3>
+		        	</div>
+		        	<div class="col-md-4 col-sm-4 col-xs-4">
+		        		<p id="location">Lekki, Lagos</p>
+		        	</div>
+		        </div>
+		        <div id="profile-details" class="row">
+		        	<div class="col-md-7 col-sm-7 col-xs-7">
+		        		<img src="images/portrait.png" alt="Profile Picture">
+		        	</div>
+		        	<div class="col-md-5 col-sm-5 col-xs-5">
+		        		<h3 class="text-left">Female, 26 <span>176cm</span></h3>
+	        			<div>
+	        				<p>Ijebu, Ogun State</p><br>
+									<p>Muslim</p><br>
+									<p>University of Lagos, Lagos</p><br>
+									<p>Front Desk Officer</p><br>
+									<p>N45,000</p><br>
+		        		</div>
+		        	</div>
+		        </div>
+		      	<div id="call" class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<p id="accepted">You have accepted her interest</p>
+								<p id="call-now"><a href="">Call +23480123#### right away</a></p>
+							</div>
+						</div>
+						<div id="upgrade" class="row text-center">
+		        	<div class="col-md-12 col-sm-12 col-xs-12">
+		        		<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+		        		<a href="#upgrade" class="btn btn-default" role="button">Upgrade now</a>
+		        	</div>
+						</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		</div>
+		<!-- ========== End ofMobile Modal========== -->
+	</body>
+	</html>
