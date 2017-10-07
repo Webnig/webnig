@@ -310,3 +310,15 @@ hr.small {
 	margin-top: 50px;
 	font-size: 15px;
 }
+
+/* Styling for About us page */
+
+.about_us_container {
+    background: #52c8d7;
+    color: #fff;
+}
+
+a.pink_link {
+    color: #f26aa8;
+    text-decoration: underline;
+}

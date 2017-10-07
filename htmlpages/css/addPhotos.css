@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+    #mobile-content {
+        display: none;
+    }
+
+    .cover {
+        background-image: url(../images/man.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 50px 50px 50px 150px;
+        min-height: 500px;
+    }
+
+    .circular {
+        padding: 15px;
+        border: 1px solid #848484;
+        border-radius: 50%;
+        position: absolute;
+        background: #fff;
+        outline: 20px solid #fff;
+        color: #848484;
+        font-size: 16pt;
+        margin-top: -50px;
+        margin-left: 30%;
+        margin-right: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    #desktop-content {
+        display: none;
+    }
+
+    .circular {
+        padding: 7px;
+        border: 1px solid #848484;
+        border-radius: 50%;
+        position: absolute;
+        background: #fff;
+        color: #848484;
+        margin-top: -40px;
+        margin-left: 40%;
+        margin-right: 40%
+    }
+}
+
+.cyan_background {
+    background: #52c8d7;
+    height: 8px;
+}
+
+.profileimage {
+    cursor: pointer;
+}
